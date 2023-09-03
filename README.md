@@ -1,2 +1,2 @@
 # HIFI-TUI
-Tidal Music Player in TUI
+Tidal & YT Music Player in TUI
