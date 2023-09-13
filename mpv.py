@@ -58,19 +58,14 @@ else:
     # still better than segfaulting, we are setting LC_NUMERIC to "C".
     locale.setlocale(locale.LC_NUMERIC, 'C')
 
-    lib_so = os.path.join(os.getcwd(),'/home/pc/Documents/GitHub/HIFI-TUI/mpv/client.h')
+    sofile = ctypes.util.find_library('mpv')
+    if sofile is None:
+        raise OSError("Cannot find libmpv in the usual places. Depending on your distro, you may try installing an "
+                "mpv-devel or mpv-libs package. If you have libmpv around but this script can't find it, consult "
+                "the documentation for ctypes.util.find_library which this script uses to look up the library "
+                "filename.")
 
-    if not os.path.exists(lib_so):
-        sofile = ctypes.util.find_library('mpv')
-        if sofile is None:
-            raise OSError("Cannot find libmpv in the usual places. Depending on your distro, you may try installing an "
-                    "mpv-devel or mpv-libs package. If you have libmpv around but this script can't find it, consult "
-                    "the documentation for ctypes.util.find_library which this script uses to look up the library "
-                    "filename.")
-        backend = CDLL(sofile)
-
-    else:
-        backend = CDLL(lib_so)
+    backend = CDLL(sofile)
 
     fs_enc = sys.getfilesystemencoding()
 

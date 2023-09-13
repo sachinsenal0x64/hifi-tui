@@ -29,6 +29,8 @@ ask = ask.lower()
 
 search_results = ytmusic.search(ask)
 
+print(search_results)
+
 
 
 video_id = search_results[0]['videoId']
