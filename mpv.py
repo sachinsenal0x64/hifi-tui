@@ -34,10 +34,9 @@ import re
 import traceback
 
 if os.name == 'nt':
-
-    dll_c = os.path.join(os.getcwd(),'mpv-2.dll')
-    if not os.path.exist(dllc):
-        dll_c = os.path.join(os.getcwd(),'mpv-1.dll')
+    dll_2 = os.path.join(os.getcwd(),'mpv-2.dll')
+    if not os.path.exists(dll_2):
+        os.path.join(os.getcwd(),'mpv-1.dll')
 
         # Note: mpv-2.dll with API version 2 corresponds to mpv v0.35.0. Most things should work with the fallback, too.
         dll = ctypes.util.find_library('mpv-2.dll') or ctypes.util.find_library('mpv-1.dll')
@@ -48,9 +47,10 @@ if os.name == 'nt':
                         'If mpv-1.dll is located elsewhere, you can add that path to os.environ["PATH"].')
         backend = CDLL(dll)
     else:
-        backend = CDLL(dll_c)
+        backend = CDLL(dll_2)
 
     fs_enc = 'utf-8'
+
 else:
     import locale
     lc, enc = locale.getlocale(locale.LC_NUMERIC)
@@ -58,13 +58,20 @@ else:
     # still better than segfaulting, we are setting LC_NUMERIC to "C".
     locale.setlocale(locale.LC_NUMERIC, 'C')
 
-    sofile = ctypes.util.find_library('mpv')
-    if sofile is None:
-        raise OSError("Cannot find libmpv in the usual places. Depending on your distro, you may try installing an "
-                "mpv-devel or mpv-libs package. If you have libmpv around but this script can't find it, consult "
-                "the documentation for ctypes.util.find_library which this script uses to look up the library "
-                "filename.")
-    backend = CDLL(sofile)
+    lib_so = os.path.join(os.getcwd(),'/home/pc/Documents/GitHub/HIFI-TUI/mpv/client.h')
+
+    if not os.path.exists(lib_so):
+        sofile = ctypes.util.find_library('mpv')
+        if sofile is None:
+            raise OSError("Cannot find libmpv in the usual places. Depending on your distro, you may try installing an "
+                    "mpv-devel or mpv-libs package. If you have libmpv around but this script can't find it, consult "
+                    "the documentation for ctypes.util.find_library which this script uses to look up the library "
+                    "filename.")
+        backend = CDLL(sofile)
+
+    else:
+        backend = CDLL(lib_so)
+
     fs_enc = sys.getfilesystemencoding()
 
 
