@@ -1,13 +1,41 @@
 Screen {
-    layout: vertical;
-    background: black;
+
+background: black;
+
+}
+
+#in {
+
+width: 100%;
+border: white;
+dock: top;
+margin-left: 1;
+margin-right: 1;
+
 }
 
 
-.box {
-    height: 5%;
-    width: 85%;
-    border: solid green;
+#op {
+
+align: left middle;
+width: 30%;
+height: 80%;
+border: white;
+dock: left;
+margin-left: 1;
+
+}
 
 
-} 
+#opp {
+
+align: right middle;
+width: 66%;
+height: 80%;
+border: white;
+dock:left;
+margin-right: 1;
+
+
+}
+
