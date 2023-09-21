@@ -87,7 +87,7 @@ with open("token.json", "r") as readfile:
     acs_tok = token["access_token"]
 
 
-url3 = f"https://api.tidal.com/v1/tracks/243872266/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL"
+url3 = f"https://api.tidal.com/v1/tracks/227809464/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL&audioMode=DOLBY_ATMOS"
 
 
 header = {"authorization": f"Bearer {acs_tok}"}

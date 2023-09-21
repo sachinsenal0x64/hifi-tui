@@ -1,40 +1,63 @@
 Screen {
 
-background: black;
+    background: black;
+    overflow: auto;
 
 }
 
+#tidal {
+
+    layout: grid;
+    grid-size: 2;
+    grid-gutter: 1 2;
+    grid-columns: 1fr;
+    grid-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 1 2;
+    min-height: 25;
+    min-width: 26;
+    height: 100%;
+
+}
+
+
 #in {
 
-width: 100%;
-border: white;
-dock: top;
-margin-left: 1;
-margin-right: 1;
+    width: 100%;
+    border: white;
+    dock: top;
+    margin-left: 1;
+    margin-right: 1;
+
+
 
 }
 
 
 #op {
 
-align: left middle;
-width: 30%;
-height: 80%;
-border: white;
-dock: left;
-margin-left: 1;
+    align: left middle;
+    height: 78%;
+    width: 30%;
+    border: white;
+    dock: left;
+    margin-left: 1;
+    margin-right: 1;
+
+
+
 
 }
 
 
 #opp {
 
-align: right middle;
-width: 66%;
-height: 80%;
-border: white;
-dock:left;
-margin-right: 1;
+    align: right middle;
+    height: 78%;
+    width: 66%;
+    border: white;
+    dock:left;
+    margin-right: 1;
+    margin-left: 1;
 
 
 }

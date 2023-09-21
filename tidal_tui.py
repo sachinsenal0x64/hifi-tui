@@ -2,6 +2,7 @@ from __future__ import annotations
 from textual import on
 from textual.app import App, ComposeResult
 from textual.widgets import Input, OptionList
+from textual.containers import Container
 import rich
 from rich.table import Table
 import requests
@@ -9,6 +10,8 @@ from requests.auth import HTTPBasicAuth
 import json
 import webbrowser
 import os
+
+
 
 
 # we need this api keys for grant tidal auth
@@ -32,11 +35,8 @@ class Auth(Hifi):
     def __init__(self, client_id, scope, url, client_secret):
         super().__init__(client_id, scope, url, client_secret)
         data = {"client_id": client_id, "scope": scope}
-        header = {
-            "User-Agent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G965F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36"
-        }
 
-        res = requests.post(url, data=data, headers=header)
+        res = requests.post(url, data=data)
 
         self.response = res
 
@@ -85,70 +85,96 @@ ROWS = [
 ]
 
 
+# Check Tokens
+try:
+    with open("token.json", "r") as tok:
+        token = json.loads(tok.read())
+        access_token = token["access_token"]
+        refresh_token = token["refresh_token"]
+
+except Exception as e:
+        pass
+
 class Tui(App):
     CSS_PATH = "tidal_tui.css"
 
     def compose(self) -> ComposeResult:
-        yield Input(id="in")
-        yield OptionList(
-            id="op",
-        )
-        yield OptionList(
-            id="opp",
-        )
+        with Container(id="tidal"):
+            yield Input(id="in")
+            yield OptionList(
+                id="op",
+            )
+            yield OptionList(
+                id="opp",
+            )
 
     @on(Input.Submitted)
     def search(self):
         check = self.query_one(Input)
         song = check.value
 
-        with open("token.json", "r") as tok:
-            token = json.loads(tok.read())
-            rich.print(token)
-            access_token = token["access_token"]
-            refresh_token = token["refresh_token"]
+        header = {"authorization": f"Bearer {access_token}"}
 
-            print(access_token, refresh_token)
+        sear_url = "https://api.tidal.com/v1/search/tracks?countryCode=US&query={song}"
 
-        url3 = f"https://api.tidal.com/v1/tracks/243872266/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL"
-
-        header = {"authorization": f"Bearer {access_token}",
-                  "User-Agent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G965F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36"}
-
-        res3 = requests.get(url=url3, headers=header)
+        res_s = requests.get(url=sear_url,headers=header)
 
 
-        with open("name.json", "a") as files:
-            json.dumps(res3.text,indent=4)
+        url3 = f"https://api.tidal.com/v1/tracks/227809464/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL&audioMode=DOLBY_ATMOS"
 
+
+
+        res3 = requests.get(url=url3,headers=header)
+
+
+
+        with open("name.json", "a") as file:
+            file.write(res3.text)
 
 if __name__ == "__main__":
-    if not os.path.exists("token.json"):
-        webbrowser.open(verifyurl)
 
-        # Polling Until Authrize
+    try:
+        
+        with open('token.json', 'r') as file:
+            data = json.load(file)
 
-        url2 = "https://auth.tidal.com/v1/oauth2/token"
+        if not os.path.exists('token.json'):
+            webbrowser.open(verifyurl)
 
-        data2 = {
-            "client_id": authrize.client_id,
-            "scope": authrize.scope,
-            "device_code": dcode,
-            "grant_type": "urn:ietf:params:oauth:grant-type:device_code",
-        }
+        elif not refresh_token:
+            webbrowser.open(verifyurl) 
+        
+        elif not access_token:
+            webbrowser.open(verifyurl)
 
-        basic = HTTPBasicAuth(authrize.client_id, authrize.client_secret)
 
-        while True:
-            res2 = requests.post(url=url2, data=data2, auth=basic)
-            if res2.ok:
-                access_token = res2.json()["access_token"]
-                refresh_token = res2.json()["refresh_token"]
-                accs = {"access_token": access_token, "refresh_token": refresh_token}
-                print(res2.text)
-                with open("token.json", "w") as file:
-                    json.dump(accs, file)
-                    break
+    except (FileNotFoundError,NameError,json.JSONDecodeError):
+            webbrowser.open(verifyurl)
+
+            # Polling Until Authrize
+
+            url2 = "https://auth.tidal.com/v1/oauth2/token"
+
+            data2 = {
+                "client_id": authrize.client_id,
+                "scope": authrize.scope,
+                "device_code": dcode,
+                "grant_type": "urn:ietf:params:oauth:grant-type:device_code",
+            }
+
+            basic = HTTPBasicAuth(authrize.client_id, authrize.client_secret)
+
+            while True:
+                res2 = requests.post(url=url2, data=data2, auth=basic)
+                if res2.ok:
+                    access_token = res2.json()["access_token"]
+                    refresh_token = res2.json()["refresh_token"]
+                    accs = {"access_token": access_token, "refresh_token": refresh_token}
+                    with open("token.json", "w") as file:
+                        json.dump(accs, file)
+                        break
+
+
 
     app = Tui()
     app.run()
