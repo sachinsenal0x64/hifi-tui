@@ -14,5 +14,5 @@
 
 - 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT
 
-- 📀 AUDIO QUALITY : | HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio |
+- 📀 AUDIO QUALITY : | HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz
 
