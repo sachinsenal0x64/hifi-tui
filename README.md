@@ -1,5 +1,5 @@
 <div align="center">
-        <h1>🎵 HIFI TUI (WIP)</h1>
+        <h1><img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/music.3xs3fhd38j80.gif" alt="logo"/>HIFI TUI (WIP)</h1>
         <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum">        
 </div>
 
