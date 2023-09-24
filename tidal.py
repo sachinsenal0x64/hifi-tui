@@ -63,8 +63,6 @@ if choice == "1":
 
 
 
-
-
     # Define the options for yt-dlp
     ydl_opts = {
         'quiet': True,

@@ -87,13 +87,42 @@ ROWS = [
 
 # Check Tokens
 try:
-    with open("token.json", "r") as tok:
-        token = json.loads(tok.read())
-        access_token = token["access_token"]
-        refresh_token = token["refresh_token"]
+
+    with open('token.json', 'r') as file:
+        data = json.load(file)
+
+        access_token = data.get("access_token",None)
+        refresh_token = data.get("refresh_token",None)
+
 
 except Exception as e:
-        pass
+        webbrowser.open(verifyurl)
+
+        # Polling Until Authrize
+
+        url2 = "https://auth.tidal.com/v1/oauth2/token"
+
+        data2 = {
+            "client_id": authrize.client_id,
+            "scope": authrize.scope,
+            "device_code": dcode,
+            "grant_type": "urn:ietf:params:oauth:grant-type:device_code",
+        }
+
+        basic = HTTPBasicAuth(authrize.client_id, authrize.client_secret)
+
+
+        while True:
+            res2 = requests.post(url=url2, data=data2, auth=basic)
+            if res2.ok:
+                access_token = res2.json()["access_token"]
+                refresh_token = res2.json()["refresh_token"]
+                accs = {"access_token": access_token, "refresh_token": refresh_token}
+
+                with open("token.json", "w") as file:
+                    json.dump(accs, file)
+                break
+
 
 class Tui(App):
     CSS_PATH = "tidal_tui.css"
@@ -131,24 +160,10 @@ class Tui(App):
         with open("name.json", "a") as file:
             file.write(res3.text)
 
-if __name__ == "__main__":
 
-    try:
-        
-        with open('token.json', 'r') as file:
-            data = json.load(file)
+try:
 
-        if not os.path.exists('token.json'):
-            webbrowser.open(verifyurl)
-
-        elif not refresh_token:
-            webbrowser.open(verifyurl) 
-        
-        elif not access_token:
-            webbrowser.open(verifyurl)
-
-
-    except (FileNotFoundError,NameError,json.JSONDecodeError):
+    if not os.path.exists('token.json') or not refresh_token or not access_token:
             webbrowser.open(verifyurl)
 
             # Polling Until Authrize
@@ -164,17 +179,27 @@ if __name__ == "__main__":
 
             basic = HTTPBasicAuth(authrize.client_id, authrize.client_secret)
 
+
             while True:
                 res2 = requests.post(url=url2, data=data2, auth=basic)
                 if res2.ok:
                     access_token = res2.json()["access_token"]
                     refresh_token = res2.json()["refresh_token"]
                     accs = {"access_token": access_token, "refresh_token": refresh_token}
+
                     with open("token.json", "w") as file:
                         json.dump(accs, file)
-                        break
+                    break
+
+
+except (FileNotFoundError,NameError,json.JSONDecodeError):
+        pass
 
 
 
+
+
+
+if __name__ == "__main__":
     app = Tui()
     app.run()
