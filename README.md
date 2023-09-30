@@ -1,6 +1,7 @@
 <div align="center">
-        <h1>HIFI TUI (WIP)</h1>
         <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum">        
+        <h1>HIFI TUI (WIP)</h1>
+
 </div>
 
 <h4 align="center"> 🎵 TIDAL| YT Music| PODCAST| PLAYER in TUI</h4>
