@@ -12,8 +12,6 @@ import webbrowser
 import os
 
 
-
-
 # we need this api keys for grant tidal auth
 class Hifi:
     def __init__(self, client_id, scope, url, client_secret):
@@ -126,6 +124,8 @@ except Exception as e:
 
 class Tui(App):
     CSS_PATH = "tidal_tui.css"
+    BINDINGS = [("ctrl+q", "quit")]
+
 
     def compose(self) -> ComposeResult:
         with Container(id="tidal"):
