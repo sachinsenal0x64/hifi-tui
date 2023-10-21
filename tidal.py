@@ -17,7 +17,7 @@ import webbrowser
 import base64
 
 
-warnings.filterwarnings(action='once')
+warnings.filterwarnings(action="once")
 warnings.simplefilter("ignore")
 
 
@@ -26,20 +26,19 @@ ytmusic = YTMusic()
 key = Controller()
 
 
-
-
-choice = input("Choose a music source:\n1. YouTube Music\n2. Tidal HiFi\nEnter 1 or 2: ")
+choice = input(
+    "Choose a music source:\n1. YouTube Music\n2. Tidal HiFi\nEnter 1 or 2: "
+)
 
 
 def clear_screen():
-        if os.name == 'nt':
-            os.system('cls')  # Clear the screen on Windows
-        else:
-            os.system('clear')  #
+    if os.name == "nt":
+        os.system("cls")  # Clear the screen on Windows
+    else:
+        os.system("clear")  #
 
 
 if choice == "1":
-
     ask = input("search: ")
 
     # Convert the input into lowercase
@@ -49,26 +48,20 @@ if choice == "1":
 
     print(search_results)
 
+    video_id = search_results[0]["videoId"]
 
+    duration = search_results[0]["duration"]
 
-    video_id = search_results[0]['videoId']
-
-    duration =  search_results[0]['duration']
-
-    song_name = search_results[0]['title']
-
+    song_name = search_results[0]["title"]
 
     play = ytmusic.get_song(video_id)
-    url = play['microformat']['microformatDataRenderer']['urlCanonical']
-
-
+    url = play["microformat"]["microformatDataRenderer"]["urlCanonical"]
 
     # Define the options for yt-dlp
     ydl_opts = {
-        'quiet': True,
-        'format': 'bestaudio/best',
-        'no_warnings': True,
-
+        "quiet": True,
+        "format": "bestaudio/best",
+        "no_warnings": True,
     }
 
     # Create a yt-dlp object and pass in the options
@@ -79,18 +72,12 @@ if choice == "1":
     # Extract the best audio URL from the info
     audio_url = info.get("url")
 
-
-
     # Regular expression to extract the 'dur' parameter value
-    duration_match = re.search(r'dur=([\d.]+)', audio_url)
-
+    duration_match = re.search(r"dur=([\d.]+)", audio_url)
 
     duration_seconds = float(duration_match.group(1))
 
-
     rich.print(duration_seconds)
-
-
 
     def format_time(duration_seconds):
         hours = int(duration_seconds // 3600)
@@ -99,26 +86,29 @@ if choice == "1":
         formatted_duration = f"{minutes:02}:{seconds:02}"
         return formatted_duration
 
-
-
     def update_progress_bar(player, duration_seconds, song_name):
         try:
             formatted_total_duration = format_time(duration_seconds)
             rich.print(f"Total Duration: {formatted_total_duration}")
 
-            with tqdm(total=duration_seconds, ncols=100, bar_format="Now Playing {bar}  {desc}", colour='#3b8b9c') as progress_bar:
+            with tqdm(
+                total=duration_seconds,
+                ncols=100,
+                bar_format="Now Playing {bar}  {desc}",
+                colour="#3b8b9c",
+            ) as progress_bar:
                 while True:
                     current_time_pos = player.time_pos
                     if current_time_pos is not None:
                         formatted_time_pos = format_time(current_time_pos)
                         progress_bar.n = current_time_pos
-                        description = f" {formatted_time_pos}/{formatted_total_duration}"
+                        description = (
+                            f" {formatted_time_pos}/{formatted_total_duration}"
+                        )
                         progress_bar.set_description(description)
                         progress_bar.refresh()
                         if current_time_pos >= duration_seconds:
-                                break
-                    time.sleep(0.1)  # Adjust the sleep interval as needed
-
+                            break
 
         except Exception as e:
             print(f"An error occurred: {e}")
@@ -127,7 +117,6 @@ if choice == "1":
 
 
 if choice == "2":
-
     # we need this api keys for grant tidal auth
     class Hifi:
         def __init__(self, client_id, scope, url, client_secret):
@@ -140,7 +129,6 @@ if choice == "2":
         def Quality(quality):
             rate = {quality: "HI_RES"}
             return rate[quality]
-
 
     # in here we create url for get AccessToken & RefreshToken
     class Auth(Hifi):
@@ -158,14 +146,13 @@ if choice == "2":
             def __str__(self):
                 return str(self.response)
 
-
     if choice == "2":
         authrize = Auth(
-                client_id="zU4XHVVkc2tDPo4t",
-                scope="r_usr+w_usr+w_sub",
-                url="https://auth.tidal.com/v1/oauth2/device_authorization",
-                client_secret="VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4=",
-            )
+            client_id="zU4XHVVkc2tDPo4t",
+            scope="r_usr+w_usr+w_sub",
+            url="https://auth.tidal.com/v1/oauth2/device_authorization",
+            client_secret="VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4=",
+        )
 
     res = authrize.response.json()
 
@@ -204,19 +191,18 @@ if choice == "2":
                 json.dump(accs, file)
                 break
 
-
     with open("token.json", "r") as readfile:
         token = json.loads(readfile.read())
         rich.print(token)
         acs_tok = token["access_token"]
 
-
     url3 = f"https://api.tidal.com/v1/tracks/176696513/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL"
-
 
     header = {"authorization": f"Bearer {acs_tok}"}
 
     res3 = requests.get(url=url3, headers=header)
+
+    rich.print(res3.text)
 
     mani = res3.json()["manifest"]
 
@@ -224,19 +210,28 @@ if choice == "2":
 
     loaddeco = json.loads(decodem)
 
-    audio_url = loaddeco.get('urls')[0]
+    audio_url = loaddeco.get("urls")[0]
 
     print(audio_url)
 
 
-if __name__ == '__main__':
-
+if __name__ == "__main__":
     clear_screen()
 
     # Configure mpv player
-    locale.setlocale(locale.LC_NUMERIC, 'C')
-    player = mpv.MPV(input_default_bindings=True, input_vo_keyboard=True,terminal=True,
-                        input_terminal=True)
+    locale.setlocale(locale.LC_NUMERIC, "C")
+    player = mpv.MPV(
+        input_default_bindings=True,
+        input_vo_keyboard=True,
+        terminal=True,
+        input_terminal=True,
+        really_quiet=False,
+    )
+
+    @player.on_key_press("r")
+    def rep():
+        player.loop = not player.loop
+        print("repeat")
 
     # @player.on_key_press('q')
     # def my_q_binding():
@@ -245,22 +240,11 @@ if __name__ == '__main__':
 
     player.play(audio_url)
 
-
     # Create a separate thread to update the progress bar
-    progress_thread = threading.Thread(target=update_progress_bar, args=(player, duration_seconds,song_name))
-    progress_thread.start()
+    progress_thread = threading.Thread(
+        target=update_progress_bar, args=(player, duration_seconds, song_name)
+    )
 
+    progress_thread.start()
     player.wait_for_playback()
     progress_thread.join()
-
-
-
-
-
-
-
-
-
-
-
-
