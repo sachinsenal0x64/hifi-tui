@@ -28,3 +28,6 @@
 
 - 🕹 QUALITY SWITCH (SOME QUALITIES DEPEND ON HARDWARES|DRIVERS AND SONGS)
 
+## License
+
+This project is licensed under the terms of the MIT license.
