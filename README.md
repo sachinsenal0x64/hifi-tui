@@ -6,7 +6,7 @@
 
 <h4 align="center"> 🎵 TIDAL| YT Music| PODCAST| PLAYER in TUI</h4>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
 
 
 <br><br>
