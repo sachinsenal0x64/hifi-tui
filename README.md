@@ -4,9 +4,10 @@
         
 </div>
 
+<h4 align="center"> 🎵 TIDAL| YT Music| PODCAST| PLAYER in TUI</h4>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
-<h4 align="center"> 🎵 TIDAL| YT Music| PODCAST| PLAYER in TUI</h4>
 
 <br><br>
 
