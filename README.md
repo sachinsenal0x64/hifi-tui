@@ -1,12 +1,12 @@
 <div align="center">
         <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum">        
         <h1>HIFI TUI (WIP)</h1>
-
+        
 </div>
 
-<h4 align="center"> 🎵 TIDAL| YT Music| PODCAST| PLAYER in TUI</h4>
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<h4 align="center"> 🎵 TIDAL| YT Music| PODCAST| PLAYER in TUI</h4>
 
 <br><br>
 
