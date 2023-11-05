@@ -19,17 +19,17 @@
 > Certain Qualities Depend on Hardwares, Drivers and Songs
 <br>
 
-- 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓     (⭕ in progress)
+- 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
-- 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI     (⭕ in progress)
+- 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI       (⭕ in progress)
 
-- 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT  (⭕ in progress)
+- 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT    (⭕ in progress)
 
-- 📀 AUDIO QUALITY: HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz  (⭕ in progress)
+- 📀 AUDIO QUALITY: HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz
 
-- 🕹 QUALITY SWITCH  (⭕ in progress)
+- 🕹 QUALITY SWITCH   (⭕ in progress)
 
 <br>
 
