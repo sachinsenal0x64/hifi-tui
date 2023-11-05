@@ -31,6 +31,8 @@
 
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
+- 📡 REST API (⭕ in progress)
+
 <br>
 
 ## Contributing
