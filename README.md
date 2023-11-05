@@ -21,7 +21,7 @@
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  (⭕ in progress)
   
-- 👤 OWN TIDAL ACCOUNTS MANAGEMENT  (⭕ in progress)
+- 👤 TIDAL ACCOUNTS MANAGEMENT 
 
 - 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
 
