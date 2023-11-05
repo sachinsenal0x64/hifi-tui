@@ -17,9 +17,7 @@
 # 🚀 Features
 
 > Some Qualities are Depend on Hardware, Drivers and Songs
-
 <br>
-
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓
   
 - 👤 OWN TIDAL ACCOUNTS MANAGEMENT
