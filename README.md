@@ -16,6 +16,10 @@
 
 # 🚀 Features
 
+> Some Qualities are Depend on Hardware, Drivers and Songs
+
+<br>
+
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓
   
 - 👤 OWN TIDAL ACCOUNTS MANAGEMENT
@@ -26,7 +30,7 @@
 
 - 📀 AUDIO QUALITY: HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz
 
-- 🕹 QUALITY SWITCH (SOME QUALITIES DEPEND ON HARDWARES|DRIVERS AND SONGS)
+- 🕹 QUALITY SWITCH 
 
 ## License
 
