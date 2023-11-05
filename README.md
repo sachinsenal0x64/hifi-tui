@@ -35,12 +35,12 @@
 
 <br>
 
-## Contributing
+## 🏗️ Contributing
 
 We need volunteers who have Tidal subscriptions because we might get banned by Tidal. And Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
 
 <br>
 
-## License
+## ⚖️ License
 
 This project is licensed under the terms of the MIT license.
