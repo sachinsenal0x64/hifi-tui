@@ -40,7 +40,7 @@
 > BluePrint
 <br>
 
-![image](https://github.com/sachinsenal0x64/HIFI-TUI/assets/127573781/43814d48-a3e4-4555-b51f-f6e368d3e42e)
+![2023-11-06_18-00](https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/20230518/2023-11-06_18-00.1hogs2wpua5.webp)
 
 
 We need volunteers who have Tidal subscriptions because we might get banned by Tidal. And Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
