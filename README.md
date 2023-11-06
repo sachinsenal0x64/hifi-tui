@@ -43,7 +43,8 @@
 ![2023-11-06_18-06](https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/20230518/2023-11-06_18-06.28cw0dd4lm80.webp)
 
 
-We need volunteers who have Tidal subscriptions because we might get banned by Tidal. And Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
+- We need volunteers who have Tidal subscriptions because we might get banned by Tidal. And Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
+- Before send PR first open issue
 
 <br>
 
