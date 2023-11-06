@@ -45,7 +45,7 @@
 
 - We need volunteers who have Tidal subscriptions because we might get banned by Tidal. And Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
   
-- Before send PR first open issue
+- Before send PR first open a issue
 
 <br>
 
