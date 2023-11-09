@@ -33,7 +33,7 @@
 
 - 📡 REST API (⭕ in progress)
 
-- ⚖️ LOAD BALANCER
+- ⚖️ LAYER 7 LOAD BALANCER
 
 <br>
 
