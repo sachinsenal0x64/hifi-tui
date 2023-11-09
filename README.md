@@ -33,6 +33,8 @@
 
 - 📡 REST API (⭕ in progress)
 
+- ⚖️ LOAD BALANCER
+
 <br>
 
 ## 🏗️ Contributing
