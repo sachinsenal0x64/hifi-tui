@@ -42,7 +42,7 @@
 > Workflow Diagram
 <br>
 
-![2023-11-06_18-12](https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/20230518/2023-11-06_18-12.3e2uxdyepxa8.webp)
+![2023-11-06_18-12](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/2023-11-08_23-58.220qxiet1zkw.png)
 
 
 - We need volunteers who have Tidal subscriptions because we might get banned by Tidal. And Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
