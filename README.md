@@ -1,6 +1,6 @@
 <div align="center">
         <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum">        
-        <h1>Hifi Tui (WIP)</h1>
+        <h1>HIFI TUI (WIP)</h1>
         
 </div>
 
