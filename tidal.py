@@ -98,6 +98,7 @@ if choice == "1":
                 bar_format="Now Playing [{bar}]  {desc}",
                 colour="#3b8b9c",
                 ascii=True,
+                leave=None,
             ) as progress_bar:
                 while True:
                     current_time_pos = player.time_pos
