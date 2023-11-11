@@ -99,18 +99,17 @@ if choice == "1":
                 colour="#3b8b9c",
                 ascii=True,
             ) as progress_bar:
-                with nostdout():
-                    while True:
-                        current_time_pos = player.time_pos
-                        if current_time_pos is not None:
-                            remaining_time = duration_seconds - player.time_pos
-                            formatted_time_pos = format_time(current_time_pos)
-                            progress_bar.n = current_time_pos
-                            description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
-                            progress_bar.set_description(description)
-                            progress_bar.refresh()
-                            if current_time_pos >= duration_seconds:
-                                break
+                while True:
+                    current_time_pos = player.time_pos
+                    if current_time_pos is not None:
+                        remaining_time = duration_seconds - player.time_pos
+                        formatted_time_pos = format_time(current_time_pos)
+                        progress_bar.n = current_time_pos
+                        description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
+                        progress_bar.set_description(description)
+                        progress_bar.refresh()
+                        if current_time_pos >= duration_seconds:
+                            break
 
         except Exception as e:
             print(f"An error occurred: {e}")
