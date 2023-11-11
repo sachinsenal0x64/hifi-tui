@@ -100,11 +100,10 @@ if choice == "1":
                 while True:
                     current_time_pos = player.time_pos
                     if current_time_pos is not None:
+                        remaining_time = duration_seconds - player.time_pos
                         formatted_time_pos = format_time(current_time_pos)
                         progress_bar.n = current_time_pos
-                        description = (
-                            f" {formatted_time_pos}/{formatted_total_duration}"
-                        )
+                        description = f" {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
                         progress_bar.set_description(description)
                         progress_bar.refresh()
                         if current_time_pos >= duration_seconds:
