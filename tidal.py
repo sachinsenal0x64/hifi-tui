@@ -1,6 +1,8 @@
 from ytmusicapi import YTMusic
+import sys
 import rich
 import mpv
+import contextlib
 import time
 import locale
 from pynput.keyboard import Key, Controller
@@ -29,6 +31,26 @@ key = Controller()
 choice = input(
     "Choose a music source:\n1. YouTube Music\n2. Tidal HiFi\nEnter 1 or 2: "
 )
+
+
+class DummyFile(object):
+    file = None
+
+    def __init__(self, file):
+        self.file = file
+
+    def write(self, x):
+        # Avoid print() second call (useless \n)
+        if len(x.rstrip()) > 0:
+            tqdm.write(x, file=self.file)
+
+
+@contextlib.contextmanager
+def nostdout():
+    save_stdout = sys.stdout
+    sys.stdout = DummyFile(sys.stdout)
+    yield
+    sys.stdout = save_stdout
 
 
 def clear_screen():
@@ -96,18 +118,21 @@ if choice == "1":
                 ncols=100,
                 bar_format="Now Playing {bar}  {desc}",
                 colour="#3b8b9c",
+                dynamic_ncols=True,
+                file=sys.stdout,
             ) as progress_bar:
-                while True:
-                    current_time_pos = player.time_pos
-                    if current_time_pos is not None:
-                        remaining_time = duration_seconds - player.time_pos
-                        formatted_time_pos = format_time(current_time_pos)
-                        progress_bar.n = current_time_pos
-                        description = f" {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
-                        progress_bar.set_description(description)
-                        progress_bar.refresh()
-                        if current_time_pos >= duration_seconds:
-                            break
+                with nostdout():
+                    while True:
+                        current_time_pos = player.time_pos
+                        if current_time_pos is not None:
+                            remaining_time = duration_seconds - player.time_pos
+                            formatted_time_pos = format_time(current_time_pos)
+                            progress_bar.n = current_time_pos
+                            description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
+                            progress_bar.set_description(description)
+                            progress_bar.refresh()
+                            if current_time_pos >= duration_seconds:
+                                break
 
         except Exception as e:
             print(f"An error occurred: {e}")
