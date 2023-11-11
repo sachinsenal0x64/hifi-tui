@@ -95,10 +95,10 @@ if choice == "1":
 
             with tqdm(
                 total=duration_seconds,
-                bar_format="Now Playing [{bar}]  {desc}",
+                bar_format=f" [Song] [{{bar}}] {{desc}}",
                 colour="#3b8b9c",
                 ascii=True,
-                leave=None,
+                leave=True,
             ) as progress_bar:
                 while True:
                     current_time_pos = player.time_pos
@@ -106,9 +106,9 @@ if choice == "1":
                         remaining_time = duration_seconds - player.time_pos
                         formatted_time_pos = format_time(current_time_pos)
                         progress_bar.n = current_time_pos
-                        description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
+                        description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)} )"
                         progress_bar.set_description(description)
-                        if current_time_pos >= duration_seconds:
+                        if float(current_time_pos) >= float(duration_seconds):
                             break
                 progress_bar.refresh()
 
@@ -238,12 +238,10 @@ if __name__ == "__main__":
     @player.on_key_press("UP")
     def increase_volume():
         player.volume += 5
-        print(f"Volume increased to: {player.volume}%")
 
     @player.on_key_press("DOWN")
     def decrease_volume():
         player.volume -= 5
-        print(f"Volume decreased to: {player.volume}%")
 
     # @player.on_key_press('q')
     # def my_q_binding():
