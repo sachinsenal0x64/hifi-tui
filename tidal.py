@@ -107,9 +107,9 @@ if choice == "1":
                         progress_bar.n = current_time_pos
                         description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
                         progress_bar.set_description(description)
-                        progress_bar.refresh()
                         if current_time_pos >= duration_seconds:
                             break
+                progress_bar.refresh()
 
         except Exception as e:
             print(f"An error occurred: {e}")
