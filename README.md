@@ -4,7 +4,7 @@
         
 </div>
 
-<h4 align="center"> 🎵 TIDAL| YT Music| PODCAST| PLAYER in TUI</h4>
+<h4 align="center"> 🎵 Tidal| Youtube Music| Podcast| Player in Tui</h4>
 
 <div align="center">
         
@@ -16,7 +16,7 @@
 
 # 🚀 Features
 
-> Certain Qualities Depend on Hardwares, Drivers and Songs
+> Certain Qualities Depend on Hardwares, Drivers and Song itself
 <br>
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
@@ -33,6 +33,8 @@
 
 - 📡 REST API (⭕ in progress)
 
+- ⚖️ LAYER 7 LOAD BALANCER
+
 <br>
 
 ## 🏗️ Contributing
@@ -40,7 +42,7 @@
 > Workflow Diagram
 <br>
 
-![2023-11-06_18-12](https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/20230518/2023-11-06_18-12.3e2uxdyepxa8.webp)
+![2023-11-06_18-12](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/2023-11-08_23-58.220qxiet1zkw.png)
 
 
 - We need volunteers who have Tidal subscriptions because we might get banned by Tidal. And Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
@@ -49,6 +51,6 @@
 
 <br>
 
-## ⚖️ License
+## 👩‍⚖️ License
 
 This project is licensed under the terms of the MIT license.
