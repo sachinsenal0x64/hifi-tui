@@ -232,6 +232,16 @@ if __name__ == "__main__":
         player.loop = not player.loop
         print("repeat")
 
+    @player.on_key_press("UP")
+    def increase_volume():
+        player.volume += 5
+        print(f"Volume increased to: {player.volume}%")
+
+    @player.on_key_press("DOWN")
+    def decrease_volume():
+        player.volume -= 5
+        print(f"Volume decreased to: {player.volume}%")
+
     # @player.on_key_press('q')
     # def my_q_binding():
     #     player.pause = not player.pause
