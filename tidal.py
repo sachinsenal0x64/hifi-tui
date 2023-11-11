@@ -33,26 +33,6 @@ choice = input(
 )
 
 
-class DummyFile(object):
-    file = None
-
-    def __init__(self, file):
-        self.file = file
-
-    def write(self, x):
-        # Avoid print() second call (useless \n)
-        if len(x.rstrip()) > 0:
-            tqdm.write(x, file=self.file)
-
-
-@contextlib.contextmanager
-def nostdout():
-    save_stdout = sys.stdout
-    sys.stdout = DummyFile(sys.stdout)
-    yield
-    sys.stdout = save_stdout
-
-
 def clear_screen():
     if os.name == "nt":
         os.system("cls")  # Clear the screen on Windows
@@ -115,11 +95,9 @@ if choice == "1":
 
             with tqdm(
                 total=duration_seconds,
-                ncols=100,
-                bar_format="Now Playing {bar}  {desc}",
+                bar_format="Now Playing [{bar}]  {desc}",
                 colour="#3b8b9c",
-                dynamic_ncols=True,
-                file=sys.stdout,
+                ascii=True,
             ) as progress_bar:
                 with nostdout():
                     while True:
@@ -249,7 +227,7 @@ if __name__ == "__main__":
         input_vo_keyboard=True,
         terminal=True,
         input_terminal=True,
-        really_quiet=False,
+        really_quiet=True,
     )
 
     @player.on_key_press("r")
