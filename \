@@ -4,7 +4,6 @@ import rich
 import mpv
 import time
 import locale
-from rich.progress import track, Progress
 from pynput.keyboard import Key, Controller
 import re
 from tqdm import tqdm
@@ -17,11 +16,6 @@ from requests.auth import HTTPBasicAuth
 import json
 import webbrowser
 import base64
-from textual.app import App, ComposeResult
-from rich.progress import track
-from textual.containers import Center, Middle
-from textual.timer import Timer
-from textual.widgets import Footer, ProgressBar
 
 
 warnings.filterwarnings(action="once")
@@ -100,31 +94,25 @@ if choice == "1":
             formatted_total_duration = format_time((duration_seconds))
             rich.print(f"Total Duration: {formatted_total_duration}")
 
-            with Progress() as progress:
-                task = progress.add_task(
-                    "[cyan] Processing...", total=float(duration_seconds)
-                )
-
+            with tqdm(
+                total=duration_seconds,
+                bar_format=f" [Song] [{{bar}}] {{desc}}",
+                colour="#3b8b9c",
+                ascii=True,
+            ) as progress_bar:
                 while duration_seconds:
-                    progress.update(task, completed=player.time_pos)
-
-            # with tqdm(
-            #     total=duration_seconds,
-            #     bar_format=f"[Song] [{{bar}}] {{desc}}",
-            #     colour="#3b8b9c",
-            #     ascii=" |",
-            # ) as progress_bar:
-            #     while duration_seconds:
-            #         current_time_pos = player.time_pos
-            #         if current_time_pos is not None:
-            #             remaining_time = duration_seconds - player.time_pos
-            #             formatted_time_pos = format_time(current_time_pos)
-            #             progress_bar.n = current_time_pos
-            #             description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
-            #             progress_bar.set_description(description, refresh=True)
+                    current_time_pos = player.time_pos
+                    if current_time_pos is not None:
+                        remaining_time = duration_seconds - player.time_pos
+                        formatted_time_pos = format_time(current_time_pos)
+                        progress_bar.n = current_time_pos
+                        description = f" [ {'Pause' if player.pause else 'Play'} ] {formatted_time_pos}/{formatted_total_duration} ({format_time(remaining_time)})"
+                        progress_bar.set_description(description, refresh=True)
+                    if None in current_time_pos:
+                        continue
 
         except Exception as e:
-            print(f"Error {e}")
+            pass
         finally:
             player.terminate()
 

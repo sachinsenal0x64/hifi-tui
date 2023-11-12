@@ -1,0 +1,8 @@
+Choose a music source:
+1. YouTube Music
+2. Tidal HiFi
+Enter 1 or 2: Traceback (most recent call last):
+  File "/mnt/home/GITHUB/HIFI-TUI/tidal.py", line 31, in <module>
+    choice = input(
+             ^^^^^^
+EOFError: EOF when reading a line
