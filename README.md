@@ -14,7 +14,7 @@
 
 <br><br>
 
-> 🥳 Join the community: [Discord](https://discord.gg/52CdKn7q)
+> 🍻 Join the community: [Discord](https://discord.gg/52CdKn7q)
 
 <br>
 
