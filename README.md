@@ -22,7 +22,6 @@
 
 > Certain Qualities Depend on Hardwares, Drivers and Song itself
 <br>
-
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
