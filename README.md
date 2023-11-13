@@ -20,7 +20,7 @@
 
 # 🚀 Features
 
-> Certain Qualities Depend on Hardwares, Drivers and Song itself
+> Certain Qualities Depend on Hardwares, Drivers and Song itself.
 <br>
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
   
