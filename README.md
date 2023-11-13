@@ -14,6 +14,10 @@
 
 <br><br>
 
+> Join the community: [Discord](https://discord.gg/52CdKn7q)
+
+<br>
+
 # 🚀 Features
 
 > Certain Qualities Depend on Hardwares, Drivers and Song itself
@@ -36,6 +40,7 @@
 - ⚖️ LAYER 7 LOAD BALANCER
 
 <br>
+
 
 ## 🏗️ Contributing
 
