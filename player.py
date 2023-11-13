@@ -34,7 +34,7 @@ class IndeterminateProgressBar(App[None]):
         )
 
         player.play(
-            "https://rr3---sn-npoe7nz7.googlevideo.com/videoplayback?expire=1699822618&ei=uudQZZLpI4rSjMwPxdyf0Ag&ip=168.138.165.25&id=o-ADGfCO95m-AVR2pu8baB02S7dXGu9ojDNtoBBtd2-ZGE&itag=251&source=youtube&requiressl=yes&mh=z-&mm=31%2C26&mn=sn-npoe7nz7%2Csn-oguelnsy&ms=au%2Conr&mv=m&mvi=3&pl=26&initcwndbps=2101250&spc=UWF9fxXh4i6MvzRZCWBsR1x1bAMMQYE&vprv=1&svpuc=1&mime=audio%2Fwebm&gir=yes&clen=4437319&dur=279.701&lmt=1696617536736693&mt=1699800546&fvip=3&keepalive=yes&fexp=24007246&beids=24350018&c=ANDROID&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRQIgU8AZonXELjktkqRnxAsmQ-extMpZ4FpDfctequ62jwECIQCWEAfgHnCaaq2o2-d98MzQTRszfRhywd6qbOcp6AFQWw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AM8Gb2swRAIgSrK5HJcXi9i9UasprO0RdrrNm2V1Uk_0yTtoHvO0rq4CICUo1syDpzrhYT5qQMycknK96h8VEhWD8jifob8cgRGi"
+             ""        
         )
         self.progress_timer.resume()
 
