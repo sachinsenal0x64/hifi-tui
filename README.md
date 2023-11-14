@@ -14,7 +14,7 @@
 
 <br><br>
 
-> 🍻 Join the community: [Reddit](https://www.reddit.com/r/hifitui)  & [Discord](https://discord.gg/EbfftZ5Dd4)
+> 🍻 Join the community: [Reddit](https://www.reddit.com/r/hifitui)  & [Discord](https://discord.gg/EbfftZ5Dd4) [](https://github.com/sachinsenal0x64/Hifi-Tui/blob/86ace8d7bfb8fd0776f7b26c68174a1eea09b5df/docs/images/discord.png)
 
 <br>
 
