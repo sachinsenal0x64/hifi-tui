@@ -1,14 +1,12 @@
 <div style="display: flex; align-items: center; justify-content: center; text-align: center;">
 
-<div style="text-align: left;">
-        <img src="https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/8788cb17-35f3-4a55-9fc6-42aca33c7de1" alt="Lady Lilith Cropped">
-    </div>
-
-<div>
-        <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum" align="center">        
-        <h1>HIFI TUI (WIP)</h1>
-    </div>
-
+ <div style="text-align: left;">
+        <img src="https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/8788cb17-35f3-4a55-9fc6-42aca33c7de1" alt="Lady Lilith">
+        
+   <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum" align="center">        
+        <h1 align="center">HIFI TUI (WIP)</h1>
+        
+ </div>
 </div>
 
 <h4 align="center"> 🎵 Tidal| Youtube Music| Podcast| Player in Tui</h4>
