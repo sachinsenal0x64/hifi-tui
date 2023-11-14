@@ -1,9 +1,9 @@
 
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum" align="center">  
+<img src="https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/Lady-Lilith_cropped.2pn2zuwn7zuo.webp" alt="Lady Lilith"  align="center">
 
-<img src="https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/8788cb17-35f3-4a55-9fc6-42aca33c7de1" alt="Lady Lilith"  align="center">
+<img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum" align="center">  
 
 </div>
 
