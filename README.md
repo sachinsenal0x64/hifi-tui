@@ -9,12 +9,13 @@
         alt="Audio Spectrum"
         align="left"> 
 
+<h4 align="center"> 🎵 Tidal| Youtube Music| Podcast| Player in Tui</h4>
+
 </div>
 
 
 
 
-<h4 align="center"> 🎵 Tidal| Youtube Music| Podcast| Player in Tui</h4>
 
 <div align="center">
         
