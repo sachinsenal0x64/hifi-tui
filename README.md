@@ -1,15 +1,16 @@
-<div style="display: flex; align-items: center; justify-content: center; text-align: center;">
+<div style="center">
 
-<div style="text-align: right;">
-        <img src="https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/8788cb17-35f3-4a55-9fc6-42aca33c7de1" alt="Lady Lilith Cropped">
-    </div>
-
-<div>
-        <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum">        
-        <h1>HIFI TUI (WIP)</h1>
-    </div>
+<img src= 
+"https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif"
+        alt="Lilith"
+        align="right"> 
+    <img src= 
+"https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/8788cb17-35f3-4a55-9fc6-42aca33c7de1" alt="Lady Lilith Cropped"
+        alt="Audio Spectrum"
+        align="left"> 
 
 </div>
+
 
 
 
