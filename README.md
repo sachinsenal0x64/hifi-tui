@@ -14,7 +14,7 @@
 
 <br><br>
 
-> 🍻 Join the community:  ![Reddit](https://www.reddit.com/r/hifitui)  & ![Discord](https://discord.gg/EbfftZ5Dd4) [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/discord.72y8nlaw5mdc.webp)](https://discord.gg/EbfftZ5Dd4)
+> 🍻 Join the community: [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/reddit.4vrlxbdj6mww.webp)](https://www.reddit.com/r/hifitui) ![Reddit](https://www.reddit.com/r/hifitui)  & ![Discord](https://discord.gg/EbfftZ5Dd4) [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/discord.72y8nlaw5mdc.webp)](https://discord.gg/EbfftZ5Dd4)
 
 <br>
 
