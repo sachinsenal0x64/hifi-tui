@@ -8,15 +8,15 @@
 
 <div align="center">
         
-  [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)  [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/reddit(1).4iicqsrtq6m8.webp)](https://www.reddit.com/r/hifitui) [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/discord.72y8nlaw5mdc.webp)](https://discord.gg/EbfftZ5Dd4)
  
   
 </div>
 
 <br><br>
 
-> 🍻 Join the community: ![Reddit](https://www.reddit.com/r/hifitui) & ![Discord](https://discord.gg/EbfftZ5Dd4) [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/discord.72y8nlaw5mdc.webp)](https://discord.gg/EbfftZ5Dd4)
- [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/reddit(1).4iicqsrtq6m8.webp)](https://www.reddit.com/r/hifitui)
+> 🍻 Join the community: ![Reddit](https://www.reddit.com/r/hifitui) & ![Discord](https://discord.gg/EbfftZ5Dd4)
+ 
 <br>
 
 # 🚀 Features
