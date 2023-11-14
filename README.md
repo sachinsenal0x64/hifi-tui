@@ -1,10 +1,13 @@
 
 <div align="center">
 
+ <p align="center">
+   
   <a href="https://en.wikipedia.org/wiki/Lilith" target="_blank"><img src="https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/Lady-Lilith_cropped.2pn2zuwn7zuo.webp" alt="Lady Lilith"  align="center"></a>
 
-  <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum" align="center">  
-
+  <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum" align="center"> 
+  
+</p>
 </div>
 
 <h1 align="center"> HIFI TUI (WIP)</h1>
