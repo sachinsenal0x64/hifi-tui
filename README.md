@@ -1,5 +1,6 @@
 <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/PICX-IMAGE-HOSTING@master/ledstrip.3024rqxzahq0.gif"
 width="1800"  height="3">
+
 <div align="center">
 
  <p align="center">
@@ -9,6 +10,9 @@ width="1800"  height="3">
   
 </p>
 </div>
+
+<img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/PICX-IMAGE-HOSTING@master/ledstrip.3024rqxzahq0.gif"
+width="1800"  height="3">
 
 <h1 align="center"> HIFI TUI (WIP)</h1>
 
