@@ -26,7 +26,16 @@ async def auth():
     async with httpx.AsyncClient() as client:
         res = await client.post(url=url, data=payload)
 
-    return res.json()
+        access_token = res.json()["access_token"]
+        expires_in = res.json()["expires_in"]
+        token_type = res.json()["token_type"]
+        out_res = {
+            "access_token": access_token,
+            "expires_in": expires_in,
+            "token_type": token_type,
+        }
+
+    return out_res
 
 
 @app.api_route("/auth", methods=["GET"])
