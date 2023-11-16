@@ -54,6 +54,8 @@ width="1800"  height="3">
 
 - ⚖️ LAYER 7 LOAD BALANCER
 
+- ⚡️ Async 
+
 <br>
 
 
