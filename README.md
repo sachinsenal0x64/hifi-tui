@@ -16,7 +16,7 @@ width="1800"  height="3">
 
 <h1 align="center"> HIFI TUI (WIP)</h1>
 
-<h4 align="center"> 🎵 Tidal Reverse Proxy & TUI With Extra Batteries </h4>
+<h4 align="center"> 🎵 Tidal Reverse Proxy & TUI With Extra Batteries. </h4>
 
 <div align="center">
         
