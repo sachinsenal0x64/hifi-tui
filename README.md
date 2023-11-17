@@ -40,6 +40,8 @@ width="1800"  height="3">
 
 > I'm Currently Paying For a Tidal-Hifi-Plus Subscription.
 
+> Sometimes, emulation may not work, especially for Dolby Atmos btw i will try my best.
+
 <br>
 
 # 🚀 Features
