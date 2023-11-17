@@ -46,9 +46,7 @@ async def get_token():
 
 
 async def main():
-    config = uvicorn.Config(
-        "main:app", port=5000, log_level="info", loop="asyncio", reload=True
-    )
+    config = uvicorn.Config("main:app", port=5000, log_level="info", reload=True)
     server = uvicorn.Server(config)
     await server.serve()
 
