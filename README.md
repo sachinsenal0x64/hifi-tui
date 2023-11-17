@@ -48,19 +48,19 @@ width="1800"  height="3">
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
-- 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI       (⭕ in progress)
+- 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
 
-- 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT    (⭕ in progress)
+- 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT (⭕ in progress)
 
 - 📀 AUDIO QUALITY: HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz
 
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
-- 📡 REST API (⭕ in progress)
+- 📡 REST API (ACT AS REVERSE PROXY INSTANCE) (⭕ in progress)
 
-- ⚖️ LAYER 7 LOAD BALANCER
+- ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY)
 
-- ⚡️ ASYNC 
+- ⚡️ ASYNC SUPPORT
 
 <br>
 
