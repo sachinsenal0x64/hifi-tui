@@ -50,7 +50,7 @@ async def main():
         "main:app", port=5000, log_level="info", loop="asyncio", reload=True
     )
     server = uvicorn.Server(config)
-    await server.server()
+    await server.serve()
 
 
 if __name__ == "__main__":
