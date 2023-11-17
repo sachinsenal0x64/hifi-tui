@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import os
 import asyncio
 
+
 app = FastAPI()
 
 load_dotenv()
@@ -39,14 +40,13 @@ async def auth():
     return out_res
 
 
-@app.api_route("/auth", methods=["GET"])
-async def get_token():
-    token = await auth()
-    return token
+@app.api_route("/", methods=["GET"])
+async def index():
+    return {"HIFI-API": "v1", "REPO": "https://github.com/sachinsenal0x64/Hifi-Tui"}
 
 
 async def main():
-    config = uvicorn.Config("main:app", port=5000, log_level="info", reload=True)
+    config = uvicorn.Config("main:app", port=5000, log_level="trace", reload=True)
     server = uvicorn.Server(config)
     await server.serve()
 
