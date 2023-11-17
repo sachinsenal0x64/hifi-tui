@@ -38,7 +38,7 @@ width="1800"  height="3">
 
 > Certain Qualities May Depend on Hardwares, Drivers and Song itself.
 
-> I'm Currently Pay For Tidal-Hifi-Plus Subscription.
+> I'm Currently Paying For a Tidal-Hifi-Plus Subscription.
 
 <br>
 
