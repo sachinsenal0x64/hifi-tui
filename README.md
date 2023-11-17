@@ -36,7 +36,7 @@ width="1800"  height="3">
 
 # 🚀 Features
 
-> Certain Qualities Depend on Hardwares, Drivers and Song itself.
+> Certain Qualities Depend on Hardwares, Drivers and Song itself and I'm Currently Pay For Tidal-Hifi-Plus.
 <br>
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
@@ -70,7 +70,7 @@ width="1800"  height="3">
 
 - Before send PR first open a issue.
   
-- We need volunteers who have Tidal subscriptions because we might get banned by Tidal (I'm Currently Pay For Tidal-Hifi-Plus).
+- We need volunteers who have Tidal subscriptions because we might get banned by Tidal.
 
 - Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
   
