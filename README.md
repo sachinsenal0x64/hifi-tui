@@ -36,7 +36,7 @@ width="1800"  height="3">
 
 # 📌 NOTE
 
-> Certain Qualities May Depend on Hardwares, Drivers and Song itself.
+> Certain Qualities May Depend on Hardwares, Drivers and the Song itself.
 
 > I'm Currently Paying For a Tidal-Hifi-Plus Subscription.
 
