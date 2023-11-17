@@ -36,11 +36,9 @@ width="1800"  height="3">
 
 # 📌 NOTE
 
-> Certain Qualities May Depend on Hardwares, Drivers and the Song itself.
-
-> I'm Currently Paying For a Tidal-Hifi-Plus Subscription.
-
-> Sometimes, emulation may not work, especially for Dolby Atmos & Sony 360 Reality Audio btw i will try my best.
+> Certain qualities may depend on hardware, drivers, and the song itself.
+> I'm currently paying for a Tidal HiFi Plus subscription.
+> Sometimes, emulation may not work, especially for Dolby Atmos and Sony 360 Reality Audio. By the way, I will try my best.
 
 <br>
 
