@@ -34,12 +34,15 @@ width="1800"  height="3">
  
 <br>
 
-# 🚀 Features
+# 📌 NOTE
 
 > Certain Qualities May Depend on Hardwares, Drivers and Song itself.
 
 > I'm Currently Pay For Tidal-Hifi-Plus Subscription.
+
 <br>
+
+# 🚀 Features
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
   
