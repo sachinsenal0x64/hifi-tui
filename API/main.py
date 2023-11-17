@@ -3,6 +3,7 @@ import uvicorn
 import httpx
 from dotenv import load_dotenv
 import os
+import asyncio
 
 app = FastAPI()
 
@@ -45,4 +46,8 @@ async def get_token():
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=5000, log_level="info", reload=True)
+    asyncio.run(
+        uvicorn.run(
+            "main:app", port=5000, log_level="info", loop="asyncio", reload=True
+        )
+    )
