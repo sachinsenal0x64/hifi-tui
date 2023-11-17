@@ -45,9 +45,13 @@ async def get_token():
     return token
 
 
-if __name__ == "__main__":
-    asyncio.run(
-        uvicorn.run(
-            "main:app", port=5000, log_level="info", loop="asyncio", reload=True
-        )
+async def main():
+    config = uvicorn.Config(
+        "main:app", port=5000, log_level="info", loop="asyncio", reload=True
     )
+    server = uvicorn.Server(config)
+    await server.server()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
