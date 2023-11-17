@@ -70,7 +70,7 @@ width="1800"  height="3">
 
 - Before send PR first open a issue.
   
-- We need volunteers who have Tidal subscriptions because we might get banned by Tidal.
+- We need volunteers who have Tidal subscriptions because we might get banned by Tidal (I'm Currently Pay For Tidal-Hifi-Plus).
 
 - Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
   
