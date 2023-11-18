@@ -47,7 +47,7 @@ width="1800"  height="3">
 
 # 🚀 Features
 
-- 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
+- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)  🆓  
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
