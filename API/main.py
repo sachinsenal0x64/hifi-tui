@@ -1,10 +1,12 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 import uvicorn
 import httpx
 from dotenv import load_dotenv
 import os
 import asyncio
-
+from typing import Annotated
+import base64
+import json
 
 app = FastAPI()
 
@@ -12,6 +14,7 @@ load_dotenv()
 
 client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
+tidal_token = os.getenv("TIDAL_TOKEN")
 
 
 async def auth():
@@ -40,9 +43,40 @@ async def auth():
     return out_res
 
 
+async def track():
+    auths = await auth()
+    access_token = auths.get("access_token")
+    return access_token
+
+
 @app.api_route("/", methods=["GET"])
 async def index():
     return {"HIFI-API": "v1", "REPO": "https://github.com/sachinsenal0x64/Hifi-Tui"}
+
+
+@app.api_route("/track/", methods=["GET"])
+async def get_track(
+    id: int,
+    quality: str,
+    country: Annotated[str | None, Query(max_length=3)] = None,
+):
+    token = await track()
+    track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
+
+    payload = {
+        "authorization": f"Bearer {tidal_token}",
+    }
+
+    print(token)
+    async with httpx.AsyncClient() as client:
+        track_data = await client.get(url=track_url, headers=payload)
+
+        final_data = track_data.json()["manifest"]
+        decode_manifest = base64.b64decode(final_data)
+        con_json = json.loads(decode_manifest)
+        audio_url = con_json.get("urls")[0]
+
+    return track_data.json(), {"originalTrack": audio_url}
 
 
 async def main():

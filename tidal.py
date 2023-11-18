@@ -209,7 +209,7 @@ if choice == "2":
         rich.print(token)
         acs_tok = token["access_token"]
 
-    url3 = f"https://api.tidal.com/v1/tracks/176696513/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL"
+    url3 = f"https://api.tidal.com/v1/tracks/286266926/playbackinfopostpaywall/v4?audioquality=LOSSLESS&playbackmode=STREAM&assetpresentation=FULL"
 
     header = {"authorization": f"Bearer {acs_tok}"}
 
@@ -229,7 +229,7 @@ if choice == "2":
 
 
 if __name__ == "__main__":
-    clear_screen()
+    # clear_screen()
 
     # Configure mpv player
     locale.setlocale(locale.LC_NUMERIC, "C")
