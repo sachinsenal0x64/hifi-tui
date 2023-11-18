@@ -67,6 +67,10 @@ width="1800"  height="3">
 
 `GET /track/`
 
+`id = Track ID EX:286266926`
+
+`quality = HI_RES or LOSSLESS or HIGH or LOW`
+
 >HTTPie
 
     https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
