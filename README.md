@@ -59,7 +59,7 @@ width="1800"  height="3">
 
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
-- 📡 REST API (ACT AS REVERSE PROXY INSTANCE) (⭕ in progress)
+- 📡 REST API (ACT AS REVERSE PROXY INSTANCE) (🟡 Usable)
 
 - ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY)
 
