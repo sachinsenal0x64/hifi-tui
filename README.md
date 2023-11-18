@@ -49,13 +49,13 @@ width="1800"  height="3">
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)  🆓  
   
+- 📀 AUDIO QUALITY: HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz
+  
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
 - 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
 
 - 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT (⭕ in progress)
-
-- 📀 AUDIO QUALITY: HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz
 
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
