@@ -67,7 +67,7 @@ width="1800"  height="3">
 
 `GET /track/`
 
-`Query = id & quality`
+`Query Params = id & quality`
 
 `id = Track ID EX:286266926`
 
