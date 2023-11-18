@@ -36,8 +36,6 @@ width="1800"  height="3">
 
 # 📌 NOTE
 
-> Certain qualities may depend on hardware, drivers, and the song itself.
-
 > I'm currently paying for a Tidal HiFi Plus subscription.
  
 <br>
