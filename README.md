@@ -40,7 +40,7 @@ width="1800"  height="3">
 
 > I'm currently paying for a Tidal HiFi Plus subscription.
  
-> Sometimes, emulation may not work, especially for Dolby Atmos and Sony 360 Reality Audio. By the way, I will try my best.
+> May Emulation not work, especially for Dolby Atmos / MQA and Sony 360 Reality Audio. By the way, I will try my best.
 
 
 <br>
