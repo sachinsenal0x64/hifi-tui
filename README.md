@@ -74,7 +74,7 @@ width="1800"  height="3">
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/track/?id=123456&quality=LOSSLESS"
+    https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
 
 ### Response
 
