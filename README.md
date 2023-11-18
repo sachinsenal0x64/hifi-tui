@@ -103,6 +103,9 @@ width="1800"  height="3">
         "originalTrack": "aka song track"
     }
 
+![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+
+
 ## 🏗️ Contributing
 
 > Workflow Diagram
