@@ -67,6 +67,8 @@ width="1800"  height="3">
 
 `GET /track/`
 
+`Query = id & quality`
+
 `id = Track ID EX:286266926`
 
 `quality = HI_RES or LOSSLESS or HIGH or LOW`
