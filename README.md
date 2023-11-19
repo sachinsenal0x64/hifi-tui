@@ -75,6 +75,8 @@ width="1800"  height="3">
 
 `quality = HI_RES or LOSSLESS or HIGH or LOW`
 
+<br>
+
 >HTTPie
 
     https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
@@ -118,6 +120,8 @@ width="1800"  height="3">
 `GET /search/`
 
 `Query Params = q=Consequence`
+
+<br>
 
 
 >HTTPie
