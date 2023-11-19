@@ -84,8 +84,7 @@ width="1800"  height="3">
 ### Response
 
   ```json
-   
-     {
+{
         "albumPeakAmplitude": 1.0,
         "albumReplayGain": -9.18,
         "assetPresentation": "FULL",
