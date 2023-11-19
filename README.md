@@ -44,7 +44,7 @@ width="1800"  height="3">
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)  
   
-- 📀 AUDIO QUALITY: MQA ENCODING | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
+- 📀 AUDIO QUALITY: MQA ENCODING 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
