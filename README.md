@@ -117,7 +117,7 @@ width="1800"  height="3">
 
 `GET /search/`
 
-`Query Params = q=song name `
+`Query Params = q=Consequence`
 
 ```json
 
@@ -178,6 +178,7 @@ width="1800"  height="3">
 
 ```
 
+![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
 
 
 
