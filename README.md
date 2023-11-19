@@ -36,26 +36,23 @@ width="1800"  height="3">
 
 # 📌 NOTE
 
-> Certain qualities may depend on hardware, drivers, and the song itself.
-
 > I'm currently paying for a Tidal HiFi Plus subscription.
 
-> Sometimes, emulation may not work, especially for Dolby Atmos and Sony 360 Reality Audio. By the way, I will try my best.
-
-
+> We DO NOT encourage piracy and Made for purely educational purposes.
+ 
 <br>
 
 # 🚀 Features
 
-- 🍟 TIDAL PREMIUM (HIFI-PLUS) ACCESS FOR FREE 🆓  
+- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)  
+  
+- 📀 AUDIO QUALITY: MQA ENCODING 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
-- 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
+- 🎧 TIDAL | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
 
 - 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT (⭕ in progress)
-
-- 📀 AUDIO QUALITY: HI RES FLAC | FLAC | MQA | DOLBY-ATOMS | Sony 360 Reality Audio | Up to 24-bit, 192 kHz
 
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
@@ -72,18 +69,26 @@ width="1800"  height="3">
 
 `GET /track/`
 
+`Query Params = id & quality`
+
+`id = Track ID EX:286266926`
+
+`quality = HI_RES or LOSSLESS or HIGH or LOW`
+
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/track/?id=123456&quality=LOSSLESS"
+    https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Content-Length: 1678
-    Content-Type: application/json
-    Date: Sat, 18 Nov 2023 08:14:15 GMT
-    Server: uvicorn
-    Strict-Transport-Security: max-age=63072000; includeSubDomains
+  ```json
+   
+     HTTP/1.1 200 OK
+     Content-Length: 1678
+     Content-Type: application/json
+     Date: Sat, 18 Nov 2023 08:14:15 GMT
+     Server: uvicorn
+     Strict-Transport-Security: max-age=63072000; includeSubDomains
 
      {
         "albumPeakAmplitude": 1.0,
@@ -95,13 +100,14 @@ width="1800"  height="3">
         "manifest": "base64 manifest",
         "manifestMimeType": "application/vnd.tidal.bts",
         "sampleRate": 44100,
-        "trackId": 123456,
+        "trackId": 286266926,
         "trackPeakAmplitude": 0.988482,
         "trackReplayGain": -7.89
     },
     {
         "originalTrack": "aka song track"
     }
+```
 
 ![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
 
