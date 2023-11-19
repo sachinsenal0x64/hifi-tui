@@ -119,6 +119,14 @@ width="1800"  height="3">
 
 `Query Params = q=Consequence`
 
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/search/?q=Consequence"
+
+
+### Response
+
 ```json
 
 {
