@@ -79,12 +79,14 @@ width="1800"  height="3">
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Content-Length: 1678
-    Content-Type: application/json
-    Date: Sat, 18 Nov 2023 08:14:15 GMT
-    Server: uvicorn
-    Strict-Transport-Security: max-age=63072000; includeSubDomains
+  ```json
+   
+     HTTP/1.1 200 OK
+     Content-Length: 1678
+     Content-Type: application/json
+     Date: Sat, 18 Nov 2023 08:14:15 GMT
+     Server: uvicorn
+     Strict-Transport-Security: max-age=63072000; includeSubDomains
 
      {
         "albumPeakAmplitude": 1.0,
@@ -103,6 +105,7 @@ width="1800"  height="3">
     {
         "originalTrack": "aka song track"
     }
+```
 
 ![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
 
