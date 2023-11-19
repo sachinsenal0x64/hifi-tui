@@ -38,7 +38,7 @@ width="1800"  height="3">
 
 > I'm currently paying for a Tidal HiFi Plus subscription.
 
-> We DO NOT encourage piracy and DO NOT support any form of downloader/recorder designed with the help of this repository and Made for purely educational purposes.
+> We DO NOT encourage piracy and Made for purely educational purposes.
  
 <br>
 
