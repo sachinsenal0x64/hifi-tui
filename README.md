@@ -37,6 +37,8 @@ width="1800"  height="3">
 # 📌 NOTE
 
 > I'm currently paying for a Tidal HiFi Plus subscription.
+
+> Made for purely educational purposes.
  
 <br>
 
