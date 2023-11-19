@@ -85,13 +85,6 @@ width="1800"  height="3">
 
   ```json
    
-     HTTP/1.1 200 OK
-     Content-Length: 1678
-     Content-Type: application/json
-     Date: Sat, 18 Nov 2023 08:14:15 GMT
-     Server: uvicorn
-     Strict-Transport-Security: max-age=63072000; includeSubDomains
-
      {
         "albumPeakAmplitude": 1.0,
         "albumReplayGain": -9.18,
