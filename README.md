@@ -50,7 +50,7 @@ width="1800"  height="3">
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
-- 🎧 PODCAST | TIDAL | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
+- 🎧 TIDAL | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
 
 - 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT (⭕ in progress)
 
