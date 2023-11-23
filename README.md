@@ -75,6 +75,8 @@ width="1800"  height="3">
 
 `quality = HI_RES or LOSSLESS or HIGH or LOW`
 
+<br>
+
 >HTTPie
 
     https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
@@ -82,15 +84,7 @@ width="1800"  height="3">
 ### Response
 
   ```json
-   
-     HTTP/1.1 200 OK
-     Content-Length: 1678
-     Content-Type: application/json
-     Date: Sat, 18 Nov 2023 08:14:15 GMT
-     Server: uvicorn
-     Strict-Transport-Security: max-age=63072000; includeSubDomains
-
-     {
+{
         "albumPeakAmplitude": 1.0,
         "albumReplayGain": -9.18,
         "assetPresentation": "FULL",
@@ -110,6 +104,85 @@ width="1800"  height="3">
 ```
 
 ![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+
+<br>
+
+### Request
+
+`GET /search/`
+
+`Query Params = q=Consequence`
+
+<br>
+
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/search/?q=Consequence"
+
+
+### Response
+
+```json
+
+{
+  "limit": 1,
+  "offset": 0,
+  "totalNumberOfItems": 200,
+  "items": [
+    {
+      "id": 82448461,
+      "title": "Consequence",
+      "duration": 313,
+      "replayGain": -9.88,
+      "peak": 1,
+      "allowStreaming": true,
+      "streamReady": true,
+      "streamStartDate": "2017-12-05T00:00:00.000+0000",
+      "premiumStreamingOnly": false,
+      "trackNumber": 10,
+      "volumeNumber": 1,
+      "version": null,
+      "popularity": 6,
+      "copyright": "City Slang/big Store",
+      "url": "http://www.tidal.com/track/82448461",
+      "isrc": "DED620118410",
+      "editable": false,
+      "explicit": false,
+      "audioQuality": "LOSSLESS",
+      "audioModes": [
+        "STEREO"
+      ],
+      "artist": {
+        "id": 3529689,
+        "name": "The Notwist",
+        "type": "MAIN"
+      },
+      "artists": [
+        {
+          "id": 3529689,
+          "name": "The Notwist",
+          "type": "MAIN"
+        }
+      ],
+      "album": {
+        "id": 82448449,
+        "title": "Neon Golden",
+        "cover": "ad3ed5f3-37a2-4b27-9002-b83459ab5a0e",
+        "videoCover": null
+      },
+      "mixes": {
+        "TRACK_MIX": "001981d70c53d5448599714c407079"
+      }
+    }
+  ]
+}
+
+
+
+```
+![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
+
 
 
 ## 🏗️ Contributing
