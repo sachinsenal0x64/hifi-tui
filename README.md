@@ -76,9 +76,9 @@ https://youtu.be/TfIWc5sQ2M0
 
 `Query Params = id & quality`
 
-`id = Track ID EX:286266926`
+`Id = Track ID EX:286266926`
 
-`quality = HI_RES or LOSSLESS or HIGH or LOW`
+`Quality = HI_RES or LOSSLESS or HIGH or LOW`
 
 <br>
 
