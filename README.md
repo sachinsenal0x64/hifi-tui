@@ -76,11 +76,13 @@ https://youtu.be/TfIWc5sQ2M0
 
 `GET /track/`
 
-`Query Params = id & quality`
-
-`Id = Track ID EX:286266926`
+`Query Params = id:int & quality:str`
 
 `Quality = HI_RES or LOSSLESS or HIGH or LOW`
+
+`Id =  Track_ID `
+
+
 
 <br>
 
