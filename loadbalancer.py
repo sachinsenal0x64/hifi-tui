@@ -53,9 +53,9 @@ class LeastConnectionsLoadBalancer:
 
 # Example usage
 server_list = [
-    {"name": "youtube.com", "connections": 0},
-    {"name": "reddit.com", "connections": 0},
-    {"name": "github.com", "connections": 0},
+    {"name": "youtube.com", "connections": 5},
+    {"name": "reddit.com", "connections": 2},
+    {"name": "github.com", "connections": 4},
 ]
 
 load_balancer = LeastConnectionsLoadBalancer(server_list)
