@@ -74,6 +74,11 @@ https://youtu.be/TfIWc5sQ2M0
 
 ### Request
 
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
+
 `GET /track/`
 
 `Query Params = id:int & quality:str`
@@ -83,12 +88,10 @@ https://youtu.be/TfIWc5sQ2M0
 `id =  Track ID `
 
 
+![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
 
 <br>
 
->HTTPie
-
-    https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
 
 ### Response
 
@@ -111,8 +114,20 @@ https://youtu.be/TfIWc5sQ2M0
         "originalTrack": "aka song track"
     }
 ```
+<br>
 
-![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
 
 <br>
 
