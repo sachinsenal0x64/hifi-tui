@@ -78,7 +78,7 @@ https://youtu.be/TfIWc5sQ2M0
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
 > | `id`       |  Integer  | Track Id = `286266926` |
-> | `quality`  |  String   | Song Quality = ` HIFI_RES` or `HIFI` or `LOSSLESS` or `HIGH` or `LOW ` |
+> | `quality`  |  String   | Song Quality = `HIFI_RES` or `HIFI` or `LOSSLESS` or `HIGH` or `LOW ` |
 
 
 <br>
