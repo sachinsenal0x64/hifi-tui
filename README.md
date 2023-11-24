@@ -78,6 +78,9 @@ https://youtu.be/TfIWc5sQ2M0
 ### Request
 
 
+<code>GET</code> <code><b>/track/</b></code>
+
+<br>
 
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
