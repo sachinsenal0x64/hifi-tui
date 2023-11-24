@@ -78,9 +78,9 @@ https://youtu.be/TfIWc5sQ2M0
 
 `Query Params = id:int & quality:str`
 
-`Quality = HI_RES or LOSSLESS or HIGH or LOW`
+`quality = HI_RES or LOSSLESS or HIGH or LOW`
 
-`Id =  Track_ID `
+`id =  Track_ID `
 
 
 
@@ -120,7 +120,9 @@ https://youtu.be/TfIWc5sQ2M0
 
 `GET /search/`
 
-`Query Params = q=Consequence`
+`Query Params = q:str`
+
+`q = Song Name`
 
 <br>
 
