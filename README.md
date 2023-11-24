@@ -75,18 +75,20 @@ https://youtu.be/TfIWc5sQ2M0
 ### Request
 
 
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `id`       |  Integer  | Track Id = `286266926` |
+> | `quality`  |  String   | Song Quality = ` HIFI_RES` or `HIFI` or `LOSSLESS` or `HIGH` or `LOW ` |
+
+
+<br>
+
+#### Example
+
 >HTTPie
 
     https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
-
-`GET /track/`
-
-`Query Params = id:int & quality:str`
-
-`quality = HI_RES or LOSSLESS or HIGH or LOW`
-
-`id =  Track ID `
-
+    
 
 ![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
 
