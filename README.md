@@ -74,11 +74,7 @@ https://youtu.be/TfIWc5sQ2M0
 
 <br>
 
-
-### Request
-
-
-<code>GET</code> <code><b>/track/</b></code>
+### <code>GET</code> <code><b>/track/</b></code>
 
 <br>
 
