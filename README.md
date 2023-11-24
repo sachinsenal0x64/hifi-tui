@@ -85,9 +85,12 @@ width="1800"  height="3">
 
 ------------------------------------------------------------------------------------------
 
-### Request
+<details>
 
-### <code>GET</code> <code><b>/track/</b></code>
+ <summary><code>GET</code>   <code><b>/track/</b></code> </summary>
+
+## Request
+
 
 <br>
 
@@ -146,15 +149,20 @@ HIFI returns the following status codes in its API:
 > | 404         | `NOT FOUND` |
 > | 500         | `INTERNAL SERVER ERROR` |
 
+
+</details>
+
 <br>
 
 
 ------------------------------------------------------------------------------------------
 
-### Request
 
+<details>
 
-### <code>GET</code> <code><b>/search/</b></code>
+ <summary><code>GET</code>   <code><b>/song/</b></code> </summary>
+
+## Request
 
 <br>
 
