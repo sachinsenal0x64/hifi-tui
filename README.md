@@ -66,7 +66,7 @@ width="1800"  height="3">
 
 <br>
 
-# 📡 API
+# 📡 API DOCUMENTATION
 
 ### Demo
 
