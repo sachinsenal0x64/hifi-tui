@@ -74,6 +74,8 @@ https://youtu.be/TfIWc5sQ2M0
 
 <br>
 
+## Request
+
 ### <code>GET</code> <code><b>/track/</b></code>
 
 <br>
@@ -136,13 +138,11 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-### Request
+## Request
 
-`GET /search/`
 
-`Query Params = q:str`
+### <code>GET</code> <code><b>/search/</b></code>
 
-`q = Song Name`
 
 <br>
 
