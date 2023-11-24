@@ -82,8 +82,8 @@ https://youtu.be/TfIWc5sQ2M0
 
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
-> | `id`       |  Integer  | Track Id = `286266926` |
-> | `quality`  |  String   | Song Quality = `HIFI_RES` or `HIFI` or `LOSSLESS` or `HIGH` or `LOW ` |
+> | `id`       |  integer  | Track Id = `286266926` |
+> | `quality`  |  string   | Song Quality = `HIFI_RES` or `HIFI` or `LOSSLESS` or `HIGH` or `LOW ` |
 
 
 <br>
@@ -146,6 +146,12 @@ HIFI returns the following status codes in its API:
 
 <br>
 
+
+> | Parameter | Type | Description |
+> |------|--------|-------------|
+> | `q`  | string | Song Name = `Consequence`|
+
+<br>
 
 >HTTPie
 
