@@ -62,6 +62,8 @@ width="1800"  height="3">
 
 - ⚡️ ASYNC SUPPORT
 
+- 📑 DOCS SUPPORT ( SWAGGER UI ) 
+
 <br>
 
 # 📡 API
