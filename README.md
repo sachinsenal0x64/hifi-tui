@@ -74,7 +74,7 @@ https://youtu.be/TfIWc5sQ2M0
 
 <br>
 
-## Request
+### Request
 
 ### <code>GET</code> <code><b>/track/</b></code>
 
@@ -138,14 +138,12 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-## Request
+### Request
 
 
 ### <code>GET</code> <code><b>/search/</b></code>
 
-
 <br>
-
 
 > | Parameter | Type | Description |
 > |------|--------|-------------|
@@ -153,9 +151,15 @@ HIFI returns the following status codes in its API:
 
 <br>
 
+
+#### Example
 >HTTPie
 
     https GET "https://tidal.401658.xyz/search/?q=Consequence"
+
+![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
+
+<br>
 
 
 ### Response
@@ -215,10 +219,22 @@ HIFI returns the following status codes in its API:
   ]
 }
 
-
-
 ```
-![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
+
+<br>
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
+
 
 
 
