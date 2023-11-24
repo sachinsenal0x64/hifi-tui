@@ -46,13 +46,13 @@ width="1800"  height="3">
 
 # 🚀 Features
 
-- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)  
+- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)
   
 - 📀 AUDIO QUALITY: MQA ENCODING 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
-  
-- 👤 TIDAL ACCOUNTS MANAGEMENT 
 
 - 🎧 TIDAL | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
+  
+- 👤 TIDAL ACCOUNTS MANAGEMENT 
 
 - 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT (⭕ in progress)
 
