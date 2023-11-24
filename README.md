@@ -83,7 +83,8 @@ width="1800"  height="3">
 
 <br>
 
- 
+------------------------------------------------------------------------------------------
+
 ### Request
 
 ### <code>GET</code> <code><b>/track/</b></code>
@@ -146,6 +147,9 @@ HIFI returns the following status codes in its API:
 > | 500         | `INTERNAL SERVER ERROR` |
 
 <br>
+
+
+------------------------------------------------------------------------------------------
 
 ### Request
 
@@ -247,6 +251,8 @@ HIFI returns the following status codes in its API:
 
 <br>
 
+
+------------------------------------------------------------------------------------------
 
 ## 🏗️ Contributing
 
