@@ -29,6 +29,8 @@ width="1800"  height="3">
 
 <br><br>
 
+# 💕 Community
+
 > 🍻 Join the community: <a href="https://www.reddit.com/r/hifitui">Reddit</a> & <a href="https://discord.gg/EbfftZ5Dd4">Discord</a>
  [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/reddit(1).4iicqsrtq6m8.webp)](https://www.reddit.com/r/hifitui) [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/discord.72y8nlaw5mdc.webp)](https://discord.gg/EbfftZ5Dd4)
  
