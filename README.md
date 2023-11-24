@@ -58,7 +58,7 @@ width="1800"  height="3">
 
 - 📡 REST API (ACT AS REVERSE PROXY INSTANCE)
 
-- ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY)
+- ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY | Purely Python Implementation)
 
 - ⚡️ ASYNC SUPPORT
 
