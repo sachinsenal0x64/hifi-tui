@@ -42,7 +42,7 @@ width="1800"  height="3">
 
 > We DO NOT encourage piracy and Made for purely educational purposes.
 
-> You can access our rest api for free if you want to self-host then need tidal subscription. 
+> You can access our rest api & tui for free if you want to self-host then need tidal subscription. 
  
 <br>
 
