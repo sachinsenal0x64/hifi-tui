@@ -41,6 +41,8 @@ width="1800"  height="3">
 > I'm currently paying for a Tidal HiFi Plus subscription.
 
 > We DO NOT encourage piracy and Made for purely educational purposes.
+
+> You can access our rest api for free if you want to self-host then need tidal subscription. 
  
 <br>
 
