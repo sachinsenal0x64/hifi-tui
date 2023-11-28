@@ -38,13 +38,13 @@ width="1800"  height="3">
 
 # 📌 NOTE
 
-> I'm currently paying for a Tidal HiFi Plus subscription.
-
 > We DO NOT encourage piracy and Made for purely educational purposes.
+
+> I'm currently paying for a Tidal HiFi Plus subscription.
 
 > You can access our rest api for free if you want to self-host then need tidal subscription.
 
-> TUI is plug & play also you can add your own tidal account by default its have our API so you can access tidal music for free 
+> TUI is plug & play also you can add your own tidal account by default its have our API so you can access tidal music for free.
  
 <br>
 
