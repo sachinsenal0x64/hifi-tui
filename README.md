@@ -36,6 +36,12 @@ width="1800"  height="3">
  
 <br>
 
+# 🔋 API STATUS 
+
+> https://status.401658.xyz/status/servers
+
+<br>
+
 # 📌 NOTE
 
 > We DO NOT encourage piracy and Made for purely educational purposes.
