@@ -256,6 +256,11 @@ HIFI returns the following status codes in its API:
 
 ------------------------------------------------------------------------------------------
 
+</details>
+
+
+<br>
+
 ## 🏗️ Contributing
 
 > Workflow Diagram
