@@ -42,7 +42,9 @@ width="1800"  height="3">
 
 > We DO NOT encourage piracy and Made for purely educational purposes.
 
-> You can access our rest api & tui for free if you want to self-host then need tidal subscription. 
+> You can access our rest api for free if you want to self-host then need tidal subscription.
+
+> TUI is plug & play also you can add your own tidal account by default its have our API so you can access for free 
  
 <br>
 
