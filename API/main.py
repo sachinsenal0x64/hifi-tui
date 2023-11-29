@@ -63,6 +63,8 @@ async def get_track(
     token = await track()
     track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
 
+    info_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
+
     payload = {
         "authorization": f"Bearer {tidal_token}",
     }
@@ -70,13 +72,18 @@ async def get_track(
     print(token)
     async with httpx.AsyncClient() as client:
         track_data = await client.get(url=track_url, headers=payload)
-
+        info_data = await client.get(url=info_url, headers=payload)
     try:
         final_data = track_data.json()["manifest"]
         decode_manifest = base64.b64decode(final_data)
         con_json = json.loads(decode_manifest)
         audio_url = con_json.get("urls")[0]
-        return track_data.json(), {"originalTrack": audio_url}
+        fetch_info = info_data.json()
+        return {
+            "Song Info": fetch_info,
+            "Track Info": track_data.json(),
+            "OriginalTrackUrl": audio_url,
+        }
     except KeyError:
         raise HTTPException(
             status_code=404,
@@ -96,7 +103,10 @@ async def search_track(q: str | None):
 
 @app.api_route("/cover/", methods=["GET"])
 async def search_cover(id: str | None = None, q: str | None = None):
-    search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
+    search_url = (
+        f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
+        or f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
+    )
     header = {"authorization": f"Bearer {tidal_token}"}
     async with httpx.AsyncClient() as clinet:
         cover_data = await clinet.get(url=search_url, headers=header)
@@ -105,18 +115,22 @@ async def search_cover(id: str | None = None, q: str | None = None):
         album_ids = []  # list to store album ids
 
         for track in tracks:
+            album_track_id = track["id"]
+            print(album_track_id)
             album_cover = track["album"]["cover"].replace("-", "/")
-            album_name = track["album"]["title"]
+            album_name = track["title"]
             album_ids.append(album_cover)
             album_ids.append(album_name)
-
+            album_ids.append(album_track_id)
         json_data = [
             {
+                "id": album_ids[i + 2],
                 "name": album_ids[i + 1],
-                "cover1": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
-                "cover2": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
+                "cover1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
+                "cover640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
+                "cover80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
             }
-            for i in range(0, len(album_ids), 2)
+            for i in range(0, len(album_ids), 3)
         ]
 
         # Create a list of dictionaries with "cover" and "name" keys
