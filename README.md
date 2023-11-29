@@ -29,28 +29,40 @@ width="1800"  height="3">
 
 <br><br>
 
+# 💕 Community
+
 > 🍻 Join the community: <a href="https://www.reddit.com/r/hifitui">Reddit</a> & <a href="https://discord.gg/EbfftZ5Dd4">Discord</a>
  [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/reddit(1).4iicqsrtq6m8.webp)](https://www.reddit.com/r/hifitui) [![](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/discord.72y8nlaw5mdc.webp)](https://discord.gg/EbfftZ5Dd4)
  
 <br>
 
+# 🔋 API STATUS 
+
+> https://status.401658.xyz/status/servers
+
+<br>
+
 # 📌 NOTE
+
+> We DO NOT encourage piracy and Made for purely educational purposes.
 
 > I'm currently paying for a Tidal HiFi Plus subscription.
 
-> We DO NOT encourage piracy and Made for purely educational purposes.
+> You can access our rest api for free if you want to self-host then need tidal subscription.
+
+> TUI is plug & play also you can add your own tidal account by default its have our API so you can access tidal music for free.
  
 <br>
 
 # 🚀 Features
 
-- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)  
+- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)
   
 - 📀 AUDIO QUALITY: MQA ENCODING 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
-  
-- 👤 TIDAL ACCOUNTS MANAGEMENT 
 
 - 🎧 TIDAL | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
+  
+- 👤 TIDAL ACCOUNTS MANAGEMENT 
 
 - 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT (⭕ in progress)
 
@@ -62,29 +74,56 @@ width="1800"  height="3">
 
 - ⚡️ ASYNC SUPPORT
 
+- 📑 DOCS SUPPORT ( SWAGGER UI ) 
+
 <br>
 
-# 📡 API
+# 📡 API DOCUMENTATION
 
 ### Demo
 
-https://youtu.be/TfIWc5sQ2M0
+<details>
 
-### Request
+<summary><code>Here</code></summary>
 
-`GET /track/`
+  <br>
+  
+ > https://youtu.be/TfIWc5sQ2M0
 
-`Query Params = id & quality`
 
-`Id = Track ID EX:286266926`
+</details>
 
-`Quality = HI_RES or LOSSLESS or HIGH or LOW`
+
+------------------------------------------------------------------------------------------
+
+<details>
+
+ <summary><code>GET</code>   <code><b>/track/</b></code> </summary>
+
+## Request
+
 
 <br>
+
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `id`       |  integer  | Track Id = `286266926` |
+> | `quality`  |  string   | Song Quality = `HIFI_RES` or `HIFI` or `LOSSLESS` or `HIGH` or `LOW ` |
+
+
+<br>
+
+#### Example
 
 >HTTPie
 
     https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
+    
+
+![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+
+<br>
+
 
 ### Response
 
@@ -107,23 +146,49 @@ https://youtu.be/TfIWc5sQ2M0
         "originalTrack": "aka song track"
     }
 ```
-
-![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
-
-<br>
-
-### Request
-
-`GET /search/`
-
-`Query Params = q=Consequence`
-
 <br>
 
 
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
+
+</details>
+
+------------------------------------------------------------------------------------------
+
+
+<details>
+
+ <summary><code>GET</code>   <code><b>/song/</b></code> </summary>
+
+## Request
+
+<br>
+
+> | Parameter | Type | Description |
+> |------|--------|-------------|
+> | `q`  | string | Song Name = `Consequence`|
+
+<br>
+
+
+#### Example
 >HTTPie
 
     https GET "https://tidal.401658.xyz/search/?q=Consequence"
+
+![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
+
+<br>
 
 
 ### Response
@@ -183,12 +248,28 @@ https://youtu.be/TfIWc5sQ2M0
   ]
 }
 
-
-
 ```
-![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
+
+<br>
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
 
 
+------------------------------------------------------------------------------------------
+
+</details>
+
+
+<br>
 
 ## 🏗️ Contributing
 
