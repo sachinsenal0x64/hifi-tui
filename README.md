@@ -269,6 +269,15 @@ HIFI returns the following status codes in its API:
 </details>
 
 
+------------------------------------------------------------------------------------------
+
+<details>
+
+<summary><code>GET</code> <code><b>/cover/</b></code></summary>
+
+
+</details>
+
 <br>
 
 ## 🏗️ Contributing
