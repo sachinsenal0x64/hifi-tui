@@ -87,7 +87,7 @@ async def get_track(
     except KeyError:
         raise HTTPException(
             status_code=404,
-            detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api",
+            detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
         )
 
 
