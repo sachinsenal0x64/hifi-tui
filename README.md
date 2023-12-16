@@ -38,7 +38,7 @@ width="1800"  height="3">
 
 # 🔋 API STATUS 
 
-> https://status.401658.xyz/status/servers
+> https://status.401658.xyz
 
 <br>
 
