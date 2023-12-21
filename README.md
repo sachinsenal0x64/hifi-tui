@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://sachinsenal0x64.github.io/picx-images-hosting/wallpaperflare.com_wallpaper.6hd2b1cbbd34.webp">
+</p>
+
 <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/PICX-IMAGE-HOSTING@master/ledstrip.3024rqxzahq0.gif"
 width="1800"  height="3">
 
