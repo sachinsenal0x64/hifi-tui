@@ -38,7 +38,7 @@ width="1800"  height="3">
  
 <br>
 
-# 🔋 API STATUS 
+# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> API STATUS 
 
 > https://status.401658.xyz
 
