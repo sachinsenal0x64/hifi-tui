@@ -125,9 +125,9 @@ async def search_cover(id: int | None = None, q: str | None = None):
                 {
                     "id": album_ids[i + 2],
                     "name": album_ids[i + 1],
-                    "cover1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
-                    "cover640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
-                    "cover80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
+                    "1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
+                    "640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
+                    "80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
                 }
                 for i in range(0, len(album_ids), 3)
             ]
@@ -156,9 +156,9 @@ async def search_cover(id: int | None = None, q: str | None = None):
                 {
                     "id": album_ids[i + 2],
                     "name": album_ids[i + 1],
-                    "cover1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
-                    "cover640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
-                    "cover80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
+                    "1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
+                    "640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
+                    "80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
                 }
                 for i in range(0, len(album_ids), 3)
             ]
