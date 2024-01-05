@@ -19,8 +19,6 @@ load_dotenv()
 
 client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
-<<<<<<< HEAD
-access_token = os.getenv("TIDAL_TOKEN")
 refresh_token = os.getenv("TIDAL_REFRESH")
 
 # client_id = "zU4XHVVkc2tDPo4t"
@@ -33,15 +31,11 @@ refresh_token = os.getenv("TIDAL_REFRESH")
 
 # refresh_token = token["refresh_token"]
 # access_token = token["access_token"]
-=======
-refresh_token = os.getenv("REFRESH_TOKEN")
->>>>>>> c227770 (refresh_auth added)
 
 
 async def refresh():
     refresh_url = "https://auth.tidal.com/v1/oauth2/token"
 
-<<<<<<< HEAD
     payload = {
         "client_id": client_id,
         "refresh_token": refresh_token,
@@ -64,22 +58,6 @@ async def refresh():
             return {"error": f"HTTP error occurred: {str(e)}"}
         except Exception as e:
             return {"error": f"An error occurred: {str(e)}"}
-=======
-    data2 = {
-        "client_id": client_id,
-        "refresh_token": refresh_token,
-        "grant_type": "refresh_token",
-    }
-
-    async with httpx.AsyncClient() as client:
-        res2 = client.post(url=refresh_url, data=data2, auth=(client_id, client_secret))
-    return res2.json()
-
-
-tokenz = refresh()
-
-tidal_token = tokenz.get("access_token")
->>>>>>> c227770 (refresh_auth added)
 
 
 async def auth():
