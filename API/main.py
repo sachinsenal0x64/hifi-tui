@@ -5,9 +5,13 @@ import os
 from typing import Annotated
 
 import httpx
+import requests
+import rich
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
+from httpx_auth import Basic
+from requests.auth import HTTPBasicAuth
 
 app = FastAPI()
 
@@ -15,7 +19,46 @@ load_dotenv()
 
 client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
-tidal_token = os.getenv("TIDAL_TOKEN")
+access_token = os.getenv("TIDAL_TOKEN")
+refresh_token = os.getenv("TIDAL_REFRESH")
+
+# client_id = "zU4XHVVkc2tDPo4t"
+
+# client_secret = "VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4="
+
+# with open("token.json", "r") as tok:
+#     token = json.loads(tok.read())
+#     print(token)
+
+# refresh_token = token["refresh_token"]
+# access_token = token["access_token"]
+
+
+async def refresh():
+    refresh_url = "https://auth.tidal.com/v1/oauth2/token"
+
+    payload = {
+        "client_id": client_id,
+        "refresh_token": refresh_token,
+        "grant_type": "refresh_token",
+        "scope": "r_usr+w_usr+w_sub",
+    }
+
+    async with httpx.AsyncClient() as client:
+        try:
+            res2 = await client.post(
+                url=refresh_url, data=payload, auth=Basic(client_id, client_secret)
+            )
+            # Assuming a successful response code is 200
+            if res2.status_code == 200:
+                tidal_token = res2.json()
+                return tidal_token
+            else:
+                return {"error": f"Failed to refresh token: {res2.status_code}"}
+        except httpx.HTTPError as e:
+            return {"error": f"HTTP error occurred: {str(e)}"}
+        except Exception as e:
+            return {"error": f"An error occurred: {str(e)}"}
 
 
 async def auth():
@@ -44,12 +87,6 @@ async def auth():
     return out_res
 
 
-async def track():
-    auths = await auth()
-    access_token = auths.get("access_token")
-    return access_token
-
-
 @app.api_route("/", methods=["GET"])
 async def index():
     return {"HIFI-API": "v1", "REPO": "https://github.com/sachinsenal0x64/Hifi-Tui"}
@@ -61,7 +98,9 @@ async def get_track(
     quality: str,
     country: Annotated[str | None, Query(max_length=3)] = None,
 ):
-    token = await track()
+    tokz = await refresh()
+    tidal_token = tokz.get("access_token")
+
     track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
 
     info_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
@@ -70,7 +109,6 @@ async def get_track(
         "authorization": f"Bearer {tidal_token}",
     }
 
-    print(token)
     async with httpx.AsyncClient() as client:
         track_data = await client.get(url=track_url, headers=payload)
         info_data = await client.get(url=info_url, headers=payload)
@@ -94,6 +132,8 @@ async def get_track(
 
 @app.api_route("/search/", methods=["GET"])
 async def search_track(q: str | None):
+    tokz = await refresh()
+    tidal_token = tokz.get("access_token")
     search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
     header = {"authorization": f"Bearer {tidal_token}"}
     async with httpx.AsyncClient() as clinet:
@@ -104,6 +144,8 @@ async def search_track(q: str | None):
 
 @app.api_route("/cover/", methods=["GET"])
 async def search_cover(id: int | None = None, q: str | None = None):
+    tokz = await refresh()
+    tidal_token = tokz.get("access_token")
     if id:
         search_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
         header = {"authorization": f"Bearer {tidal_token}"}
