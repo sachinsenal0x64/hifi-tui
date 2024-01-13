@@ -286,7 +286,7 @@ HIFI returns the following status codes in its API:
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
 > | `id`       |  integer  | Track Id = `92099357` |
-> | `quality`  |  string   | Song Name = `The College Dropout` |
+> | `song`  |  string   | Song Name = `The College Dropout` |
 
 
 <br>
@@ -295,7 +295,8 @@ HIFI returns the following status codes in its API:
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
+    https GET "https://tidal.401658.xyz/cover/?q=Maestro"
+    https GET "https://tidal.401658.xyz/cover/?id=328060990"
     
 
 ![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
