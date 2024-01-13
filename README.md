@@ -278,6 +278,53 @@ HIFI returns the following status codes in its API:
 <summary><code>GET</code> <code><b>/cover/</b></code></summary>
 
 
+## Request
+
+
+<br>
+
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `id`       |  integer  | Track Id = `92099357` |
+> | `quality`  |  string   | Song Name = `The College Dropout` |
+
+
+<br>
+
+#### Example
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
+    
+
+![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+
+<br>
+
+
+### Response
+
+  ```json
+{
+        "albumPeakAmplitude": 1.0,
+        "albumReplayGain": -9.18,
+        "assetPresentation": "FULL",
+        "audioMode": "STEREO",
+        "audioQuality": "LOSSLESS",
+        "bitDepth": 16,
+        "manifest": "base64 manifest",
+        "manifestMimeType": "application/vnd.tidal.bts",
+        "sampleRate": 44100,
+        "trackId": 286266926,
+        "trackPeakAmplitude": 0.988482,
+        "trackReplayGain": -7.89
+    },
+    {
+        "originalTrack": "aka song track"
+    }
+```
+
 </details>
 
 <br>
