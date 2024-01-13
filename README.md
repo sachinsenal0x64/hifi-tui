@@ -286,8 +286,8 @@ HIFI returns the following status codes in its API:
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
 > | `id`       |  integer  | Track Id = `328060990` |
-> | `song`  |  string   | Song Name = `Maestro` |
-
+> | `song`     |  string   | Song Name = `Maestro` |
+> | `sizes`    |  string   | Size =  `1280 / 640 / 80`
 
 <br>
 
