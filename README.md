@@ -299,7 +299,8 @@ HIFI returns the following status codes in its API:
     https GET "https://tidal.401658.xyz/cover/?id=328060990"
     
 
-![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/42b43878-00c5-4d35-8210-2cca466bc594)
+
 
 <br>
 
@@ -307,23 +308,15 @@ HIFI returns the following status codes in its API:
 ### Response
 
   ```json
-{
-        "albumPeakAmplitude": 1.0,
-        "albumReplayGain": -9.18,
-        "assetPresentation": "FULL",
-        "audioMode": "STEREO",
-        "audioQuality": "LOSSLESS",
-        "bitDepth": 16,
-        "manifest": "base64 manifest",
-        "manifestMimeType": "application/vnd.tidal.bts",
-        "sampleRate": 44100,
-        "trackId": 286266926,
-        "trackPeakAmplitude": 0.988482,
-        "trackReplayGain": -7.89
-    },
+[
     {
-        "originalTrack": "aka song track"
+        "1280": "https://resources.tidal.com/images/6f5c52be/c21c/4fb7/9ce6/0c270f6f1a5a/1280x1280.jpg",
+        "640": "https://resources.tidal.com/images/6f5c52be/c21c/4fb7/9ce6/0c270f6f1a5a/640x640.jpg",
+        "80": "https://resources.tidal.com/images/6f5c52be/c21c/4fb7/9ce6/0c270f6f1a5a/80x80.jpg",
+        "id": 328060988,
+        "name": "Maestro: Music by Leonard Bernstein (Original Soundtrack / Dolby Atmos)"
     }
+]
 ```
 
 </details>
