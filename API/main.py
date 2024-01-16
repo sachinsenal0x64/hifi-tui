@@ -22,7 +22,10 @@ client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
 access_token = os.getenv("TIDAL_TOKEN")
 refresh_token = os.getenv("TIDAL_REFRESH")
-
+redis_url = os.getenv("REDIS_URL")
+redis_port = os.getenv("REDIS_PORT")
+redis_password = os.getenv("REDIS_PASSWORD")
+user_id = os.getenv("USER_ID")
 
 client_id = "zU4XHVVkc2tDPo4t"
 
@@ -42,7 +45,7 @@ cached_tok = r.get("access_token")
 
 
 async def token_checker():
-    refresh_url = "https://api.tidal.com/v2/feed/activities/?userId=191008167"
+    refresh_url = f"https://api.tidal.com/v2/feed/activities/?userId={user_id}"
 
     headers = {"authorization": f"Bearer {cached_tok}"}
 
