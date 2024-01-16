@@ -176,7 +176,7 @@ async def search_track(q: str | None):
 @app.api_route("/cover/", methods=["GET"])
 async def search_cover(id: int | None = None, q: str | None = None):
     tokz = await refresh()
-    tidal_token = tokz.get("access_token")
+    tidal_token = tokz
     if id:
         search_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
         header = {"authorization": f"Bearer {tidal_token}"}
