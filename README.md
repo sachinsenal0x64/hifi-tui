@@ -45,7 +45,7 @@ width="1800"  height="3">
 
 # 📌 NOTE
 
-> We DO NOT encourage piracy and made for purely educational purposes.
+> We DO NOT encourage piracy and made for purely educational purposes / personal use.
 
 > I'm currently paying for a Tidal HiFi Plus subscription.
 
