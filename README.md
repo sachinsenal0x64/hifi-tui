@@ -15,7 +15,7 @@ width="1800"  height="3">
 <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/PICX-IMAGE-HOSTING@master/ledstrip.3024rqxzahq0.gif"
 width="1800"  height="3">
 
-<h1 align="center"> HIFI TUI (WIP)</h1>
+<h1 align="center"> HIFI TUI </h1>
 
 <h4 align="center"> 🎵 Tidal Reverse Proxy & TUI With Extra Batteries. </h4>
 
