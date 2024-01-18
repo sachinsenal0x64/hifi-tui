@@ -336,7 +336,7 @@ HIFI returns the following status codes in its API:
 ![2023-11-06_18-12](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/2023-11-08_23-58.220qxiet1zkw.png)
 
 
-- Before send PR first open a issue.
+- Before send PR first open a issue then fork the repo.
   
 - We need volunteers who have Tidal subscriptions because we might get banned by Tidal.
 
