@@ -55,6 +55,12 @@ width="1800"  height="3">
  
 <br>
 
+# WHY ?
+
+I love terminal/CLI tools and musics, so why not have a tidal music client for the terminal? Unfortunately,i haven't found any client for tidal in the terminal yet, and that's why it's all about :)
+
+<br>
+
 # 🚀 Features
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)
