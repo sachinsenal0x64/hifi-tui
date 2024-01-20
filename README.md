@@ -115,7 +115,7 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
 > | `id`       |  integer  | Track Id = `286266926` |
-> | `quality`  |  string   | Song Quality = `HIFI_RES` or `HIFI` or `LOSSLESS` or `HIGH` or `LOW ` |
+> | `quality`  |  string   | Song Quality = `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` |
 
 
 <br>
