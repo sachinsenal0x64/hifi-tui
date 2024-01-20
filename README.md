@@ -67,7 +67,7 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
   
 - 📀 AUDIO QUALITY: DOLBY ATMOS | MQA 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
 
-- 🎧 TIDAL | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
+- 🎧 TIDAL-HIFI | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
