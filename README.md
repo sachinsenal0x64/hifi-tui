@@ -328,6 +328,12 @@ HIFI returns the following status codes in its API:
 
 <br>
 
+# 🏠 HOW TO SELF-HOST
+
+(⭕ WIP)
+
+<br>
+
 ## 🏗️ Contributing
 
 > Workflow Diagram
