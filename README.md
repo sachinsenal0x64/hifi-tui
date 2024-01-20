@@ -63,7 +63,7 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 
 # 🚀 Features
 
-- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api)
+- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://tidal.401658.xyz) & TUI PLAYER
   
 - 📀 AUDIO QUALITY: DOLBY ATMOS | MQA 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
 
