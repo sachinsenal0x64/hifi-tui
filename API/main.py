@@ -187,7 +187,6 @@ async def search_cover(id: int | None = None, q: str | None = None):
             album_ids = []  # list to store album ids
 
             album_track_id = tracks["id"]
-            print(album_track_id)
             album_cover = tracks["cover"].replace("-", "/")
             album_name = tracks["title"]
             album_ids.append(album_cover)
