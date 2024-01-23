@@ -162,7 +162,7 @@ async def get_track(
 
 
 @app.api_route("/search/", methods=["GET"])
-async def search_track(q: str | None):
+async def search_track(q: str | None = None):
     tokz = await refresh()
     tidal_token = tokz
     search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
