@@ -353,7 +353,10 @@ HIFI returns the following status codes in its API:
 
 
 > [!NOTE]
-> This based on reverse api so its totally free and easy to install via package manager 
+> Tui player based on reverse [api](https://tidal.401658.xyz) so its totally free and easy to install via package manager 
+
+
+(⭕ WIP)
 
 <br>
 
