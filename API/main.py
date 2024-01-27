@@ -39,7 +39,12 @@ with open("token.json", "r") as tok:
 refresh_token = token["refresh_token"]
 access_token = token["access_token"]
 
-r = redis.Redis(host="localhost", port=6379, db=0, protocol=3, decode_responses=True)
+r = redis.Redis(host=redis_url,
+                port=redis_port,
+                password=redis_password,
+                db=0,
+                protocol=3,
+                decode_responses=True)
 
 cached_tok = r.get("access_token")
 
