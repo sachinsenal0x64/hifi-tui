@@ -103,14 +103,14 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 > This required tidal premium account.
 
 
-(⭕ WIP)
+
 
 <br>
 
 ## 📡 API DOCUMENTATION
 
 > [!TIP]
-> Reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) is free.
+> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) for free.
 
 ### Demo
 
