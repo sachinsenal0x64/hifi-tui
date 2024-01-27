@@ -97,7 +97,7 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 ## 🏠 HOW TO SELF-HOST (API)
 
 > [!NOTE]
-> This required tidal premium account / Redis & Fill the .env file.
+> This required tidal subscription / Redis & Fill the .env file.
 
 <br>
 
