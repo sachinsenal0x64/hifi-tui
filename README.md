@@ -109,6 +109,9 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 
 ## 📡 API DOCUMENTATION
 
+> [!TIP]
+> Reverse [api](https://tidal.401658.xyz) is free.
+
 ### Demo
 
 <details>
