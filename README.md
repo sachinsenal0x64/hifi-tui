@@ -123,7 +123,7 @@ pip install -r requirements.txt
 python main.py
 
 ```
-![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/4330ea31-3f15-45b0-962c-ca5a85041f02)
+![fastapi](https://sachinsenal0x64.github.io/picx-images-hosting/300191675-4330ea31-3f15-45b0-962c-ca5a85041f02.5tz3jj54f2ps.webp)
 
 
 <br>
