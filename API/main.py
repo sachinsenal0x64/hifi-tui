@@ -70,33 +70,39 @@ async def refresh():
         tidal_token = cached_tok
         return tidal_token
 
-    else:
-        refresh_url = "https://auth.tidal.com/v1/oauth2/token"
-        payload = {
-            "client_id": client_id,
-            "refresh_token": refresh_token,
-            "grant_type": "refresh_token",
-            "scope": "r_usr+w_usr+w_sub",
-        }
-        async with httpx.AsyncClient() as client:
-            try:
-                res2 = await client.post(
-                    url=refresh_url, data=payload, auth=Basic(client_id, client_secret)
-                )
-                # Assuming a successful response code is 200
-                if res2.status_code == 200:
-                    print_token = res2.json()
-                    tida_token = print_token.get("access_token")
-                    r.set("access_token", tida_token)
-                    tidal_token = tida_token
-                    return tidal_token
-                else:
-                    return {"error": f"Failed to refresh token: {res2.status_code}"}
+    if not cached_tok:
+        if not r.get("access_token"):
+            refresh_url = "https://auth.tidal.com/v1/oauth2/token"
+            payload = {
+                "client_id": client_id,
+                "refresh_token": refresh_token,
+                "grant_type": "refresh_token",
+                "scope": "r_usr+w_usr+w_sub",
+            }
+            async with httpx.AsyncClient() as client:
+                try:
+                    res2 = await client.post(
+                        url=refresh_url,
+                        data=payload,
+                        auth=Basic(client_id, client_secret),
+                    )
+                    # Assuming a successful response code is 200
+                    if res2.status_code == 200:
+                        print_token = res2.json()
+                        tida_token = print_token.get("access_token")
+                        r.set("access_token", tida_token)
+                        tidal_token = tida_token
+                        return tidal_token
+                    else:
+                        return {"error": f"Failed to refresh token: {res2.status_code}"}
 
-            except httpx.HTTPError as e:
-                return {"error": f"HTTP error occurred: {str(e)}"}
-            except Exception as e:
-                return {"error": f"An error occurred: {str(e)}"}
+                except httpx.HTTPError as e:
+                    return {"error": f"HTTP error occurred: {str(e)}"}
+                except Exception as e:
+                    return {"error": f"An error occurred: {str(e)}"}
+        else:
+            tidal_token = r.get("access_token")
+            return tidal_token
 
 
 async def auth():
