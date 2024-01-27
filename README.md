@@ -110,7 +110,7 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 ## 📡 API DOCUMENTATION
 
 > [!TIP]
-> Reverse [api](https://tidal.401658.xyz) is free.
+> Reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) is free.
 
 ### Demo
 
@@ -358,7 +358,7 @@ HIFI returns the following status codes in its API:
 
 
 > [!NOTE]
-> Tui player based on reverse [api](https://tidal.401658.xyz) so its totally free and easy to install via package manager 
+> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) so its totally free and easy to install via package manager 
 
 
 (⭕ WIP)
