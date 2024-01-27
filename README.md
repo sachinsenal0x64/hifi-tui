@@ -97,9 +97,15 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 ## 🏠 HOW TO SELF-HOST (API)
 
 > [!NOTE]
-> This required tidal premium account.
+> This required tidal premium account / redis.
 
-
+```console
+git clone https://github.com/sachinsenal0x64/Hifi-Tui.git
+cd Hifi-Tui
+cd API
+pip install -r requirements.txt
+python main.py
+```
 
 
 <br>
