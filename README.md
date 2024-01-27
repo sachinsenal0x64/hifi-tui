@@ -43,6 +43,15 @@ width="1800"  height="3">
 
 <br>
 
+# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> TIDAL REVERSE API
+
+> [!NOTE]  
+> TUI based on this api and its free & opensource.
+
+> https://tidal.401658.xyz
+
+<br>
+
 # 📌 NOTE
 
 > We DO NOT encourage piracy and made for purely educational purposes / personal use.
@@ -328,11 +337,23 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-# 🏠 HOW TO SELF-HOST (API)
+# 💨 Quick Start
+
+## 🏠 HOW TO SELF-HOST (API)
+
+> [!NOTE]
+> This required tidal premium account.
+
 
 (⭕ WIP)
 
+<br>
 
+## 🏠 HOW TO INSTALL (TUI)
+
+
+> [!NOTE]
+> This based on reverse api so its totally free and easy to install via package manager 
 
 <br>
 
