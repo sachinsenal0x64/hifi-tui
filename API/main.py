@@ -130,7 +130,7 @@ async def get_track(
     country: Annotated[str | None, Query(max_length=3)] = None,
 ):
     tokz = await refresh()
-    tidal_token = tokz.get("access_token")
+    tidal_token = tokz
 
     track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
 
