@@ -399,6 +399,8 @@ HIFI returns the following status codes in its API:
 - We need volunteers who have Tidal subscriptions because we might get banned by Tidal.
 
 - Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
+
+- All of your commits should go to the dev branch. Please don't push to the main branch.
   
 
 <br>
