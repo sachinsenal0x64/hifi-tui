@@ -37,11 +37,6 @@ width="1800"  height="3">
  
 <br>
 
-# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> API STATUS 
-
-> https://status.401658.xyz
-
-<br>
 
 # <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> TIDAL REVERSE API
 
@@ -49,6 +44,8 @@ width="1800"  height="3">
 > TUI based on this api and it free & opensource.
 
 > https://tidal.401658.xyz
+
+> https://status.401658.xyz
 
 <br>
 
