@@ -400,7 +400,7 @@ HIFI returns the following status codes in its API:
 
 - Feel free to send PR's regarding spelling mistakes, incorrect grammar etc.
 
-- All of your commits should go to the dev branch. Please don't push to the main branch.
+- All of your commits should go to the dev or misc branch. Please don't push to the main branch.
   
 
 <br>
