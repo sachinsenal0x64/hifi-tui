@@ -94,7 +94,20 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 
 <br>
 
-# 📡 API DOCUMENTATION
+
+# 💨 Quick Start
+
+## 🏠 HOW TO SELF-HOST (API)
+
+> [!NOTE]
+> This required tidal premium account.
+
+
+(⭕ WIP)
+
+<br>
+
+## 📡 API DOCUMENTATION
 
 ### Demo
 
@@ -337,17 +350,6 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-# 💨 Quick Start
-
-## 🏠 HOW TO SELF-HOST (API)
-
-> [!NOTE]
-> This required tidal premium account.
-
-
-(⭕ WIP)
-
-<br>
 
 ## 🏠 HOW TO INSTALL (TUI)
 
