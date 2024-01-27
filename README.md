@@ -83,7 +83,7 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
 
 - 📡 REST API (ACT AS REVERSE PROXY INSTANCE)
 
-- ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY | Purely Python Implementation)
+- ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY | Purely Python Implementation) & i reimplemented the load balancer using GO
 
 - ⚡️ ASYNC SUPPORT
 
