@@ -2,7 +2,10 @@ module main.go
 
 go 1.21.6
 
-require github.com/rivo/tview v0.0.0-20240122063236-8526c9fe1b54
+require (
+	github.com/gdamore/tcell v1.4.0
+	github.com/rivo/tview v0.0.0-20240122063236-8526c9fe1b54
+)
 
 require (
 	github.com/gdamore/encoding v1.0.0 // indirect
