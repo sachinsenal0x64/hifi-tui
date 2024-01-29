@@ -63,7 +63,7 @@ width="1800"  height="3">
 
 # ❓ WHY ?
 
-I love terminal/CLI tools as well as music, so why not to have a tidal music client for the terminal? Unfortunately, I haven't found any terminal client yet, and that's why it's all about :)
+I love cli tools as well as music, so why not to have a tidal music client for the terminal? Unfortunately, I haven't found any terminal client yet, and that's why it's all about :)
 
 <br>
 
