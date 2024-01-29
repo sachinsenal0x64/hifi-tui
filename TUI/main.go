@@ -50,7 +50,7 @@ func (a *App) SetInputHandlers() {
 
 		switch event.Key() {
 		case tcell.KeyCtrlL:
-			if focus == a.library.Component {
+			if focus == a.library.BodyComponent {
 				a.tview.SetFocus(a.library.BodyComponent)
 			}
 		}

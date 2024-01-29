@@ -9,7 +9,7 @@ type LibraryComponets struct {
 	BodyComponent *tview.TextArea
 }
 
-func CreateRequest() *LibraryComponets {
+func CreateLibrary() *LibraryComponets {
 	ct := tview.NewFlex()
 	ct.SetDirection(tview.FlexRow).SetBorder(true).SetTitle("Library")
 
@@ -18,7 +18,7 @@ func CreateRequest() *LibraryComponets {
 	body.SetTitle("Body")
 	body.SetText("", true)
 
-	// Add requests component on its container
+	// Add library component on its container
 	ct.AddItem(body, 0, 1, false)
 
 	return &LibraryComponets{
