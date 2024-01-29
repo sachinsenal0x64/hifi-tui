@@ -59,73 +59,65 @@ func (a App) Start() error {
 }
 
 func (a *App) SetInputHandlers() {
+	var keySequence []rune
 	a.rootContainer.SetInputCapture(func(event *tcell.EventKey) *tcell.EventKey {
-		// focus := a.tview.GetFocus()
+
+		focus := a.tview.GetFocus()
+
 		switch event.Rune() {
-		case 'k':
-			a.tview.SetFocus(a.library.Container)
 
 		case 'j':
-			a.tview.SetFocus(a.lyrics.Container)
+			if focus == a.library.Container {
+				a.tview.SetFocus(a.lyrics.Container)
+			} else if focus == a.song.Container {
+				a.tview.SetFocus(a.player.Container)
+			}
 
+		case 'k':
+			if focus == a.lyrics.Container {
+				a.tview.SetFocus(a.library.Container)
+			} else if focus == a.player.Container {
+				a.tview.SetFocus(a.song.Container)
+			}
+
+		case 'h':
+			if focus == a.song.Container {
+				a.tview.SetFocus(a.library.Container)
+			} else if focus == a.player.Container {
+				a.tview.SetFocus(a.lyrics.Container)
+			}
+
+		case 'l':
+			if focus == a.lyrics.Container || focus == a.player.Container {
+				a.tview.SetFocus(a.player.Container)
+			} else {
+				a.tview.SetFocus(a.song.Container)
+			}
+
+		case 'w':
+			keySequence = append(keySequence, 'w')
+
+		case 'q': // Check for the wq key press
+			keySequence = append(keySequence, 'q')
+			// Check for both 'wq' and 'q' key presses
+			if len(keySequence) >= 2 && keySequence[len(keySequence)-2] == 'w' && keySequence[len(keySequence)-1] == 'q' {
+				// 'wq' sequence detected, stop tview
+				a.tview.Stop()
+				keySequence = nil // Reset the sequence for the next input
+				return nil
+			}
 		}
-
-		// Check for the q key press
-		if event.Rune() == 'q' {
-			a.tview.Stop()
-			return nil
-
+		if event.Key() == tcell.KeyEsc {
+			a.tview.SetFocus(a.rootContainer)
 		}
 		return event
-
 	})
 
 }
 
 func main() {
-	// app := tview.NewApplication()
-
-	// // 2x2
-
-	// flex := tview.NewFlex().
-	// 	AddItem(tview.NewFlex().SetDirection(tview.FlexRow).
-	// 		AddItem(tview.NewBox().SetBorder(true).SetTitle("Library"), 0, 1, false).
-	// 		AddItem(tview.NewBox().SetBorder(true).SetTitle("Lyrics"), 0, 1, false), 0, 1, false).
-
-	// 	// 2x2
-
-	// 	AddItem(tview.NewFlex().SetDirection(tview.FlexRow).
-	// 		AddItem(tview.NewBox().SetBorder(true).SetTitle("Songs"), 0, 10, false).
-	// 		AddItem(tview.NewBox().SetBorder(true).SetTitle("Player"), 0, 1, false), 0, 3, false)
-
-	// // Set up an event loop
-	// app.SetInputCapture(func(event *tcell.EventKey) *tcell.EventKey {
-
-	// 	switch event.Rune() {
-	// 	case 'k':
-	// 		flex.SetBorder(true)
-
-	// 	case 'j':
-	// 		flex.SetBorder(false)
-	// 	}
-
-	// 	// Check for the q key press
-	// 	if event.Rune() == 'q' {
-	// 		app.Stop()
-	// 		return nil
-	// 	}
-
-	// 	return event
-
-	// })
-
-	// // The application will run until app.Stop() is called (in response to the Escape key press)
-
-	// if err := app.SetRoot(flex, true).Run(); err != nil {
-	// 	panic(err)
-	// }
-
 	app := CreateApp()
+
 	if err := app.Start(); err != nil {
 		panic(err)
 	}
