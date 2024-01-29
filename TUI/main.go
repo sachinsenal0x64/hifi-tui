@@ -8,7 +8,7 @@ import (
 
 // Song informations
 
-type Song struct {
+type Track struct {
 	duration float64
 	title    string
 	artist   string
@@ -20,21 +20,32 @@ type App struct {
 	rootContainer *tview.Flex
 	library       *components.LibraryComponets
 	song          *components.SongComponets
+	lyrics        *components.LyricsComponets
+	player        *components.PlayerComponets
 }
 
 func CreateApp() *App {
 	lib := components.CreateLibrary()
 	song := components.CreateSong()
+	lyrics := components.CreateLyrics()
+	player := components.CreatePlayer()
 
 	a := App{
 		tview:         tview.NewApplication(),
 		rootContainer: tview.NewFlex(),
 		library:       lib,
 		song:          song,
+		lyrics:        lyrics,
+		player:        player,
 	}
 
-	a.rootContainer.AddItem(a.library.Container, 0, 1, false)
-	a.rootContainer.AddItem(a.song.Container, 0, 10, false)
+	a.rootContainer.AddItem(tview.NewFlex().SetDirection(tview.FlexRow).
+		AddItem(a.library.Container, 0, 1, false).
+		AddItem(a.lyrics.Container, 0, 1, false), 0, 1, false)
+
+	a.rootContainer.AddItem(tview.NewFlex().SetDirection(tview.FlexRow).
+		AddItem(a.song.Container, 0, 10, false).
+		AddItem(a.player.Container, 0, 1, false), 0, 3, false)
 
 	a.tview.SetRoot(a.rootContainer, true)
 
@@ -55,7 +66,7 @@ func (a *App) SetInputHandlers() {
 			a.tview.SetFocus(a.library.Container)
 
 		case 'j':
-			a.tview.SetFocus(a.song.Container)
+			a.tview.SetFocus(a.lyrics.Container)
 
 		}
 

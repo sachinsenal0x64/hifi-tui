@@ -8,7 +8,7 @@ import (
 
 // Song informations
 
-type Song struct {
+type Track struct {
 	duration float64
 	title    string
 	artist   string
@@ -19,21 +19,24 @@ type App struct {
 	tview         *tview.Application
 	rootContainer *tview.Flex
 	library       *components.LibraryComponets
+	song          *components.SongComponets
 }
 
 func CreateApp() *App {
 	lib := components.CreateLibrary()
+	song := components.CreateSong()
 
 	a := App{
 		tview:         tview.NewApplication(),
 		rootContainer: tview.NewFlex(),
 		library:       lib,
+		song:          song,
 	}
 
-	a.rootContainer.AddItem(a.library.Container, 0, 1, false).
-		AddItem(a.library.BodyComponent.Box, 0, 1, false)
+	a.rootContainer.AddItem(a.library.Container, 0, 1, false)
+	a.rootContainer.AddItem(a.song.Container, 0, 10, false)
 
-	a.tview.SetRoot(a.rootContainer, true).SetFocus(a.rootContainer).EnableMouse(true)
+	a.tview.SetRoot(a.rootContainer, true)
 
 	a.SetInputHandlers()
 
@@ -46,16 +49,13 @@ func (a App) Start() error {
 
 func (a *App) SetInputHandlers() {
 	a.rootContainer.SetInputCapture(func(event *tcell.EventKey) *tcell.EventKey {
-		focus := a.tview.GetFocus()
+		// focus := a.tview.GetFocus()
 		switch event.Rune() {
 		case 'k':
-
-			if focus == a.library.Container {
-				a.tview.SetFocus(a.library.Container.Box)
-
-			}
+			a.tview.SetFocus(a.library.Container)
 
 		case 'j':
+			a.tview.SetFocus(a.song.Container)
 
 		}
 
