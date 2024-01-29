@@ -388,7 +388,7 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-## 🏠 KEY BINDINGS (TUI)
+## ⌨ KEY BINDINGS (TUI)
 
 <br>
 
