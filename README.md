@@ -73,7 +73,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
   
 - 📀 AUDIO QUALITY / CODEC: DOLBY ATMOS | MQA 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
 
-- ⌨ VIM LIKE KEYBINDINGS
+- ⌨ VIM LIKE KEY BINDINGS
 
 - 🎧 TIDAL-HIFI | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
   
@@ -388,7 +388,7 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-## 🏠 KEYBINDINGS (TUI)
+## 🏠 KEY BINDINGS (TUI)
 
 <br>
 
