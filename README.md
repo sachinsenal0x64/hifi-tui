@@ -73,6 +73,8 @@ I love terminal/CLI tools as well as music, so why not to have a tidal music cli
   
 - 📀 AUDIO QUALITY / CODEC: DOLBY ATMOS | MQA 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
 
+- ⌨ VIM LIKE KEYBINDINGS
+
 - 🎧 TIDAL-HIFI | PODCAST | YOUTUBE MUSIC PLAYER IN TUI  (⭕ in progress)
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
