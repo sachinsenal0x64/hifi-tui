@@ -386,6 +386,9 @@ HIFI returns the following status codes in its API:
 
 (⭕ WIP)
 
+
+#### 🏠 KEYBINDINGS (TUI)
+
 <br>
 
 ## 🏗️ Contributing
