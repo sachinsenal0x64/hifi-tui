@@ -83,7 +83,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> TIDAL REVERSE API
+# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> TIDAL REVERSE API / STATUS
 
 > [!NOTE]  
 > TUI based on this api and it free & opensource.
@@ -103,7 +103,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 
 > [!NOTE]
-> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) so its totally free (you can access without any premium subscription) and easy to install via package manager 
+> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api) so its totally free (you can access without any premium subscription) and easy to install via package manager 
 
 
 (⭕ WIP)
