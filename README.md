@@ -153,7 +153,7 @@ python main.py
 ## 📡 API DOCUMENTATION
 
 > [!TIP]
-> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) for free.
+> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api) for free.
 
 ### Demo
 
