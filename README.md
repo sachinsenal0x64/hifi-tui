@@ -38,17 +38,6 @@ width="1800"  height="3">
 <br>
 
 
-# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> TIDAL REVERSE API
-
-> [!NOTE]  
-> TUI based on this api and it free & opensource.
-
-> https://tidal.401658.xyz
-
-> https://status.401658.xyz
-
-<br>
-
 # 📌 NOTE
 
 > We DO NOT encourage piracy and made for purely educational purposes / personal use.
@@ -89,10 +78,21 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - ⚡️ ASYNC SUPPORT
 
-- 📑 DOCS SUPPORT ( SWAGGER UI ) 
+- 📑 DOCS SUPPORT ( SWAGGER UI )
+  
 
 <br>
 
+# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> TIDAL REVERSE API
+
+> [!NOTE]  
+> TUI based on this api and it free & opensource.
+
+> https://tidal.401658.xyz
+
+> https://status.401658.xyz
+
+<br>
 
 # 💨 Quick Start
 
