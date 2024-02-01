@@ -76,7 +76,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY | Purely Python & GO Implementations)
 
-- ⚡️ ASYNC | CONCURRENCY SUPPORT
+- ⚡️ POWERFUL ASYNC | CONCURRENCY SUPPORT
 
 - 📑 DOCS SUPPORT ( SWAGGER UI )
   
