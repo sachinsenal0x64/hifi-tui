@@ -83,6 +83,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
+
 # <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="Status" height="40px" width="40px"> TIDAL REVERSE API / STATUS
 
 > [!NOTE]  
@@ -93,6 +94,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 > https://status.401658.xyz
 
 <br>
+
 
 # 💨 Quick Start
 
