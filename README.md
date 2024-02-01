@@ -105,7 +105,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 
 > [!NOTE]
-> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api) so its totally free (you can access without any premium subscription) and easy to install via package manager 
+> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) so its totally free (you can access without any premium subscription) and easy to install via package manager 
 
 
 (⭕ WIP)
@@ -121,7 +121,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 ## 🏠 HOW TO SELF-HOST (API)
 
 > [!NOTE]
-> This Required Tidal subscription / [Redis](https://github.com/redis/redis) & fill the .env file.
+> This Required [Tidal](https://tidal.com) subscription / [Redis](https://github.com/redis/redis) & Fill the [.env](https://github.com/sachinsenal0x64/Hifi-Tui/blob/main/API/.env-example) file.
 
 <br>
 
@@ -155,7 +155,7 @@ python main.py
 ## 📡 API DOCUMENTATION
 
 > [!TIP]
-> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api) for free.
+> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
 
 ### Demo
 
