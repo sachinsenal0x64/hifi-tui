@@ -96,6 +96,26 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 # 💨 Quick Start
 
+<br>
+
+
+## 🏠 HOW TO INSTALL (TUI)
+
+
+> [!NOTE]
+> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) so its totally free (you can access without any premium subscription) and easy to install via package manager 
+
+
+(⭕ WIP)
+
+<br>
+
+## ⌨ KEY BINDINGS (TUI)
+
+(⭕ WIP)
+
+<br>
+
 ## 🏠 HOW TO SELF-HOST (API)
 
 > [!NOTE]
@@ -373,22 +393,6 @@ HIFI returns the following status codes in its API:
 ```
 
 </details>
-
-<br>
-
-
-## 🏠 HOW TO INSTALL (TUI)
-
-
-> [!NOTE]
-> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui#-tidal-reverse-api) so its totally free and easy to install via package manager 
-
-
-(⭕ WIP)
-
-<br>
-
-## ⌨ KEY BINDINGS (TUI)
 
 <br>
 
