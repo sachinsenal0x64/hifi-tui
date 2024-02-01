@@ -68,7 +68,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
-- 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT (⭕ in progress)
+- 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT | LYRICS & COVER ART (⭕ in progress)
 
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
@@ -76,7 +76,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY | Purely Python & GO Implementations)
 
-- ⚡️ ASYNC SUPPORT
+- ⚡️ ASYNC | CONCURRENCY SUPPORT
 
 - 📑 DOCS SUPPORT ( SWAGGER UI )
   
