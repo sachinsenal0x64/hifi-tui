@@ -403,7 +403,7 @@ HIFI returns the following status codes in its API:
 > Workflow Diagram
 <br>
 
-![2023-11-06_18-12](https://cdn.statically.io/gh/sachinsenal0x64/picx-images-hosting@master/2023-11-08_23-58.220qxiet1zkw.png)
+![2023-11-06_18-12](https://sachinsenal0x64.github.io/picx-images-hosting/Untitled-2024-02-02-1444.5m2c9asdofb4.webp)
 
 
 - Before send PR first open a issue then fork the repo.
