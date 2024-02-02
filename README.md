@@ -121,7 +121,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 ## 🏠 HOW TO SELF-HOST (API)
 
 > [!NOTE]
-> This Required [Tidal](https://tidal.com) subscription / [Redis](https://github.com/redis/redis) & Fill the [.env](https://github.com/sachinsenal0x64/Hifi-Tui/blob/main/API/.env-example) file.
+> This Required [Tidal](https://tidal.com) subscription / [Redis](https://github.com/redis/redis) & Fill the [.env](https://github.com/sachinsenal0x64/Hifi-Tui/blob/main/api/.env-example) file.
 
 <br>
 
