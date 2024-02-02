@@ -72,7 +72,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
-- 📡 REST API (ACT AS REVERSE PROXY INSTANCE)
+- 📡 BEAUTIFUL REST API (ACT AS REVERSE PROXY INSTANCE)
 
 - ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY | Purely Python & GO Implementations)
 
