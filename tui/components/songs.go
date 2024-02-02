@@ -11,7 +11,7 @@ type SongComponets struct {
 
 func CreateSong() *SongComponets {
 	ct := tview.NewFlex()
-	ct.SetDirection(tview.FlexRow).SetBorder(true).SetTitle("Song")
+	ct.SetDirection(tview.FlexRow).SetBorder(true).SetTitle("Songs")
 
 	// Add library component on its container
 

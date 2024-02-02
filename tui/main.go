@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
-	"github.com/sachinsenal0x64/Hifi-Tui/TUI/components"
+	"hifi-tui/tui/components"
 )
 
 // Song informations
