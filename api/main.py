@@ -72,7 +72,7 @@ async def refresh():
 
     elif status != 200:
         r.delete("access_token")
-        
+
     if not cached_tok:
         if not r.get("access_token"):
             refresh_url = "https://auth.tidal.com/v1/oauth2/token"
@@ -103,9 +103,6 @@ async def refresh():
                     return {"error": f"HTTP error occurred: {str(e)}"}
                 except Exception as e:
                     return {"error": f"An error occurred: {str(e)}"}
-        else:
-            tidal_token = r.get("access_token")
-            return tidal_token
 
 
 async def auth():
@@ -261,6 +258,12 @@ async def search_cover(id: int | None = None, q: str | None = None):
         "Cover not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
     )
 
+
+    else:
+        raise HTTPException(
+            status_code=404,
+            detail="Cover not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
+        )
 
 
 async def main():
