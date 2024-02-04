@@ -70,6 +70,9 @@ async def refresh():
         tidal_token = cached_tok
         return tidal_token
 
+    elif status != 200:
+        r.delete("access_token")
+        
     if not cached_tok:
         if not r.get("access_token"):
             refresh_url = "https://auth.tidal.com/v1/oauth2/token"
