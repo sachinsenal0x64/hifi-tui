@@ -190,68 +190,77 @@ async def search_track(q: str):
 async def search_cover(id: int | None = None, q: str | None = None):
     tokz = await refresh()
     tidal_token = tokz
-    if id:
-        search_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
-        header = {"authorization": f"Bearer {tidal_token}"}
-        async with httpx.AsyncClient() as clinet:
-            cover_data = await clinet.get(url=search_url, headers=header)
-            tracks = cover_data.json()["album"]
+    try:
+        if id:
+            search_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
+            header = {"authorization": f"Bearer {tidal_token}"}
+            async with httpx.AsyncClient() as clinet:
+                cover_data = await clinet.get(url=search_url, headers=header)
+                tracks = cover_data.json()["album"]
 
-            album_ids = []  # list to store album ids
+                album_ids = []  # list to store album ids
 
-            album_track_id = tracks["id"]
-            album_cover = tracks["cover"].replace("-", "/")
-            album_name = tracks["title"]
-            album_ids.append(album_cover)
-            album_ids.append(album_name)
-            album_ids.append(album_track_id)
-
-            json_data = [
-                {
-                    "id": album_ids[i + 2],
-                    "name": album_ids[i + 1],
-                    "1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
-                    "640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
-                    "80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
-                }
-                for i in range(0, len(album_ids), 3)
-            ]
-
-            # Create a list of dictionaries with "cover" and "name" keys
-            return json_data
-
-    elif q:
-        search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
-        header = {"authorization": f"Bearer {tidal_token}"}
-        async with httpx.AsyncClient() as clinet:
-            cover_data = await clinet.get(url=search_url, headers=header)
-            tracks = cover_data.json()["items"][:10]
-
-            album_ids = []  # list to store album ids
-
-            for track in tracks:
-                album_track_id = track["id"]
-                print(album_track_id)
-                album_cover = track["album"]["cover"].replace("-", "/")
-                album_name = track["title"]
+                album_track_id = tracks["id"]
+                album_cover = tracks["cover"].replace("-", "/")
+                album_name = tracks["title"]
                 album_ids.append(album_cover)
                 album_ids.append(album_name)
                 album_ids.append(album_track_id)
-            json_data = [
-                {
-                    "id": album_ids[i + 2],
-                    "name": album_ids[i + 1],
-                    "1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
-                    "640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
-                    "80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
-                }
-                for i in range(0, len(album_ids), 3)
-            ]
 
-            # Create a list of dictionaries with "cover" and "name" keys
-            return json_data
+                json_data = [
+                    {
+                        "id": album_ids[i + 2],
+                        "name": album_ids[i + 1],
+                        "1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
+                        "640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
+                        "80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
+                    }
+                    for i in range(0, len(album_ids), 3)
+                ]
 
-    else:
+                # Create a list of dictionaries with "cover" and "name" keys
+                return json_data
+
+        elif q:
+            search_url = (
+                f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
+            )
+            header = {"authorization": f"Bearer {tidal_token}"}
+            async with httpx.AsyncClient() as clinet:
+                cover_data = await clinet.get(url=search_url, headers=header)
+                tracks = cover_data.json()["items"][:10]
+
+                album_ids = []  # list to store album ids
+
+                for track in tracks:
+                    album_track_id = track["id"]
+                    print(album_track_id)
+                    album_cover = track["album"]["cover"].replace("-", "/")
+                    album_name = track["title"]
+                    album_ids.append(album_cover)
+                    album_ids.append(album_name)
+                    album_ids.append(album_track_id)
+                json_data = [
+                    {
+                        "id": album_ids[i + 2],
+                        "name": album_ids[i + 1],
+                        "1280": f"https://resources.tidal.com/images/{album_ids[i]}/1280x1280.jpg",
+                        "640": f"https://resources.tidal.com/images/{album_ids[i]}/640x640.jpg",
+                        "80": f"https://resources.tidal.com/images/{album_ids[i]}/80x80.jpg",
+                    }
+                    for i in range(0, len(album_ids), 3)
+                ]
+
+                # Create a list of dictionaries with "cover" and "name" keys
+                return json_data
+
+        else:
+            raise HTTPException(
+                status_code=404,
+                detail="Cover not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
+            )
+
+    except KeyError:
         raise HTTPException(
             status_code=404,
             detail="Cover not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
