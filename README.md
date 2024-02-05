@@ -245,7 +245,7 @@ HIFI returns the following status codes in its API:
 
 <details>
 
- <summary><code>GET</code>   <code><b>/song/</b></code> </summary>
+ <summary><code>GET</code>   <code><b>/search/</b></code> </summary>
 
 ## Request
 
