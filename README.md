@@ -46,7 +46,7 @@ width="1800"  height="3">
 
 > You can access our rest api for free if you want to self-host then need tidal subscription.
 
-> TUI is plug & play also you can add your own tidal account but by default its has our API so you can access tidal music for free.
+> TUI is plug & play also you can add your own tidal account but by default its has our API so you can listen tidal music for free.
  
 <br>
 
@@ -58,7 +58,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 # 🚀 Features
 
-- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN ACCESS FOR FREE USING OUR  [API](https://tidal.401658.xyz) & TUI PLAYER
+- 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN LISTEN FOR FREE USING OUR  [API](https://tidal.401658.xyz) & TUI PLAYER
   
 - 📀 AUDIO QUALITY / CODEC  DOLBY ATMOS | MQA 96K | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
 
