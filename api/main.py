@@ -2,6 +2,7 @@ import asyncio
 import base64
 import json
 import os
+from logging import raiseExceptions
 from typing import Annotated
 
 import httpx
@@ -12,6 +13,7 @@ import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from httpx_auth import Basic
+from redis import client
 from requests.auth import HTTPBasicAuth
 
 app = FastAPI()
@@ -164,6 +166,48 @@ async def get_track(
         fetch_info = info_data.json()
         return {
             "Song Info": fetch_info,
+            "Track Info": track_data.json(),
+            "OriginalTrackUrl": audio_url,
+        }
+    except KeyError:
+        raise HTTPException(
+            status_code=404,
+            detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
+        )
+
+
+@app.api_route("/song/", methods=["GET"])
+async def get_song(
+    q: str,
+    quality: str,
+    country: Annotated[str | None, Query(max_length=3)] = None,
+):
+    tokz = await refresh()
+    tidal_token = tokz
+    search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
+    payload = {
+        "authorization": f"Bearer {tidal_token}",
+    }
+    async with httpx.AsyncClient() as clinet:
+        search_data = await clinet.get(url=search_url, headers=payload)
+        try:
+            id = search_data.json()["items"][0]["id"]
+
+        except IndexError:
+            raise HTTPException(status_code=404)
+
+        track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
+        track_data = await clinet.get(url=track_url, headers=payload)
+
+    try:
+        rich.print(track_data.json())
+        final_data = track_data.json()["manifest"]
+        decode_manifest = base64.b64decode(final_data)
+        con_json = json.loads(decode_manifest)
+        audio_url = con_json.get("urls")[0]
+
+        return {
+            "Song Info": search_data.json()["items"][0],
             "Track Info": track_data.json(),
             "OriginalTrackUrl": audio_url,
         }
