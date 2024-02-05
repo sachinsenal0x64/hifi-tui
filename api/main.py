@@ -250,14 +250,6 @@ async def search_cover(id: int | None = None, q: str | None = None):
 
             # Create a list of dictionaries with "cover" and "name" keys
             return json_data
-                  
-    else:
-      raise HTTPException(
-        status_code=404,
-        detail=
-        "Cover not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
-    )
-
 
     else:
         raise HTTPException(
