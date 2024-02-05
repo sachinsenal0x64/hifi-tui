@@ -105,7 +105,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 
 > [!NOTE]
-> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) so its totally free (you can access without any premium subscription) and easy to install via package manager 
+> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) so its totally free (you can listen without any premium subscription) and easy to install via package manager 
 
 
 (⭕ WIP)
