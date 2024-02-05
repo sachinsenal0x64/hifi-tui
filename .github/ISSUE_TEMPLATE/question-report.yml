@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please search for this issue in issues-page first. Avoid duplication.
+        Please search for this issue in issues-page or discussions-page first. Avoid duplication.
   - type: textarea
     id: which-tool
     attributes:
