@@ -426,7 +426,6 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-
 ### Response
 
   ```json
@@ -504,6 +503,7 @@ HIFI returns the following status codes in its API:
 }
 
 ```
+</details>
 
 <br>
 
