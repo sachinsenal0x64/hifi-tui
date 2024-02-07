@@ -398,6 +398,114 @@ HIFI returns the following status codes in its API:
 
 <br>
 
+<details>
+
+ <summary><code>GET</code>   <code><b>/song/</b></code> </summary>
+
+## Request
+
+
+<br>
+
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `q`       |  integer   |  Song Query = `Mine` |
+> | `quality`  |  string   | Song Quality = `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` |
+
+
+<br>
+
+#### Example
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/song/?q=Mine&quality=HI_RES"
+    
+
+![image](https://sachinsenal0x64.github.io/picx-images-hosting/2024-02-07-20:19:04-screenshot.5zw9tsa19wcg.webp)
+
+<br>
+
+
+### Response
+
+  ```json
+{
+    "OriginalTrackUrl": "track url",
+    "Song Info": {
+        "adSupportedStreamReady": true,
+        "album": {
+            "cover": "22b8ce2a-1912-4fc6-956f-3be5eb4a7f4c",
+            "id": 79712262,
+            "title": "Mine",
+            "vibrantColor": "#a7d9fc",
+            "videoCover": null
+        },
+        "allowStreaming": true,
+        "artist": {
+            "id": 7384212,
+            "name": "Bazzi",
+            "picture": "2726f1e5-0435-4c49-a6f7-c2192544638f",
+            "type": "MAIN"
+        },
+        "artists": [
+            {
+                "id": 7384212,
+                "name": "Bazzi",
+                "picture": "2726f1e5-0435-4c49-a6f7-c2192544638f",
+                "type": "MAIN"
+            }
+        ],
+        "audioModes": [
+            "STEREO"
+        ],
+        "audioQuality": "HI_RES",
+        "copyright": "2017",
+        "djReady": true,
+        "duration": 134,
+        "editable": false,
+        "explicit": true,
+        "id": 79712263,
+        "isrc": "USAT21704227",
+        "mediaMetadata": {
+            "tags": [
+                "LOSSLESS",
+                "MQA"
+            ]
+        },
+        "mixes": {
+            "TRACK_MIX": "0014833cd62b1eecd3b24115e5f8d4"
+        },
+        "peak": 0.997437,
+        "popularity": 64,
+        "premiumStreamingOnly": false,
+        "replayGain": -10.39,
+        "stemReady": false,
+        "streamReady": true,
+        "streamStartDate": "2017-10-12T00:00:00.000+0000",
+        "title": "Mine",
+        "trackNumber": 1,
+        "url": "http://www.tidal.com/track/79712263",
+        "version": null,
+        "volumeNumber": 1
+    },
+    "Track Info": {
+        "albumPeakAmplitude": 0.997437,
+        "albumReplayGain": -10.39,
+        "assetPresentation": "FULL",
+        "audioMode": "STEREO",
+        "audioQuality": "HI_RES",
+        "manifest": "base64 manifest",
+        "manifestMimeType": "application/vnd.tidal.bts",
+        "trackId": 79712263,
+        "trackPeakAmplitude": 0.997437,
+        "trackReplayGain": -10.39
+    }
+}
+
+```
+
+<br>
 ## 🏗️ Contributing
 
 > Workflow Diagram
