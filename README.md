@@ -24,8 +24,7 @@ width="1800"  height="3">
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT) [![FASTAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=FastAPI&logoColor=white)](https://fastapi.tiangolo.com) [![Python](https://img.shields.io/badge/-Python-FCC624?style=style=flat-square&logo=Python)](https://www.python.org) [![PkgGoDev](https://pkg.go.dev/badge/github.com/rivo/tview)](https://pkg.go.dev/github.com/rivo/tview)
 
 
-   
-  
+    
 </div>
 
 <br><br>
@@ -100,9 +99,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-
 ## 🏠 INSTALLATION (TUI)
-
 
 > [!NOTE]
 > Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) so its totally free (you can listen without any premium subscription) and easy to install via package manager 
@@ -154,11 +151,12 @@ python main.py
 
 ## 📡 API DOCUMENTATION
 
->   Low (96 kbps) - 3 MB
-    Low (320 kbps) - 8 MB
-    High (FLAC, 16-bit, 44.1 kHz) - 30 MB
-    Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
+>   Low (96 kbps) - 3 MB <br>
+    Low (320 kbps) - 8 MB <br>
+    High (FLAC, 16-bit, 44.1 kHz) - 30 MB <br>
+    Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB <br>
     Max (MQA) - 26 MB
+
 
 <br>
 
