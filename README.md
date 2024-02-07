@@ -409,7 +409,7 @@ HIFI returns the following status codes in its API:
 
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
-> | `q`       |  integer   |  Song Query = `Mine` |
+> | `q`       |  integer   |  Song Query  =  `Mine` |
 > | `quality`  |  string   | Song Quality = `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` |
 
 
