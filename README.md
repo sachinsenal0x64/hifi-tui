@@ -160,7 +160,7 @@ python main.py
 
 <br>
 
-[MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
+> [MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
 
 <br>
 
