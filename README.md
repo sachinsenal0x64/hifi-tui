@@ -160,6 +160,10 @@ python main.py
 
 <br>
 
+[MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
+
+<br>
+
 > [!TIP]
 > You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
 
