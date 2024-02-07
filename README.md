@@ -93,8 +93,8 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 > https://status.401658.xyz
 
-<br>
 
+<br>
 
 # 💨 Quick Start
 
@@ -153,6 +153,14 @@ python main.py
 <br>
 
 ## 📡 API DOCUMENTATION
+
+>   Low (96 kbps) - 3 MB
+    Low (320 kbps) - 8 MB
+    High (FLAC, 16-bit, 44.1 kHz) - 30 MB
+    Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
+    Max (MQA) - 26 MB
+
+<br>
 
 > [!TIP]
 > You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
