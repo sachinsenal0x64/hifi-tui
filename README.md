@@ -362,7 +362,10 @@ HIFI returns the following status codes in its API:
 > |------------|-----------|-------------|
 > | `id`       |  integer  | Track Id = `328060990` |
 > | `song`     |  string   | Song Name = `Maestro` |
-> | `sizes`    |  string   | Size =  `1280 / 640 / 80`|
+
+<br>
+
+> #### Sizes = `1280px | 640px | 80px `
 
 <br>
 
@@ -409,7 +412,7 @@ HIFI returns the following status codes in its API:
 
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
-> | `q`       |  integer   |  Song Query  =  `Mine` |
+> | `q`        |  string   | Song Query   =  `Mine` |
 > | `quality`  |  string   | Song Quality = `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` |
 
 
@@ -503,6 +506,19 @@ HIFI returns the following status codes in its API:
 }
 
 ```
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
+
 </details>
 
 <br>
