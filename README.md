@@ -55,6 +55,13 @@ width="1800"  height="3">
 
 I love cli tools as well as music, so why not to have a tidal music client for the terminal? Unfortunately, I haven't found any terminal client yet, and that's why it's all about :)
 
+
+<br>
+
+> Tidal Current Situation.
+
+![Doge](https://sachinsenal0x64.github.io/picx-images-hosting/658aud.5f9r4ktllf8.webp)
+
 <br>
 
 # 🚀 Features
