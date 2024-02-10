@@ -2,12 +2,9 @@
 width="1800"  height="3">
 
 <div align="center">
-
- <p align="center">
  
-  ![hifi-tui](https://sachinsenal0x64.github.io/picx-images-hosting/test1.1ejfncjvbvuo.webp)
+ ![hifi-tui](https://sachinsenal0x64.github.io/picx-images-hosting/test1.1ejfncjvbvuo.webp)
  
-</p>
 </div>
 
 <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/PICX-IMAGE-HOSTING@master/ledstrip.3024rqxzahq0.gif"
