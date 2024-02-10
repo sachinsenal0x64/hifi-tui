@@ -7,8 +7,6 @@ width="1800"  height="3">
  
   ![hifi-tui](https://sachinsenal0x64.github.io/picx-images-hosting/test1.1ejfncjvbvuo.webp)
  
-  <img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/picx-images-hosting@master/audio-Spectrum-.2jn5ghwym6w0.gif" alt="Audio Spectrum" align="center"> 
-  
 </p>
 </div>
 
