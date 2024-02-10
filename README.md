@@ -63,7 +63,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN LISTEN FOR FREE USING OUR  [API](https://tidal.401658.xyz) & TUI PLAYER
   
-- 📀 AUDIO QUALITY / CODEC  DOLBY ATMOS | MQA 96K  | HI RES FLAC | FLAC | HIGH | LOW | Up to 24-bit, 192 kHz
+- 📀 AUDIO QUALITY / CODEC  DOLBY ATMOS | MQA 96K  | HI RES FLAC | FLAC LOSSLESS | HIGH | LOW | Up to 24-bit, 192 kHz
 
 - ⌨ VIM LIKE KEY BINDINGS
 
