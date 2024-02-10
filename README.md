@@ -42,7 +42,7 @@ width="1800"  height="3">
 
 > TUI is plug & play also you can add your own tidal account but by default it has our API so you can listen tidal music for free.
 
-> Some Qualities & Codecs Need Special Driver / Hardware i always recommend to use `HI_RES FLAC` or `FLAC`.
+> Some Qualities & Codecs Need Special Driver / Hardware i always recommend to use `HI_RES` or `LOSSLESS` both are flac.
  
 <br>
 
