@@ -83,7 +83,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - 📑 DOCS SUPPORT ( SWAGGER UI )
 
-- 🕹️ REMOTE (Highly Controllable Remotely Over the Network + Independently, Such an as Play | Pause | Seek | Volume | Next | Previous | Loop)
+- 🕹️ REMOTE (Highly Controllable Remotely Over the Network + Independently, Such an as Play | Pause | Seek | Volume | Next | Previous | Loops (Repeat | Infinity))
   
 
 <br>
