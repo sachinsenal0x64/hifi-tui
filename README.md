@@ -82,6 +82,8 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 - ⚡️ POWERFUL ASYNC | CONCURRENCY SUPPORT
 
 - 📑 DOCS SUPPORT ( SWAGGER UI )
+
+- Remote (Highly Controllable Remotely Over the Network + Independently, Such an as Play | Pause | Seek | Volume | Next | Previous | Loop)
   
 
 <br>
