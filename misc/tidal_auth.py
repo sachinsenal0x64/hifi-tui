@@ -1,8 +1,9 @@
-import requests
-from requests.auth import HTTPBasicAuth
 import json
-import rich
 import webbrowser
+
+import requests
+import rich
+from requests.auth import HTTPBasicAuth
 
 
 # we need this api keys for grant tidal auth
@@ -74,11 +75,17 @@ while True:
     if res2.ok:
         access_token = res2.json()["access_token"]
         refresh_token = res2.json()["refresh_token"]
-        accs = {"access_token": access_token, "refresh_token": refresh_token}
-        print(res2.text)
+        user_id = res2.json()["user"]["userId"]
+        accs = {
+            "access_token": access_token,
+            "refresh_token": refresh_token,
+            "userID": user_id,
+            "client_ID": "zU4XHVVkc2tDPo4t",
+            "client_secret": "VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4=",
+        }
         with open("token.json", "w") as file:
-            json.dump(accs, file)
-            break
+            json.dump(accs, file, indent=4)
+        break
 
 
 with open("token.json", "r") as readfile:
@@ -89,9 +96,11 @@ with open("token.json", "r") as readfile:
 
 url3 = f"https://api.tidal.com/v1/tracks/227809464/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL&audioMode=DOLBY_ATMOS"
 
-
 header = {"authorization": f"Bearer {acs_tok}"}
 
 res3 = requests.get(url=url3, headers=header)
 
-print(res3.text)
+rich.print(res3.json())
+
+
+print("TOKEN IS VALID")
