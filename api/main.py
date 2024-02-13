@@ -223,8 +223,8 @@ async def search_track(q: str):
     header = {"authorization": f"Bearer {tidal_token}"}
     async with httpx.AsyncClient() as clinet:
         search_data = await clinet.get(url=search_url, headers=header)
-
-        return [search_data.json()]
+        sed = search_data.json()["items"]
+        return [sed]
 
 
 @app.api_route("/cover/", methods=["GET"])
