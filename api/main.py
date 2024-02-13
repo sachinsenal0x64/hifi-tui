@@ -43,7 +43,7 @@ access_token = token["access_token"]
 
 r = redis.Redis(
     host=redis_url or "localhost",
-    port=redis_port or 6379,
+    port=int(redis_port or 6379),
     password=redis_password,
     db=0,
     protocol=3,
