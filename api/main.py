@@ -3,8 +3,7 @@ import base64
 import json
 import os
 from logging import raiseExceptions
-from typing import Annotated
-
+from typing import Union
 import httpx
 import redis
 import rich
@@ -227,7 +226,7 @@ async def search_track(q: str):
 
 
 @app.api_route("/cover/", methods=["GET"])
-async def search_cover(id: int | None = None, q: str | None = None):
+async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
     tokz = await refresh()
     tidal_token = tokz
     try:
