@@ -7,14 +7,12 @@ from typing import Annotated
 
 import httpx
 import redis
-import requests
 import rich
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from httpx_auth import Basic
 from redis import client
-from requests.auth import HTTPBasicAuth
 
 app = FastAPI()
 
@@ -89,7 +87,7 @@ async def refresh():
                     res2 = await client.post(
                         url=refresh_url,
                         data=payload,
-                        auth=Basic(client_id, client_secret),
+                        auth=(client_id, client_secret),
                     )
                     # Assuming a successful response code is 200
                     if res2.status_code == 200:
@@ -118,6 +116,7 @@ async def auth():
         "client_id": cids,
         "client_secret": csec,
     }
+
     async with httpx.AsyncClient() as client:
         res = await client.post(url=url, data=payload)
 
