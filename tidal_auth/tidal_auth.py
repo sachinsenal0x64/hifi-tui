@@ -70,7 +70,8 @@ data2 = {
 
 basic = HTTPBasicAuth(authrize.client_id, authrize.client_secret)
 
-while True:
+
+while res == True:
     res2 = requests.post(url=url2, data=data2, auth=basic)
     if res2.ok:
         access_token = res2.json()["access_token"]
@@ -85,14 +86,13 @@ while True:
         }
         with open("token.json", "w") as file:
             json.dump(accs, file, indent=4)
-        break
 
+        res = False
 
 with open("token.json", "r") as readfile:
     token = json.loads(readfile.read())
     rich.print(token)
     acs_tok = token["access_token"]
-
 
 url3 = f"https://api.tidal.com/v1/tracks/227809464/playbackinfopostpaywall?countryCode=en_US&audioquality={HI_RES}&playbackmode=STREAM&assetpresentation=FULL&audioMode=DOLBY_ATMOS"
 
