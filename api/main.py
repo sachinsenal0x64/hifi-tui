@@ -140,7 +140,7 @@ async def index():
 async def get_track(
     id: int,
     quality: str,
-    country: Annotated[str | None, Query(max_length=3)] = None,
+    country: Union[str, None] = Query(default=None, max_length=3),
 ):
     tokz = await refresh()
     tidal_token = tokz
@@ -177,7 +177,7 @@ async def get_track(
 async def get_song(
     q: str,
     quality: str,
-    country: Annotated[str | None, Query(max_length=3)] = None,
+    country:  Union[str, None] = Query(default=None, max_length=50),
 ):
     tokz = await refresh()
     tidal_token = tokz
