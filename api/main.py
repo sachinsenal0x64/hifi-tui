@@ -163,12 +163,11 @@ async def get_track(
         decode_manifest = base64.b64decode(final_data)
         con_json = json.loads(decode_manifest)
         audio_url = con_json.get("urls")[0]
+        au_j = {"OriginalTrackUrl": audio_url}
         fetch_info = info_data.json()
-        return {
-            "Song Info": fetch_info,
-            "Track Info": track_data.json(),
-            "OriginalTrackUrl": audio_url,
-        }
+
+        return [fetch_info, track_data.json(), au_j]
+
     except KeyError:
         raise HTTPException(
             status_code=404,
@@ -205,12 +204,10 @@ async def get_song(
         decode_manifest = base64.b64decode(final_data)
         con_json = json.loads(decode_manifest)
         audio_url = con_json.get("urls")[0]
+        au_j = {"OriginalTrackUrl": audio_url}
 
-        return {
-            "Song Info": search_data.json()["items"][0],
-            "Track Info": track_data.json(),
-            "OriginalTrackUrl": audio_url,
-        }
+        return [search_data.json()["items"][0], track_data.json(), au_j]
+
     except KeyError:
         raise HTTPException(
             status_code=404,
@@ -227,7 +224,7 @@ async def search_track(q: str):
     async with httpx.AsyncClient() as clinet:
         search_data = await clinet.get(url=search_url, headers=header)
 
-        return search_data.json()
+        return [search_data.json()]
 
 
 @app.api_route("/cover/", methods=["GET"])
