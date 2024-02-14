@@ -38,6 +38,8 @@ width="1800"  height="3">
 
 > I'm currently paying for a Tidal HiFi Plus subscription.
 
+> We Dont have any GUI Application for android / ios / windows / mac / linux  contributors are welcome.
+
 > You can access our rest api for free if you want to self-host then need tidal subscription.
 
 > TUI is plug & play also you can add your own tidal account but by default it has our API so you can listen tidal music for free.
