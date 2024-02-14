@@ -32,7 +32,7 @@ width="1800"  height="3">
 <br>
 
 
-# 📌 NOTE
+# 📌 F.A.Q
 
 > We DO NOT encourage piracy and made for purely educational purposes / personal use / just for listen not for downloading.
 
@@ -43,6 +43,15 @@ width="1800"  height="3">
 > TUI is plug & play also you can add your own tidal account but by default it has our API so you can listen tidal music for free.
 
 > Some Qualities & Codecs Need Special Driver / Hardware to get maximum output i always recommend to use `HI_RES` or `LOSSLESS` both are in flac.
+
+> [MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
+
+>   Low (96 kbps) - 3 MB <br>
+    Low (320 kbps) - 8 MB <br>
+    High (FLAC, 16-bit, 44.1 kHz) - 30 MB <br>
+    Max (MQA) - 26 MB <br>
+    Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
+
  
 <br>
 
@@ -164,17 +173,6 @@ python main.py
 <br>
 
 ## 📡 API DOCUMENTATION
-
-> [MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
-
->   Low (96 kbps) - 3 MB <br>
-    Low (320 kbps) - 8 MB <br>
-    High (FLAC, 16-bit, 44.1 kHz) - 30 MB <br>
-    Max (MQA) - 26 MB <br>
-    Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
-
-
-<br>
 
 > [!TIP]
 > You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
