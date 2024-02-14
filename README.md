@@ -118,6 +118,13 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
+# 📄 Documentation
+
+- https://hifitui.401658.xyz
+- https://hifi-tui-docs.pages.dev (Backup Url)
+
+<br>
+
 # 💨 Quick Start
 
 <br>
