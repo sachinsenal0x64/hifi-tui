@@ -122,6 +122,8 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
+> 💠 Docs are Work In Progress
+
 # 📄 Documentation
 
 - https://hifitui.401658.xyz
