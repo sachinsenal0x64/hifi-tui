@@ -122,9 +122,10 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-> 💠 Docs are Work In Progress
+
 
 # 📄 Documentation
+> 💠 Docs are Work In Progress
 
 - https://hifitui.401658.xyz
 - https://hifi-tui-docs.pages.dev (Backup Url)
