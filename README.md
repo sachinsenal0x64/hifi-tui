@@ -165,17 +165,14 @@ python main.py
 
 ## 📡 API DOCUMENTATION
 
+> [MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
+
 >   Low (96 kbps) - 3 MB <br>
     Low (320 kbps) - 8 MB <br>
     High (FLAC, 16-bit, 44.1 kHz) - 30 MB <br>
     Max (MQA) - 26 MB <br>
     Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
 
-
-
-<br>
-
-> [MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
 
 <br>
 
