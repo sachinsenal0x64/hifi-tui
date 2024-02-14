@@ -101,6 +101,12 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
+# Batteries 🔋🔋
+
+- [host-hifi-restapi-on-vercel](https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel)
+
+<br>
+
 # 💨 Quick Start
 
 <br>
