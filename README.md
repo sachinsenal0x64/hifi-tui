@@ -54,6 +54,8 @@ width="1800"  height="3">
     Max (MQA) - 26 MB <br>
     Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
 
+> We don't have any GUI Application for android / ios / windows / mac / linux  contributors are welcome.
+
  
 <br>
 
@@ -93,7 +95,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 - ⚡️ POWERFUL ASYNC | CONCURRENCY SUPPORT
 
 - 📑 DOCS SUPPORT ( SWAGGER UI )
-
+ 
 - 🕹️ REMOTE (Highly Controllable Remotely Over the Network + Independently, Such an as Play | Pause | Seek | Volume | Next | Previous | Loops (Repeat | Infinity))
   
 
