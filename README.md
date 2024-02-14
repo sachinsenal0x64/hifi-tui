@@ -44,7 +44,7 @@ width="1800"  height="3">
 
 > TUI is plug & play also you can add your own tidal account but by default it has our API so you can listen tidal music for free.
 
-> Some Qualities & Codecs Need Special Driver / Hardware to get maximum output i always recommend to use `HI_RES` or `LOSSLESS` both are in flac.
+> TL;DR  HIFI API Can Get Any Quality & Codec Which Tidal Offer / Some Qualities & Codecs Need Special Driver / Hardware to get maximum output i always recommend to use `HI_RES` or `LOSSLESS` both are in flac.
 
 > [MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
 
