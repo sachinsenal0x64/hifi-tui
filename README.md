@@ -557,7 +557,7 @@ HIFI returns the following status codes in its API:
 
 <br>
 
-## 🏗️ Contributing
+## 🫂 Contributing
 
 > Workflow Diagram
 <br>
