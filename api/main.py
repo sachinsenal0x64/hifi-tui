@@ -4,12 +4,14 @@ import json
 import os
 from logging import raiseExceptions
 from typing import Union
+
 import httpx
 import redis
 import rich
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.datastructures import Default
 from httpx_auth import Basic
 from redis import client
 
@@ -30,12 +32,12 @@ client_id = "zU4XHVVkc2tDPo4t"
 client_secret = "VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4="
 
 
-# with open("token.json", "r") as tok:
-#     token = json.loads(tok.read())
+with open("token.json", "r") as tok:
+    token = json.loads(tok.read())
 
 
-# refresh_token = token["refresh_token"]
-# access_token = token["access_token"]
+refresh_token = token["refresh_token"]
+access_token = token["access_token"]
 
 r = redis.Redis(
     host=redis_url or "localhost",
@@ -172,12 +174,45 @@ async def get_track(
         )
 
 
-@app.api_route("/song/", methods=["GET"])
-async def get_song(
-    q: str,
+@app.api_route("/track/", methods=["GET"])
+async def get_track(
+    id: int,
     quality: str,
-    country:  Union[str, None] = Query(default=None, max_length=50),
+    country: Union[str, None] = Query(default=None, max_length=3),
 ):
+    tokz = await refresh()
+    tidal_token = tokz
+
+    track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
+
+    info_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
+
+    payload = {
+        "authorization": f"Bearer {tidal_token}",
+    }
+
+    async with httpx.AsyncClient() as client:
+        track_data = await client.get(url=track_url, headers=payload)
+        info_data = await client.get(url=info_url, headers=payload)
+    try:
+        final_data = track_data.json()["manifest"]
+        decode_manifest = base64.b64decode(final_data)
+        con_json = json.loads(decode_manifest)
+        audio_url = con_json.get("urls")[0]
+        au_j = {"OriginalTrackUrl": audio_url}
+        fetch_info = info_data.json()
+
+        return [fetch_info, track_data.json(), au_j]
+
+    except KeyError:
+        raise HTTPException(
+            status_code=404,
+            detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
+        )
+
+
+@app.api_route("/song/", methods=["GET"])
+async def get_song(q: str, quality: str):
     tokz = await refresh()
     tidal_token = tokz
     search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
@@ -221,6 +256,18 @@ async def search_track(q: str):
     async with httpx.AsyncClient() as clinet:
         search_data = await clinet.get(url=search_url, headers=header)
         sed = search_data.json()["items"]
+        return [sed]
+
+
+@app.api_route("/album/", methods=["GET"])
+async def search_album(id: int):
+    tokz = await refresh()
+    tidal_token = tokz
+    search_url = f"https://api.tidal.com/v1/albums/{id}/?countryCode=US"
+    header = {"authorization": f"Bearer {tidal_token}"}
+    async with httpx.AsyncClient() as clinet:
+        album_data = await clinet.get(url=search_url, headers=header)
+        sed = album_data.json()
         return [sed]
 
 
