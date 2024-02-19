@@ -4,6 +4,7 @@ import json
 import os
 from logging import raiseExceptions
 from typing import Union
+
 import httpx
 import redis
 import rich
@@ -30,12 +31,12 @@ client_id = "zU4XHVVkc2tDPo4t"
 client_secret = "VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4="
 
 
-# with open("token.json", "r") as tok:
-#     token = json.loads(tok.read())
+with open("token.json", "r") as tok:
+    token = json.loads(tok.read())
 
 
-# refresh_token = token["refresh_token"]
-# access_token = token["access_token"]
+refresh_token = token["refresh_token"]
+access_token = token["access_token"]
 
 r = redis.Redis(
     host=redis_url or "localhost",
@@ -217,7 +218,7 @@ async def search_track(q: str):
     async with httpx.AsyncClient() as clinet:
         search_data = await clinet.get(url=search_url, headers=header)
         sed = search_data.json()["items"]
-        return [sed]
+        return sed
 
 
 @app.api_route("/album/", methods=["GET"])
