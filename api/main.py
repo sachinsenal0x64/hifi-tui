@@ -174,43 +174,6 @@ async def get_track(
         )
 
 
-@app.api_route("/track/", methods=["GET"])
-async def get_track(
-    id: int,
-    quality: str,
-    country: Union[str, None] = Query(default=None, max_length=3),
-):
-    tokz = await refresh()
-    tidal_token = tokz
-
-    track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
-
-    info_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
-
-    payload = {
-        "authorization": f"Bearer {tidal_token}",
-    }
-
-    async with httpx.AsyncClient() as client:
-        track_data = await client.get(url=track_url, headers=payload)
-        info_data = await client.get(url=info_url, headers=payload)
-    try:
-        final_data = track_data.json()["manifest"]
-        decode_manifest = base64.b64decode(final_data)
-        con_json = json.loads(decode_manifest)
-        audio_url = con_json.get("urls")[0]
-        au_j = {"OriginalTrackUrl": audio_url}
-        fetch_info = info_data.json()
-
-        return [fetch_info, track_data.json(), au_j]
-
-    except KeyError:
-        raise HTTPException(
-            status_code=404,
-            detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
-        )
-
-
 @app.api_route("/song/", methods=["GET"])
 async def get_song(q: str, quality: str):
     tokz = await refresh()
