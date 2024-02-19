@@ -32,12 +32,12 @@ client_id = "zU4XHVVkc2tDPo4t"
 client_secret = "VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4="
 
 
-with open("token.json", "r") as tok:
-    token = json.loads(tok.read())
+# with open("token.json", "r") as tok:
+#     token = json.loads(tok.read())
 
 
-refresh_token = token["refresh_token"]
-access_token = token["access_token"]
+# refresh_token = token["refresh_token"]
+# access_token = token["access_token"]
 
 r = redis.Redis(
     host=redis_url or "localhost",
