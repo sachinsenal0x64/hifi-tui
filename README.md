@@ -583,7 +583,7 @@ HIFI returns the following status codes in its API:
     https GET "https://tidal.401658.xyz/album/?id=157117504"
     
 
-![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+![image](https://github.com/sachinsenal0x64/picx-images-hosting/raw/master/2024-02-20-19:33:52-screenshot.99t2w3gelf.webp)
 
 <br>
 
