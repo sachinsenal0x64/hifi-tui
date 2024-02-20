@@ -31,12 +31,12 @@ client_id = "zU4XHVVkc2tDPo4t"
 client_secret = "VJKhDFqJPqvsPVNBV6ukXTJmwlvbttP7wlMlrc72se4="
 
 
-with open("token.json", "r") as tok:
-    token = json.loads(tok.read())
+if os.path.exists("token.json"):
+    with open("token.json", "r") as tok:
+        token = json.loads(tok.read())
 
-
-refresh_token = token["refresh_token"]
-access_token = token["access_token"]
+    refresh_token = token["refresh_token"]
+    access_token = token["access_token"]
 
 r = redis.Redis(
     host=redis_url or "localhost",
@@ -47,18 +47,21 @@ r = redis.Redis(
     decode_responses=True,
 )
 
-cached_tok = r.get("access_token")
+
+cached_tok = None
 
 
 async def token_checker():
     refresh_url = f"https://api.tidal.com/v2/feed/activities/?userId={user_id}"
+
+    cached_tok = r.get("access_token")
 
     headers = {"authorization": f"Bearer {cached_tok}"}
 
     async with httpx.AsyncClient() as client:
         res2 = await client.get(url=refresh_url, headers=headers)
         rich.print(res2.json())
-        # Assuming a successful response code is 200
+
         if res2.status_code == 200:
             return res2.status_code
 
@@ -66,42 +69,43 @@ async def token_checker():
 async def refresh():
     status = await token_checker()
     if status == 200:
+        cached_tok = r.get("access_token")
         tidal_token = cached_tok
         return tidal_token
 
     elif status != 200:
+        cached_tok = None
         r.delete("access_token")
 
-    if not cached_tok:
-        if not r.get("access_token"):
-            refresh_url = "https://auth.tidal.com/v1/oauth2/token"
-            payload = {
-                "client_id": client_id,
-                "refresh_token": refresh_token,
-                "grant_type": "refresh_token",
-                "scope": "r_usr+w_usr+w_sub",
-            }
-            async with httpx.AsyncClient() as client:
-                try:
-                    res2 = await client.post(
-                        url=refresh_url,
-                        data=payload,
-                        auth=(client_id, client_secret),
-                    )
-                    # Assuming a successful response code is 200
-                    if res2.status_code == 200:
-                        print_token = res2.json()
-                        tida_token = print_token.get("access_token")
-                        r.set("access_token", tida_token)
-                        tidal_token = tida_token
-                        return tidal_token
-                    else:
-                        return {"error": f"Failed to refresh token: {res2.status_code}"}
+    if not r.get("access_token"):
+        refresh_url = "https://auth.tidal.com/v1/oauth2/token"
+        payload = {
+            "client_id": client_id,
+            "refresh_token": refresh_token,
+            "grant_type": "refresh_token",
+            "scope": "r_usr+w_usr+w_sub",
+        }
+        async with httpx.AsyncClient() as client:
+            try:
+                res2 = await client.post(
+                    url=refresh_url,
+                    data=payload,
+                    auth=(client_id, client_secret),
+                )
+                # Assuming a successful response code is 200
+                if res2.status_code == 200:
+                    print_token = res2.json()
+                    tida_token = print_token.get("access_token")
+                    r.set("access_token", tida_token)
+                    tidal_token = tida_token
+                    return tidal_token
+                else:
+                    return {"error": f"Failed to refresh token: {res2.status_code}"}
 
-                except httpx.HTTPError as e:
-                    return {"error": f"HTTP error occurred: {str(e)}"}
-                except Exception as e:
-                    return {"error": f"An error occurred: {str(e)}"}
+            except httpx.HTTPError as e:
+                return {"error": f"HTTP error occurred: {str(e)}"}
+            except Exception as e:
+                return {"error": f"An error occurred: {str(e)}"}
 
 
 async def auth():
