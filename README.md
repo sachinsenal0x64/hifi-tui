@@ -191,6 +191,7 @@ python main.py
 > [!TIP]
 > You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
 
+------------------------------------------------------------------------------------------
 ### Demo
 
 <details>
@@ -275,6 +276,7 @@ HIFI returns the following status codes in its API:
 </details>
 
 ------------------------------------------------------------------------------------------
+
 
 
 <details>
@@ -437,6 +439,7 @@ HIFI returns the following status codes in its API:
 
 <details>
 
+
  <summary><code>GET</code>   <code><b>/song/</b></code> </summary>
 
 ## Request
@@ -554,6 +557,108 @@ HIFI returns the following status codes in its API:
 
 
 </details>
+
+------------------------------------------------------------------------------------------
+
+<details>
+
+ <summary><code>GET</code>   <code><b>/album/</b></code> </summary>
+
+## Request
+
+
+<br>
+
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `id`       |  integer  | Album Id = `286266926` |
+
+
+<br>
+
+#### Example
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/album/?id=157117504"
+    
+
+![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
+
+<br>
+
+
+### Response
+
+  ```json
+ {
+        "adSupportedStreamReady": true,
+        "allowStreaming": true,
+        "artist": {
+            "id": 7162333,
+            "name": "Dua Lipa",
+            "picture": "28047130-6ada-4955-b3b9-65bed4508618",
+            "type": "MAIN"
+        },
+        "artists": [
+            {
+                "id": 7162333,
+                "name": "Dua Lipa",
+                "picture": "28047130-6ada-4955-b3b9-65bed4508618",
+                "type": "MAIN"
+            }
+        ],
+        "audioModes": [
+            "SONY_360RA"
+        ],
+        "audioQuality": "LOW",
+        "copyright": "℗ 2017 Dua Lipa Limited under exclusive license to Warner Music UK Limited",
+        "cover": "deae7f19-5da7-4d73-97be-ce901911c939",
+        "djReady": true,
+        "duration": 2456,
+        "explicit": false,
+        "id": 157117504,
+        "mediaMetadata": {
+            "tags": [
+                "SONY_360RA"
+            ]
+        },
+        "numberOfTracks": 12,
+        "numberOfVideos": 0,
+        "numberOfVolumes": 1,
+        "popularity": 36,
+        "premiumStreamingOnly": false,
+        "releaseDate": "2020-10-05",
+        "stemReady": false,
+        "streamReady": true,
+        "streamStartDate": "2020-10-05T00:00:00.000+0000",
+        "title": "Dua Lipa (360 Reality Audio)",
+        "type": "ALBUM",
+        "upc": "190295160180",
+        "url": "http://www.tidal.com/album/157117504",
+        "version": null,
+        "vibrantColor": "#6d99c6",
+        "videoCover": null
+    }
+```
+<br>
+
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
+
+</details>
+
+------------------------------------------------------------------------------------------
 
 <br>
 
