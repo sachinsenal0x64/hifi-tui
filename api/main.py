@@ -230,11 +230,15 @@ async def search_album(id: int):
     tokz = await refresh()
     tidal_token = tokz
     search_url = f"https://api.tidal.com/v1/albums/{id}/?countryCode=US"
+    item_url = f"https://api.tidal.com/v1/albums/{id}/items?limit=100&countryCode=US"
     header = {"authorization": f"Bearer {tidal_token}"}
     async with httpx.AsyncClient() as clinet:
         album_data = await clinet.get(url=search_url, headers=header)
+        album_item = await clinet.get(url=item_url, headers=header)
         sed = album_data.json()
-        return [sed]
+        sed_2 = album_item.json()
+
+        return [sed, sed_2]
 
 
 @app.api_route("/cover/", methods=["GET"])
