@@ -435,7 +435,8 @@ HIFI returns the following status codes in its API:
 
 </details>
 
-<br>
+------------------------------------------------------------------------------------------
+
 
 <details>
 
@@ -640,6 +641,179 @@ HIFI returns the following status codes in its API:
         "vibrantColor": "#6d99c6",
         "videoCover": null
     }
+```
+<br>
+
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
+
+</details>
+
+------------------------------------------------------------------------------------------
+
+<details>
+
+ <summary><code>GET</code>   <code><b>/playlist/</b></code> </summary>
+
+## Request
+
+
+<br>
+
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `id`       |  integer  | Playlist UUID = `910c525f-be8a-41a1-b557-2682af2bcef3` |
+
+
+<br>
+
+#### Example
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/playlist/?id=910c525f-be8a-41a1-b557-2682af2bcef3"
+    
+
+![image](https://sachinsenal0x64.github.io/picx-images-hosting/2024-02-20-23:15:31-screenshot.67x6v3b7q9.webp)
+
+<br>
+
+
+### Response
+
+  ```json
+ {
+        "created": "2015-04-14T16:32:14.636+0000",
+        "creator": {
+            "id": 5034071,
+            "name": "VIC MENSA",
+            "picture": "cdd212a2-dadc-466d-9703-7216a9f66da1",
+            "type": null
+        },
+        "description": "",
+        "duration": 2696,
+        "image": "c41cfe9b-cda1-4364-b517-f6a706741d24",
+        "lastItemAddedAt": null,
+        "lastUpdated": "2020-03-24T12:27:23.941+0000",
+        "numberOfTracks": 11,
+        "numberOfVideos": 0,
+        "popularity": 0,
+        "promotedArtists": [
+            {
+                "id": 5034071,
+                "name": "VIC MENSA",
+                "picture": null,
+                "type": "MAIN"
+            },
+            {
+                "id": 25022,
+                "name": "Kanye West",
+                "picture": null,
+                "type": "MAIN"
+            },
+            {
+                "id": 3899583,
+                "name": "Theophilus London",
+                "picture": null,
+                "type": "MAIN"
+            },
+            {
+                "id": 5637986,
+                "name": "Allan Kingdom",
+                "picture": null,
+                "type": "MAIN"
+            }
+        ],
+        "publicPlaylist": false,
+        "squareImage": "03750282-401b-481c-bf60-55d6ee9fcc27",
+        "title": "My Playlist",
+        "type": "ARTIST",
+        "url": "http://www.tidal.com/playlist/910c525f-be8a-41a1-b557-2682af2bcef3",
+        "uuid": "910c525f-be8a-41a1-b557-2682af2bcef3"
+    },
+    {
+        "items": [
+            {
+                "cut": null,
+                "item": {
+                    "adSupportedStreamReady": true,
+                    "album": {
+                        "cover": "43929b37-df27-4e1a-81b2-70692c058674",
+                        "id": 44590541,
+                        "releaseDate": "2015-04-16",
+                        "title": "U Mad",
+                        "vibrantColor": "#FFFFFF",
+                        "videoCover": null
+                    },
+                    "allowStreaming": true,
+                    "artist": {
+                        "id": 5034071,
+                        "name": "VIC MENSA",
+                        "picture": "cdd212a2-dadc-466d-9703-7216a9f66da1",
+                        "type": "MAIN"
+                    },
+                    "artists": [
+                        {
+                            "id": 5034071,
+                            "name": "VIC MENSA",
+                            "picture": "cdd212a2-dadc-466d-9703-7216a9f66da1",
+                            "type": "MAIN"
+                        },
+                        {
+                            "id": 25022,
+                            "name": "Kanye West",
+                            "picture": "26076dbd-7361-40d3-9335-f944d2c49ea6",
+                            "type": "FEATURED"
+                        }
+                    ],
+                    "audioModes": [
+                        "STEREO"
+                    ],
+                    "audioQuality": "LOSSLESS",
+                    "copyright": "(C) 2015 Roc Nation Records, LLC",
+                    "dateAdded": "2015-04-15T15:03:19.696+0000",
+                    "description": null,
+                    "djReady": true,
+                    "duration": 300,
+                    "editable": false,
+                    "explicit": true,
+                    "id": 44590542,
+                    "index": 0,
+                    "isrc": "QMJMT1500671",
+                    "itemUuid": "90545040-acc7-44c1-9481-7e48f36cefe8",
+                    "mediaMetadata": {
+                        "tags": [
+                            "LOSSLESS"
+                        ]
+                    },
+                    "mixes": {
+                        "TRACK_MIX": "00169d5b613bbc32050146c8be21df"
+                    },
+                    "peak": 0.999359,
+                    "popularity": 47,
+                    "premiumStreamingOnly": false,
+                    "replayGain": -9.38,
+                    "stemReady": false,
+                    "streamReady": true,
+                    "streamStartDate": "2015-04-10T00:00:00.000+0000",
+                    "title": "U Mad",
+                    "trackNumber": 1,
+                    "url": "http://www.tidal.com/track/44590542",
+                    "version": null,
+                    "volumeNumber": 1
+                },
+                "type": "track"
+            },
 ```
 <br>
 
