@@ -2,7 +2,6 @@
 
 fastapi==0.109.1
 httpx==0.25.2
-httpx-auth==0.18.0
 python-dotenv==1.0.0
 redis==5.0.1
 rich==13.3.3
