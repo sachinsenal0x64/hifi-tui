@@ -241,6 +241,52 @@ async def search_album(id: int):
         return [sed, sed_2]
 
 
+@app.api_route("/playlist/", methods=["GET"])
+async def search_playlist(id: str):
+    tokz = await refresh()
+    tidal_token = tokz
+    search_url = f"https://api.tidal.com/v1/playlists/{id}?countryCode=US"
+    search_item = (
+        f"https://api.tidal.com/v1/playlists/{id}/items?countryCode=US&limit=100"
+    )
+    header = {"authorization": f"Bearer {tidal_token}"}
+    async with httpx.AsyncClient() as clinet:
+        album_search = await clinet.get(url=search_url, headers=header)
+        album_item = await clinet.get(url=search_item, headers=header)
+        sed_1 = album_search.json()
+        sed_2 = album_item.json()
+
+        return [sed_1, sed_2]
+
+
+@app.api_route("/artist/", methods=["GET"])
+async def search_artist(id: int):
+    tokz = await refresh()
+    tidal_token = tokz
+    search_url = f"https://api.tidal.com/v1/artists/{id}?countryCode=US"
+    header = {"authorization": f"Bearer {tidal_token}"}
+    async with httpx.AsyncClient() as clinet:
+        album_search = await clinet.get(url=search_url, headers=header)
+        sed_1 = album_search.json()
+        artist_ids = []
+        artist_cover = sed_1["picture"].replace("-", "/")
+        artist_ids.append(artist_cover)
+        artist_name = sed_1["name"]
+        artist_ids.append(artist_name)
+        artist_id = sed_1["id"]
+        artist_ids.append(artist_id)
+
+        json_data = [
+            {
+                "id": artist_ids[i + 2],
+                "name": artist_ids[i + 1],
+                "750": f"https://resources.tidal.com/images/{artist_ids[i]}/750x750.jpg",
+            }
+            for i in range(0, len(artist_ids), 3)
+        ]
+        return [sed_1, json_data]
+
+
 @app.api_route("/cover/", methods=["GET"])
 async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
     tokz = await refresh()
