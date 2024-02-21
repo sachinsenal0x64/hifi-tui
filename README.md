@@ -673,7 +673,7 @@ HIFI returns the following status codes in its API:
 
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
-> | `id`       |  integer  | Playlist UUID = `910c525f-be8a-41a1-b557-2682af2bcef3` |
+> | `id`       |  string  | Playlist UUID = `910c525f-be8a-41a1-b557-2682af2bcef3` |
 
 
 <br>
@@ -815,6 +815,108 @@ HIFI returns the following status codes in its API:
                 },
                 "type": "track"
             },
+```
+<br>
+
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
+
+</details>
+
+------------------------------------------------------------------------------------------
+
+
+<details>
+
+ <summary><code>GET</code>   <code><b>/artist/</b></code> </summary>
+
+## Request
+
+
+<br>
+
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `id`       |  integer  | Artist ID = `5034071` |
+
+
+<br>
+
+#### Example
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/artist/?id=5034071"
+    
+
+![image](https://sachinsenal0x64.github.io/picx-images-hosting/2024-02-21-21:19:27-screenshot.1aoq2k57al.webp)
+
+<br>
+
+
+### Response
+
+  ```json
+ [
+    {
+        "artistRoles": [
+            {
+                "category": "Artist",
+                "categoryId": -1
+            },
+            {
+                "category": "Songwriter",
+                "categoryId": 2
+            },
+            {
+                "category": "Production team",
+                "categoryId": 10
+            },
+            {
+                "category": "Producer",
+                "categoryId": 1
+            },
+            {
+                "category": "Engineer",
+                "categoryId": 3
+            },
+            {
+                "category": "Performer",
+                "categoryId": 11
+            }
+        ],
+        "artistTypes": [
+            "ARTIST",
+            "CONTRIBUTOR"
+        ],
+        "id": 5034071,
+        "mixes": {
+            "ARTIST_MIX": "000720bd7d7867c71a4c63b1fe61cf"
+        },
+        "name": "VIC MENSA",
+        "picture": "cdd212a2-dadc-466d-9703-7216a9f66da1",
+        "popularity": 66,
+        "url": "http://www.tidal.com/artist/5034071"
+    },
+    [
+        {
+            "750": "https://resources.tidal.com/images/cdd212a2/dadc/466d/9703/7216a9f66da1/750x750.jpg",
+            "id": 5034071,
+            "name": "VIC MENSA"
+        }
+    ]
+]
+
 ```
 <br>
 
