@@ -127,6 +127,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 # 📄 Documentation
 > 💠 Docs are Work In Progress
 
+- [API-DOCS](https://github.com/sachinsenal0x64/hifi-tui?tab=readme-ov-file#-api-documentation)
 - https://hifitui.401658.xyz
 - https://hifi-tui-docs.pages.dev (Backup Url)
 
