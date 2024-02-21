@@ -12,7 +12,7 @@ width="1800"  height="3">
 
 <h1 align="center"> HIFI TUI </h1>
 
-<h4 align="center"> Privacy Focus Cross Platform Tidal Reverse Proxy / Tui + Batteries Included . </h4>
+<h4 align="center"> Privacy Focused Cross Platform Tidal Reverse Proxy / Tui + Batteries Included . </h4>
 
 <div align="center">
         
