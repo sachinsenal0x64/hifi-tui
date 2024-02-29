@@ -221,7 +221,7 @@ python main.py
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
 > | `id`       |  integer  | Track Id = `286266926` |
-> | `quality`  |  string   | Song Quality = `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` or `HI_RES_LOSSLESS` |
+> | `quality`  |  string   | Song Quality = `HI_RES_LOSSLESS` or `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` |
 
 
 <br>
@@ -290,7 +290,7 @@ HIFI returns the following status codes in its API:
 
 > | Parameter | Type | Description |
 > |------|--------|-------------|
-> | `q`  | string | Song Name = `Consequence`|
+> | `q`  | string |  Name = `Consequence`|
 
 <br>
 
@@ -452,7 +452,7 @@ HIFI returns the following status codes in its API:
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
 > | `q`        |  string   | Song Query   =  `Mine` |
-> | `quality`  |  string   | Song Quality = `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` or `HI_RES_LOSSLESS`|
+> | `quality`  |  string   | Song Quality = `HI_RES_LOSSLESS` or `HI_RES` or `LOSSLESS` or `HIGH` or `LOW ` |
 
 
 <br>
