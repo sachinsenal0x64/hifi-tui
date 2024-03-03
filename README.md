@@ -54,7 +54,7 @@ width="1800"  height="3">
     Max (MQA) - 26 MB <br>
     Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
 
-> We don't have any GUI Application for android / ios / windows / mac / linux  contributors are welcome.
+> Currently We don't have any GUI Application for android / ios / windows / mac / linux  contributors are welcome.
 
  
 <br>
