@@ -187,6 +187,7 @@ git clone https://github.com/sachinsenal0x64/Hifi-Tui.git
 cd Hifi-Tui
 cd API
 rename .env-example to .env
+pip install "fastapi[all]"
 pip install -r requirements.txt
 python main.py
 
