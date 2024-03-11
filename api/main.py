@@ -14,7 +14,9 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.datastructures import Default
 from redis import client
 
-app = FastAPI()
+app = FastAPI(
+    title="HiFi-RestAPI",
+)
 
 load_dotenv()
 
