@@ -89,7 +89,9 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 - 🕹 QUALITY SWITCH   (⭕ in progress)
 
 - 📡 BEAUTIFUL REST API (ACT AS REVERSE PROXY INSTANCE)
-
+  
+- ⛓️‍💥 BYPASS GEO RESTRICTED CONTENT
+  
 - ⚖️ LAYER 7 LOAD BALANCER (ACT AS API GATEWAY | Purely Python & GO Implementations)
 
 - ⚡️ POWERFUL ASYNC | CONCURRENCY SUPPORT
@@ -118,7 +120,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - [host-hifi-restapi-on-vercel](https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel)
 - [tidal_auth](https://github.com/sachinsenal0x64/hifi-tui/tree/main/tidal_auth)
-- [loadbalancer](https://github.com/sachinsenal0x64/hifi-tui/tree/main/loadbalancer)
+- [apigateway](https://github.com/sachinsenal0x64/hifi-tui/tree/main/apigateway)
 
 <br>
 
@@ -159,6 +161,10 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 > This Required [Tidal](https://tidal.com) subscription / [Redis](https://github.com/redis/redis) & Fill the [.env](https://github.com/sachinsenal0x64/Hifi-Tui/blob/main/api/.env-example) file. / Grab Tokens and Ids Using
 [tidal_auth.py](https://github.com/sachinsenal0x64/hifi-tui/tree/main/tidal_auth)
 
+> [!TIP]
+> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
+
+
 
 
 <br>
@@ -191,9 +197,6 @@ python main.py
 <br>
 
 ## 📡 API DOCUMENTATION
-
-> [!TIP]
-> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
 
 ------------------------------------------------------------------------------------------
 ### Demo
