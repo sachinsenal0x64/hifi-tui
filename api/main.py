@@ -150,65 +150,97 @@ async def get_track(
     quality: str,
     country: Union[str, None] = Query(default=None, max_length=3),
 ):
-    tokz = await refresh()
-    tidal_token = tokz
-
-    track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
-
-    info_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
-
-    payload = {
-        "authorization": f"Bearer {tidal_token}",
-    }
-
-    async with httpx.AsyncClient() as client:
-        track_data = await client.get(url=track_url, headers=payload, timeout=None)
-        info_data = await client.get(url=info_url, headers=payload, timeout=None)
     try:
-        final_data = track_data.json()["manifest"]
-        decode_manifest = base64.b64decode(final_data)
-        con_json = json.loads(decode_manifest)
-        audio_url = con_json.get("urls")[0]
-        au_j = {"OriginalTrackUrl": audio_url}
-        fetch_info = info_data.json()
+        tokz = await refresh()
+        tidal_token = tokz
 
-        return [fetch_info, track_data.json(), au_j]
+        track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
+
+        info_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
+
+        payload = {
+            "authorization": f"Bearer {tidal_token}",
+        }
+
+        async with httpx.AsyncClient() as client:
+            track_data = await client.get(url=track_url, headers=payload, timeout=None)
+            info_data = await client.get(url=info_url, headers=payload, timeout=None)
+
+            final_data = track_data.json()["manifest"]
+            decode_manifest = base64.b64decode(final_data)
+            con_json = json.loads(decode_manifest)
+            audio_url = con_json.get("urls")[0]
+            au_j = {"OriginalTrackUrl": audio_url}
+            fetch_info = info_data.json()
+
+            return [fetch_info, track_data.json(), au_j]
 
     except KeyError:
         raise HTTPException(
             status_code=404,
             detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
+        )
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
         )
 
 
 @app.api_route("/song/", methods=["GET"])
 async def get_song(q: str, quality: str):
-    tokz = await refresh()
-    tidal_token = tokz
-    search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
-    payload = {
-        "authorization": f"Bearer {tidal_token}",
-    }
-    async with httpx.AsyncClient() as clinet:
-        search_data = await clinet.get(url=search_url, headers=payload, timeout=None)
-        try:
-            id = search_data.json()["items"][0]["id"]
-
-        except IndexError:
-            raise HTTPException(status_code=404)
-
-        track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
-        track_data = await clinet.get(url=track_url, headers=payload, timeout=None)
-
     try:
-        rich.print(track_data.json())
-        final_data = track_data.json()["manifest"]
-        decode_manifest = base64.b64decode(final_data)
-        con_json = json.loads(decode_manifest)
-        audio_url = con_json.get("urls")[0]
-        au_j = {"OriginalTrackUrl": audio_url}
+        tokz = await refresh()
+        tidal_token = tokz
+        search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
+        payload = {
+            "authorization": f"Bearer {tidal_token}",
+        }
+        async with httpx.AsyncClient() as clinet:
+            search_data = await clinet.get(
+                url=search_url, headers=payload, timeout=None
+            )
+            try:
+                id = search_data.json()["items"][0]["id"]
 
-        return [search_data.json()["items"][0], track_data.json(), au_j]
+            except IndexError:
+                raise HTTPException(status_code=404)
+
+            track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
+            track_data = await clinet.get(url=track_url, headers=payload, timeout=None)
+
+            rich.print(track_data.json())
+            final_data = track_data.json()["manifest"]
+            decode_manifest = base64.b64decode(final_data)
+            con_json = json.loads(decode_manifest)
+            audio_url = con_json.get("urls")[0]
+            au_j = {"OriginalTrackUrl": audio_url}
+
+            return [search_data.json()["items"][0], track_data.json(), au_j]
 
     except KeyError:
         raise HTTPException(
@@ -216,79 +248,239 @@ async def get_song(q: str, quality: str):
             detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
         )
 
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
+        )
+
 
 @app.api_route("/search/", methods=["GET"])
 async def search_track(q: str):
-    tokz = await refresh()
-    tidal_token = tokz
-    search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
-    header = {"authorization": f"Bearer {tidal_token}"}
-    async with httpx.AsyncClient() as clinet:
-        search_data = await clinet.get(url=search_url, headers=header, timeout=None)
-        sed = search_data.json()["items"]
-        return sed
+    try:
+        tokz = await refresh()
+        tidal_token = tokz
+        search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
+        header = {"authorization": f"Bearer {tidal_token}"}
+        async with httpx.AsyncClient() as clinet:
+            search_data = await clinet.get(url=search_url, headers=header)
+            sed = search_data.json()["items"]
+            return sed
+
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
+        )
 
 
 @app.api_route("/album/", methods=["GET"])
 async def search_album(id: int):
-    tokz = await refresh()
-    tidal_token = tokz
-    search_url = f"https://api.tidal.com/v1/albums/{id}/?countryCode=US"
-    item_url = f"https://api.tidal.com/v1/albums/{id}/items?limit=100&countryCode=US"
-    header = {"authorization": f"Bearer {tidal_token}"}
-    async with httpx.AsyncClient() as clinet:
-        album_data = await clinet.get(url=search_url, headers=header, timeout=None)
-        album_item = await clinet.get(url=item_url, headers=header, timeout=None)
-        sed = album_data.json()
-        sed_2 = album_item.json()
+    try:
+        tokz = await refresh()
+        tidal_token = tokz
+        search_url = f"https://api.tidal.com/v1/albums/{id}/?countryCode=US"
+        item_url = (
+            f"https://api.tidal.com/v1/albums/{id}/items?limit=100&countryCode=US"
+        )
+        header = {"authorization": f"Bearer {tidal_token}"}
+        async with httpx.AsyncClient() as clinet:
+            album_data = await clinet.get(url=search_url, headers=header, timeout=None)
+            album_item = await clinet.get(url=item_url, headers=header, timeout=None)
+            sed = album_data.json()
+            sed_2 = album_item.json()
 
-        return [sed, sed_2]
+            return [sed, sed_2]
+
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
+        )
 
 
 @app.api_route("/playlist/", methods=["GET"])
 async def search_playlist(id: str):
-    tokz = await refresh()
-    tidal_token = tokz
-    search_url = f"https://api.tidal.com/v1/playlists/{id}?countryCode=US"
-    search_item = (
-        f"https://api.tidal.com/v1/playlists/{id}/items?countryCode=US&limit=100"
-    )
-    header = {"authorization": f"Bearer {tidal_token}"}
-    async with httpx.AsyncClient() as clinet:
-        album_search = await clinet.get(url=search_url, headers=header, timeout=None)
-        album_item = await clinet.get(url=search_item, headers=header, timeout=None)
-        sed_1 = album_search.json()
-        sed_2 = album_item.json()
+    try:
+        tokz = await refresh()
+        tidal_token = tokz
+        search_url = f"https://api.tidal.com/v1/playlists/{id}?countryCode=US"
+        search_item = (
+            f"https://api.tidal.com/v1/playlists/{id}/items?countryCode=US&limit=100"
+        )
+        header = {"authorization": f"Bearer {tidal_token}"}
+        async with httpx.AsyncClient() as clinet:
+            album_search = await clinet.get(
+                url=search_url, headers=header, timeout=None
+            )
+            album_item = await clinet.get(url=search_item, headers=header, timeout=None)
+            sed_1 = album_search.json()
+            sed_2 = album_item.json()
 
-        return [sed_1, sed_2]
+            return [sed_1, sed_2]
+
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
+        )
 
 
 @app.api_route("/artist/", methods=["GET"])
 async def search_artist(id: int):
-    tokz = await refresh()
-    tidal_token = tokz
-    search_url = f"https://api.tidal.com/v1/artists/{id}?countryCode=US"
-    header = {"authorization": f"Bearer {tidal_token}"}
-    async with httpx.AsyncClient() as clinet:
-        album_search = await clinet.get(url=search_url, headers=header, timeout=None)
-        sed_1 = album_search.json()
-        artist_ids = []
-        artist_cover = sed_1["picture"].replace("-", "/")
-        artist_ids.append(artist_cover)
-        artist_name = sed_1["name"]
-        artist_ids.append(artist_name)
-        artist_id = sed_1["id"]
-        artist_ids.append(artist_id)
+    try:
+        tokz = await refresh()
+        tidal_token = tokz
+        search_url = f"https://api.tidal.com/v1/artists/{id}?countryCode=US"
+        header = {"authorization": f"Bearer {tidal_token}"}
+        async with httpx.AsyncClient() as clinet:
+            album_search = await clinet.get(
+                url=search_url, headers=header, timeout=None
+            )
+            sed_1 = album_search.json()
+            artist_ids = []
+            artist_cover = sed_1["picture"].replace("-", "/")
+            artist_ids.append(artist_cover)
+            artist_name = sed_1["name"]
+            artist_ids.append(artist_name)
+            artist_id = sed_1["id"]
+            artist_ids.append(artist_id)
 
-        json_data = [
-            {
-                "id": artist_ids[i + 2],
-                "name": artist_ids[i + 1],
-                "750": f"https://resources.tidal.com/images/{artist_ids[i]}/750x750.jpg",
-            }
-            for i in range(0, len(artist_ids), 3)
-        ]
-        return [sed_1, json_data]
+            json_data = [
+                {
+                    "id": artist_ids[i + 2],
+                    "name": artist_ids[i + 1],
+                    "750": f"https://resources.tidal.com/images/{artist_ids[i]}/750x750.jpg",
+                }
+                for i in range(0, len(artist_ids), 3)
+            ]
+            return [sed_1, json_data]
+
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
+        )
 
 
 @app.api_route("/cover/", methods=["GET"])
@@ -375,9 +567,39 @@ async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
             detail="Cover not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
         )
 
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
+        )
+
 
 async def main():
-    config = uvicorn.Config("main:app", port=5000)
+    config = uvicorn.Config("main:app", port=5000, workers=2)
     server = uvicorn.Server(config)
     await server.serve()
 
