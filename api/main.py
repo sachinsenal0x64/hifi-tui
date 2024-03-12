@@ -58,7 +58,6 @@ async def token_checker():
     refresh_url = f"https://api.tidal.com/v2/feed/activities/?userId={user_id}"
 
     cached_tok = await r.get("access_token")
-    await r.close()
     headers = {"authorization": f"Bearer {cached_tok}"}
 
     async with httpx.AsyncClient() as client:
@@ -74,17 +73,14 @@ async def refresh():
     r = await get_redis_connection()
     if status == 200:
         cached_tok = await r.get("access_token")
-        await r.close()
         tidal_token = cached_tok
         return tidal_token
 
     elif status != 200:
         cached_tok = None
         r.delete("access_token")
-        await r.close()
 
     if not await r.get("access_token"):
-        await r.close()
         refresh_url = "https://auth.tidal.com/v1/oauth2/token"
         payload = {
             "client_id": client_id,
