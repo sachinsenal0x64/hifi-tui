@@ -191,10 +191,10 @@ USER_ID=
 ```
 
 ```console
-git clone https://github.com/sachinsenal0x64/Hifi-Tui.git
-cd Hifi-Tui
-cd API
-rename .env-example to .env
+git clone https://github.com/sachinsenal0x64/hifi-tui
+cd hifi-tui
+cd api
+mv env-example .env
 pip install "fastapi[all]"
 pip install -r requirements.txt
 python main.py
