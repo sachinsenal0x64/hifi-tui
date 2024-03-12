@@ -592,7 +592,7 @@ async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
 
 
 async def main():
-    config = uvicorn.Config("main:app", port=5000, workers=8)
+    config = uvicorn.Config("main:app", host="0.0.0.0", port=5000, workers=8)
     server = uvicorn.Server(config)
     await server.serve()
 
