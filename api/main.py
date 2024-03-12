@@ -71,6 +71,7 @@ async def token_checker():
 async def refresh():
     status = await token_checker()
     r = await get_redis_connection()
+
     if status == 200:
         cached_tok = await r.get("access_token")
         tidal_token = cached_tok
