@@ -83,7 +83,7 @@ async def refresh():
         r.delete("access_token")
         await r.close()
 
-    if not r.get("access_token"):
+    if not await r.get("access_token"):
         await r.close()
         refresh_url = "https://auth.tidal.com/v1/oauth2/token"
         payload = {
