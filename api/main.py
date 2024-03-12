@@ -5,11 +5,11 @@ import os
 from typing import Union
 
 import httpx
+import redis.asyncio as redis
 import rich
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
-from redis.asyncio import Redis
 
 app = FastAPI(
     title="HiFi-RestAPI",
@@ -39,7 +39,7 @@ if os.path.exists("token.json"):
 
 
 async def get_redis_connection():
-    r = Redis(
+    r = redis.Redis(
         host=redis_url or "localhost",
         port=int(redis_port or 6379),
         password=redis_password,
@@ -54,11 +54,11 @@ cached_tok = None
 
 
 async def token_checker():
-    refresh_url = f"https://api.tidal.com/v2/feed/activities/?userId={user_id}"
     r = await get_redis_connection()
-    cached_tok = r.get("access_token")
-    await r.close()
+    refresh_url = f"https://api.tidal.com/v2/feed/activities/?userId={user_id}"
 
+    cached_tok = await r.get("access_token")
+    await r.close()
     headers = {"authorization": f"Bearer {cached_tok}"}
 
     async with httpx.AsyncClient() as client:
@@ -73,7 +73,7 @@ async def refresh():
     status = await token_checker()
     r = await get_redis_connection()
     if status == 200:
-        cached_tok = r.get("access_token")
+        cached_tok = await r.get("access_token")
         await r.close()
         tidal_token = cached_tok
         return tidal_token
