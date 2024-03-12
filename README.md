@@ -72,6 +72,10 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
+<table>
+<tr>
+<td>
+ 
 # 🚀 Features
 
 - 🍟 TIDAL PREMIUM (HIFI-PLUS) YOU CAN LISTEN FOR FREE USING OUR  [API](https://tidal.401658.xyz) & TUI PLAYER
@@ -100,6 +104,10 @@ I love cli tools as well as music, so why not to have a tidal music client for t
  
 - 🕹️ REMOTE (Highly Controllable Remotely Over the Network + Independently, Such an as Play | Pause | Seek | Volume | Next | Previous | Loops (Repeat | Infinity))
   
+</table>
+</tr>
+</td>
+
 
 <br>
 
