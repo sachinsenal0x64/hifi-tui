@@ -482,9 +482,9 @@ async def search_artist(id: int):
 
 @app.api_route("/cover/", methods=["GET"])
 async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
-    tokz = await refresh()
-    tidal_token = tokz
     try:
+        tokz = await refresh()
+        tidal_token = tokz
         if id:
             search_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
             header = {"authorization": f"Bearer {tidal_token}"}
@@ -592,7 +592,7 @@ async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
 
 
 async def main():
-    config = uvicorn.Config("main:app", port=5000, workers=2)
+    config = uvicorn.Config("main:app", port=5000, workers=8)
     server = uvicorn.Server(config)
     await server.serve()
 
