@@ -1,3 +1,5 @@
+# Rename env-example to .env
+
 CLIENT_ID= 
 CLIENT_SECRET=
 TIDAL_TOKEN= 
