@@ -172,7 +172,9 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 > [!TIP]
 > You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
 
+## ☁️ One-Click Deploy To Vercel
 
+- [Here](https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel)
 
 
 <br>
