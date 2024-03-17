@@ -977,6 +977,11 @@ HIFI returns the following status codes in its API:
 
 <br>
 
+## 🔐 Security Policy
+Please refer to [SECURITY.md](./SECURITY.md).
+
+<br>
+
 ## 👩‍⚖️ License
 
 This project is licensed under the terms of the MIT license.
