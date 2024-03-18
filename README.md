@@ -202,13 +202,6 @@ python main.py
 
 <br>
 
-## ☁️ One-Click Deploy To Vercel
-
-- [Here](https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel?tab=readme-ov-file#%EF%B8%8F-one-click-deploy-to-vercel)
-
-  
-<br>
-
 ## 📡 API DOCUMENTATION
 
 ------------------------------------------------------------------------------------------
