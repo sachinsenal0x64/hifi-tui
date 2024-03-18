@@ -2,6 +2,7 @@ import asyncio
 import base64
 import json
 import os
+from importlib.metadata import version
 from typing import Union
 
 import httpx
@@ -10,10 +11,9 @@ import rich
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse
 
-app = FastAPI(
-    title="HiFi-RestAPI",
-)
+app = FastAPI(title="HiFi-RestAPI", version="v1.0")
 
 load_dotenv()
 
@@ -44,6 +44,7 @@ async def get_redis_connection():
         port=int(redis_port or 6379),
         password=redis_password,
         db=0,
+        ssl_cert_reqs="none",
         protocol=3,
         decode_responses=True,
     )
@@ -141,6 +142,12 @@ async def auth():
         }
 
     return out_res
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    dirname = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__))))
+    return FileResponse(f"{dirname}/favicon.ico")
 
 
 @app.api_route("/", methods=["GET"])
@@ -593,7 +600,12 @@ async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
 
 
 async def main():
-    config = uvicorn.Config("main:app", host="0.0.0.0", port=5000, workers=8)
+    config = uvicorn.Config(
+        "main:app",
+        host="0.0.0.0",
+        port=5000,
+        workers=8,
+    )
     server = uvicorn.Server(config)
     await server.serve()
 
