@@ -181,7 +181,7 @@ async def doc():
     <!-- easier for nested objects -->
     <script>
       var configuration = {
-        theme: "purple",
+        theme: "saturn",
       };
 
       var apiReference = document.getElementById("api-reference");
