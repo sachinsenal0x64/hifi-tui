@@ -112,7 +112,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 <br>
 
 
-# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="" height="40px" width="40px"> TIDAL REVERSE API / STATUS <br> <a href="https://uptime.401658.xyz/history/hi-fi"><img alt="24-hour uptime 100.00%" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsachinsenal0x64%2Fuptime%2FHEAD%2Fapi%2Fhi-fi%2Fuptime-day.json">
+# <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="" height="40px" width="40px"> TIDAL REVERSE API / STATUS
 
 > [!NOTE]  
 > TUI based on this api and it free & opensource.
