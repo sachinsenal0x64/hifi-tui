@@ -48,11 +48,7 @@ width="1800"  height="3">
 
 > [MQA-CHECKER](https://github.com/purpl3F0x/MQA_identifier)
 
->   Low (96 kbps) - 3 MB <br>
-    Low (320 kbps) - 8 MB <br>
-    High (FLAC, 16-bit, 44.1 kHz) - 30 MB <br>
-    Max (MQA) - 26 MB <br>
-    Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
+> Low (96 kbps) - 3 MB | Low (320 kbps) - 8 MB | High (FLAC, 16-bit, 44.1 kHz) - 30 MB | Max (MQA) - 26 MB | Max (MQA) - 26  | Max (HiRes FLAC, up to 24-bit, 192 kHz) - 30 MB to 140 MB
 
 > Currently We don't have any GUI Application for android / ios / windows / mac / linux  contributors are welcome.
 
