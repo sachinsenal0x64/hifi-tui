@@ -6,7 +6,6 @@ import (
 	"github.com/rivo/tview"
 )
 
-
 // Song struct to represent song information
 type Song struct {
 	Duration string
