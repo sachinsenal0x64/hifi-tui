@@ -298,7 +298,9 @@ HIFI returns the following status codes in its API:
 > |------|--------|-------------|
 > | `s`  | string |  Name = `Spaceship`|
 > | `a`  | string |  Artist Name = `Kanye West`|
-> | `al`  | string |  Artist Name = `The College Dropout`| 
+> | `al` | string |  Album Name = `Late Registration`|
+> | `v`  | string |  Video Name = `Spaceship`|
+> | `p`  | string |  Playlist Name = `Pop Hits`| 
 
 <br>
 
