@@ -296,15 +296,16 @@ HIFI returns the following status codes in its API:
 
 > | Parameter | Type | Description |
 > |------|--------|-------------|
-> | `q`  | string |  Name = `Consequence`|
+> | `s`  | string |  Name = `Spaceship`|
+> | `a`  | string |  Artist Name = `Kanye West`|
+> | `al`  | string |  Artist Name = `The College Dropout`| 
 
 <br>
-
 
 #### Example
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/search/?q=Consequence"
+    https GET "https://tidal.401658.xyz/search/?s=Consequence"
 
 ![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
 
