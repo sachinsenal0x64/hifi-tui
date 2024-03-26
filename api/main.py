@@ -520,25 +520,31 @@ async def search_artist(id: int):
         search_url = f"https://api.tidal.com/v1/artists/{id}?countryCode=US"
         header = {"authorization": f"Bearer {tidal_token}"}
         async with httpx.AsyncClient() as clinet:
-            album_search = await clinet.get(url=search_url, headers=header)
-            sed_1 = album_search.json()
-            artist_ids = []
-            artist_cover = sed_1["picture"].replace("-", "/")
-            artist_ids.append(artist_cover)
-            artist_name = sed_1["name"]
-            artist_ids.append(artist_name)
-            artist_id = sed_1["id"]
-            artist_ids.append(artist_id)
+            try:
+                global sed_1
+                album_search = await clinet.get(url=search_url, headers=header)
+                sed_1 = album_search.json()
+                artist_ids = []
+                artist_cover = sed_1["picture"].replace("-", "/")
+                artist_ids.append(artist_cover)
+                artist_name = sed_1["name"]
+                artist_ids.append(artist_name)
+                artist_id = sed_1["id"]
+                artist_ids.append(artist_id)
 
-            json_data = [
-                {
-                    "id": artist_ids[i + 2],
-                    "name": artist_ids[i + 1],
-                    "750": f"https://resources.tidal.com/images/{artist_ids[i]}/750x750.jpg",
-                }
-                for i in range(0, len(artist_ids), 3)
-            ]
-            return [sed_1, json_data]
+                json_data = [
+                    {
+                        "id": artist_ids[i + 2],
+                        "name": artist_ids[i + 1],
+                        "750": f"https://resources.tidal.com/images/{artist_ids[i]}/750x750.jpg",
+                    }
+                    for i in range(0, len(artist_ids), 3)
+                ]
+
+                return [sed_1, json_data]
+
+            except AttributeError:
+                return [sed_1]
 
     except httpx.ConnectTimeout:
         raise HTTPException(
