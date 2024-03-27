@@ -44,6 +44,7 @@ async def get_redis_connection():
         port=int(redis_port or 6379),
         password=redis_password,
         db=0,
+        ssl=True,
         ssl_cert_reqs="none",
         protocol=3,
         decode_responses=True,
@@ -93,13 +94,16 @@ async def refresh():
             "grant_type": "refresh_token",
             "scope": "r_usr+w_usr+w_sub",
         }
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(http2=True) as client:
             try:
                 res2 = await client.post(
                     url=refresh_url,
                     data=payload,
                     auth=(client_id, client_secret),
                 )
+
+                print(res2.http_version)
+
                 # Assuming a successful response code is 200
                 if res2.status_code == 200:
                     print_token = res2.json()
@@ -129,7 +133,7 @@ async def auth():
         "client_secret": csec,
     }
 
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(http2=True) as client:
         res = await client.post(url=url, data=payload)
 
         access_token = res.json()["access_token"]
@@ -152,7 +156,7 @@ async def favicon():
 
 @app.api_route("/", methods=["GET"], include_in_schema=False)
 async def index():
-    return {"HIFI-API": "v1", "REPO": "https://github.com/sachinsenal0x64/Hifi-Tui"}
+    return {"HIFI-API": "v1.0", "REPO": "https://github.com/sachinsenal0x64/Hifi-Tui"}
 
 
 @app.api_route("/tdoc", methods=["GET"], include_in_schema=False)
@@ -226,7 +230,7 @@ async def get_track(
             "authorization": f"Bearer {tidal_token}",
         }
 
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(http2=True) as client:
             track_data = await client.get(url=track_url, headers=payload)
             info_data = await client.get(url=info_url, headers=payload)
 
@@ -280,32 +284,31 @@ async def get_song(q: str, quality: str):
     try:
         tokz = await refresh()
         tidal_token = tokz
-
         search_url = f"https://api.tidal.com/v1/search/tracks?countryCode=US&query={q}"
-
         payload = {
             "authorization": f"Bearer {tidal_token}",
         }
-        async with httpx.AsyncClient() as clinet:
-            if q:
-                search_data = await clinet.get(url=search_url, headers=payload)
-                try:
-                    id = search_data.json()["items"][0]["id"]
+        async with httpx.AsyncClient(http2=True) as clinet:
+            search_data = await clinet.get(url=search_url, headers=payload)
+            try:
+                id = search_data.json()["items"][0]["id"]
 
-                except IndexError:
-                    raise HTTPException(status_code=404)
+            except IndexError:
+                raise HTTPException(status_code=404)
 
-                track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
-                track_data = await clinet.get(url=track_url, headers=payload)
+            track_url = f"https://api.tidal.com/v1/tracks/{id}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
+            track_data = await clinet.get(url=track_url, headers=payload)
 
-                rich.print(track_data.json())
-                final_data = track_data.json()["manifest"]
-                decode_manifest = base64.b64decode(final_data)
-                con_json = json.loads(decode_manifest)
-                audio_url = con_json.get("urls")[0]
-                au_j = {"OriginalTrackUrl": audio_url}
+            print(track_data.http_version)
 
-                return [search_data.json()["items"][0], track_data.json(), au_j]
+            rich.print(track_data.json())
+            final_data = track_data.json()["manifest"]
+            decode_manifest = base64.b64decode(final_data)
+            con_json = json.loads(decode_manifest)
+            audio_url = con_json.get("urls")[0]
+            au_j = {"OriginalTrackUrl": audio_url}
+
+            return [search_data.json()["items"][0], track_data.json(), au_j]
 
     except KeyError:
         raise HTTPException(
@@ -368,7 +371,7 @@ async def search_track(
 
         header = {"authorization": f"Bearer {tidal_token}"}
 
-        async with httpx.AsyncClient() as clinet:
+        async with httpx.AsyncClient(http2=True) as clinet:
             if s:
                 search_data = await clinet.get(url=search_url, headers=header)
                 sed = search_data.json()
@@ -435,7 +438,7 @@ async def search_album(id: int):
             f"https://api.tidal.com/v1/albums/{id}/items?limit=100&countryCode=US"
         )
         header = {"authorization": f"Bearer {tidal_token}"}
-        async with httpx.AsyncClient() as clinet:
+        async with httpx.AsyncClient(http2=True) as clinet:
             album_data = await clinet.get(url=search_url, headers=header)
             album_item = await clinet.get(url=item_url, headers=header)
             sed = album_data.json()
@@ -484,7 +487,7 @@ async def search_playlist(id: str):
             f"https://api.tidal.com/v1/playlists/{id}/items?countryCode=US&limit=100"
         )
         header = {"authorization": f"Bearer {tidal_token}"}
-        async with httpx.AsyncClient() as clinet:
+        async with httpx.AsyncClient(http2=True) as clinet:
             album_search = await clinet.get(url=search_url, headers=header)
             album_item = await clinet.get(url=search_item, headers=header)
             sed_1 = album_search.json()
@@ -530,7 +533,7 @@ async def search_artist(id: int):
         tidal_token = tokz
         search_url = f"https://api.tidal.com/v1/artists/{id}?countryCode=US"
         header = {"authorization": f"Bearer {tidal_token}"}
-        async with httpx.AsyncClient() as clinet:
+        async with httpx.AsyncClient(http2=True) as clinet:
             try:
                 global sed_1
                 album_search = await clinet.get(url=search_url, headers=header)
@@ -596,7 +599,7 @@ async def search_cover(id: Union[int, None] = None, q: Union[str, None] = None):
         if id:
             search_url = f"https://api.tidal.com/v1/tracks/{id}/?countryCode=US"
             header = {"authorization": f"Bearer {tidal_token}"}
-            async with httpx.AsyncClient() as clinet:
+            async with httpx.AsyncClient(http2=True) as clinet:
                 cover_data = await clinet.get(url=search_url, headers=header)
                 tracks = cover_data.json()["album"]
 
