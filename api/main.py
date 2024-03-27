@@ -187,11 +187,19 @@ async def doc():
 
       var apiReference = document.getElementById("api-reference");
       apiReference.dataset.configuration = JSON.stringify(configuration);
+      
+      // Remove the text "Powered by scalar.com" and the URL while keeping the link
+      document.addEventListener("DOMContentLoaded", function() {
+        var poweredByLink = document.querySelector('.darklight-reference-promo');
+        if (poweredByLink) {
+          poweredByLink.textContent = ""; // Setting text content to empty string
+          poweredByLink.removeAttribute("href"); // Removing the href attribute
+        }
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
   </body>
 </html>
-
 
 """
     )
