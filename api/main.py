@@ -2,7 +2,6 @@ import asyncio
 import base64
 import json
 import os
-from importlib.metadata import version
 from typing import Union
 
 import httpx
