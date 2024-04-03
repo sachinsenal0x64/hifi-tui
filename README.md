@@ -1,14 +1,8 @@
-<img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/PICX-IMAGE-HOSTING@master/ledstrip.3024rqxzahq0.gif"
-width="1800"  height="3">
-
 <div align="center">
  
  ![hifi-tui](https://sachinsenal0x64.github.io/picx-images-hosting/test1.1ejfncjvbvuo.webp)
  
 </div>
-
-<img src="https://cdn.jsdelivr.net/gh/sachinsenal0x64/PICX-IMAGE-HOSTING@master/ledstrip.3024rqxzahq0.gif"
-width="1800"  height="3">
 
 <h1 align="center"> HIFI TUI </h1>
 
