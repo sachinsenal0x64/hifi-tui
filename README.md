@@ -86,8 +86,6 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - 📚 PLAYLISTS | RECENT PLAYBACK | LIBARAY MANAGEMENT | LYRICS & COVER ART (⭕ in progress)
 
-- 🕹 QUALITY SWITCH   (⭕ in progress)
-
 - 📡 BEAUTIFUL REST API (ACT AS REVERSE PROXY INSTANCE)
   
 - ⛓️‍💥 BYPASS GEO RESTRICTED CONTENT
