@@ -414,27 +414,9 @@ async def search_track(
                     album_tracks = album_info.json().get("rows")[1]["modules"][0][
                         "pagedList"
                     ]["items"]
-                    all_tracks.extend([track["item"]["id"] for track in album_tracks])
+                    all_tracks.extend([track["item"] for track in album_tracks])
 
-                final_results = []
-                for track_id_one in all_tracks:
-                    quality = "HI_RES_LOSSLESS" or "HI_RES" or "LOSSLESS" or "HIGH"
-
-                    track_url = f"https://api.tidal.com/v1/tracks/{track_id_one}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
-
-                    track_data = await clinet.get(url=track_url, headers=header)
-
-                    final_data = track_data.json()["manifest"]
-                    decode_manifest = base64.b64decode(final_data)
-                    con_json = json.loads(decode_manifest)
-                    audio_url = con_json.get("urls")[0]
-                    au_j = {"OriginalTrackUrl": audio_url}
-
-                    final_results.append(au_j)
-
-                final = {"Tracks": final_results, "Albums": alb}
-
-                return [final]
+                return [alb, all_tracks]
 
     except httpx.ConnectTimeout:
         raise HTTPException(
