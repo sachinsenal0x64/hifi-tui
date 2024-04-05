@@ -293,7 +293,8 @@ HIFI returns the following status codes in its API:
 > | `a`  | string |  Artist Name = `Kanye West`|
 > | `al` | string |  Album Name = `Late Registration`|
 > | `v`  | string |  Video Name = `Spaceship`|
-> | `p`  | string |  Playlist Name = `Pop Hits`| 
+> | `p`  | string |  Playlist Name = `Pop Hits`|
+> | `f`  | int    |  Artist ID = `7162333`| 
 
 <br>
 
