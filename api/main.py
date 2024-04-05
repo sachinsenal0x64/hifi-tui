@@ -354,6 +354,7 @@ async def search_track(
     al: Union[str, None] = Query(default=None),
     v: Union[str, None] = Query(default=None),
     p: Union[str, None] = Query(default=None),
+    f: Union[int, None] = Query(default=None),
 ):
     try:
         tokz = await refresh()
@@ -361,7 +362,7 @@ async def search_track(
 
         search_url = f"https://api.tidal.com/v1/search/tracks?query={s}&limit=25&offset=0&countryCode=US"
 
-        artist_url = f"https://api.tidal.com/v1/search/top-hits?query={a}&limit=25&offset=0&types=TRACKS&countryCode=US"
+        artist_url = f"https://api.tidal.com/v1/search/top-hits?query={a}&limit=25&offset=0&types=ARTISTS,TRACKS&countryCode=US"
 
         album_url = f"https://api.tidal.com/v1/search/top-hits?query={al}&limit=25&offset=0&types=ALBUMS&countryCode=US"
 
@@ -380,7 +381,7 @@ async def search_track(
             if a:
                 search_data = await clinet.get(url=artist_url, headers=header)
                 sed = search_data.json()
-                return sed
+                return [sed]
 
             if al:
                 search_data = await clinet.get(url=album_url, headers=header)
@@ -396,6 +397,44 @@ async def search_track(
                 search_data = await clinet.get(url=playlist_url, headers=header)
                 sed = search_data.json()
                 return sed
+
+            if f:
+                artist_albums = f"https://api.tidal.com/v1/pages/single-module-page/ae223310-a4c2-4568-a770-ffef70344441/4/a4f964ba-b52e-41e8-b25c-06cd70c1efad/2?artistId={f}&countryCode=US&deviceType=BROWSER"
+                album_data = await clinet.get(url=artist_albums, headers=header)
+                alb = album_data.json()
+
+                albums_ids = []
+                for album in alb.get("rows")[0]["modules"][0]["pagedList"]["items"]:
+                    albums_ids.append(album["id"])
+
+                all_tracks = []
+                for album_id in albums_ids:
+                    album_endpoint = f"https://api.tidal.com/v1/pages/album?albumId={album_id}&countryCode=US&deviceType=BROWSER"
+                    album_info = await clinet.get(url=album_endpoint, headers=header)
+                    album_tracks = album_info.json().get("rows")[1]["modules"][0][
+                        "pagedList"
+                    ]["items"]
+                    all_tracks.extend([track["item"]["id"] for track in album_tracks])
+
+                final_results = []
+                for track_id_one in all_tracks:
+                    quality = "HI_RES_LOSSLESS" or "HI_RES" or "LOSSLESS" or "HIGH"
+
+                    track_url = f"https://api.tidal.com/v1/tracks/{track_id_one}/playbackinfopostpaywall/v4?audioquality={quality}&playbackmode=STREAM&assetpresentation=FULL"
+
+                    track_data = await clinet.get(url=track_url, headers=header)
+
+                    final_data = track_data.json()["manifest"]
+                    decode_manifest = base64.b64decode(final_data)
+                    con_json = json.loads(decode_manifest)
+                    audio_url = con_json.get("urls")[0]
+                    au_j = {"OriginalTrackUrl": audio_url}
+
+                    final_results.append(au_j)
+
+                final = {"Tracks": final_results, "Albums": alb}
+
+                return [final]
 
     except httpx.ConnectTimeout:
         raise HTTPException(
@@ -426,6 +465,9 @@ async def search_track(
         raise HTTPException(
             status_code=429,
         )
+
+    except TypeError:
+        raise HTTPException(status_code=404)
 
 
 @app.api_route("/album/", methods=["GET"])
