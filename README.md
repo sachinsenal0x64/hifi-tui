@@ -150,6 +150,23 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
+## 🐳 Docker Hub
+
+```bash
+# Clone the Repo
+https://github.com/sachinsenal0x64/hifi-tui
+
+# Rename .env-example
+cd hifi-tui/api
+mv .env-example .env
+
+# Run the Docker contaer
+docker pull sachinsenal/hifi-proxy
+docker run --env-file .env -p 8000:8000 hifi-tui
+```
+
+<br>
+
 ## 🏠 API SELF HOSTING
 
 > [!NOTE]
@@ -158,6 +175,58 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 > [!TIP]
 > You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
+
+<br>
+
+### 🐳 Docker Hub
+
+```bash
+# Clone the Repo
+https://github.com/sachinsenal0x64/hifi-tui
+
+# Rename .env-example
+cd hifi-tui/api
+mv .env-example .env
+
+# Run the Docker contaer
+docker pull sachinsenal/hifi-proxy
+docker run --env-file .env -p 8000:8000 hifi-tui
+
+```
+<br>
+
+### 🐳 Docker Compose
+
+```bash
+# Clone the Repo
+https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel
+
+# Rename .env-example
+cd host-hifi-restapi-on-vercel
+mv .env-example .env
+
+# Run the Docker contaer
+docker-compose up
+```
+<br>
+
+### 🐳 Docker File
+
+```bash
+# Clone the Repo
+https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel
+
+# Rename .env-example
+cd host-hifi-restapi-on-vercel
+mv .env-example .env
+
+# Build the Docker image
+docker build -t host-hifi-restapi-on-vercel .
+
+# Run the Docker contaer
+docker run --env-file .env -p 8000:8000 host-hifi-restapi-on-vercel
+
+```
 
 <br>
 
