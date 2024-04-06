@@ -230,6 +230,8 @@ docker run --env-file .env -p 8000:8000 host-hifi-restapi-on-vercel
 
 <br>
 
+### 🦄 From Source Code
+
 ```env
 
 CLIENT_ID= 
