@@ -243,21 +243,14 @@ python main.py
 
 <br>
 
+## 🎞️ DEMO
+
+[![hifi tui](https://img.youtube.com/vi/TfIWc5sQ2M0/0.jpg)](https://www.youtube.com/watch?v=TfIWc5sQ2M0)
+
+
+<br>
+
 ## 📡 API DOCUMENTATION
-
-------------------------------------------------------------------------------------------
-### Demo
-
-<details>
-
-<summary><code>Here</code></summary>
-
-  <br>
-  
- > https://youtu.be/TfIWc5sQ2M0
-
-
-</details>
 
 
 ------------------------------------------------------------------------------------------
