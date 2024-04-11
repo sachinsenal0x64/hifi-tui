@@ -44,7 +44,7 @@ async def get_redis_connection():
         port=int(redis_port or 6379),
         password=redis_password,
         db=0,
-        ssl=True,
+        ssl=False,
         ssl_cert_reqs="none",
         protocol=3,
         decode_responses=True,
@@ -196,7 +196,7 @@ async def doc():
                          await removePoweredByTextAndUrl();
       });
 
-      async function removePoweredByTextAndUrl() {
+      function removePoweredByTextAndUrl() {
           var poweredByLink = document.querySelector('.darklight-reference-promo');
           if (poweredByLink) {
             poweredByLink.textContent = ""; // Setting text content to empty string
@@ -259,6 +259,57 @@ async def get_track(
         )
 
     except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.WriteError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ReadError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+
+@app.api_route("/lyrics/", methods=["GET"])
+async def get_lyrics(id: int):
+    try:
+        tokz = await refresh()
+        tidal_token = tokz
+        search_url = f"https://api.tidal.com/v1/tracks/{id}/lyrics?countryCode=US&locale=en_US&deviceType=BROWSER"
+        payload = {
+            "authorization": f"Bearer {tidal_token}",
+        }
+        async with httpx.AsyncClient(http2=True) as clinet:
+            search_data = await clinet.get(url=search_url, headers=payload)
+
+            return [search_data.json()]
+
+    except KeyError:
+        raise HTTPException(
+            status_code=404,
+            detail="Quality not found. check API docs = https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation",
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectTimeout:
+        raise HTTPException(
+            status_code=429,
+        )
+
+    except httpx.ConnectError:
         raise HTTPException(
             status_code=429,
         )
@@ -582,7 +633,7 @@ async def search_artist(id: int):
                 return [sed_1, json_data]
 
             except AttributeError:
-                return [sed_1]
+                raise HTTPException(status_code=404)
 
     except httpx.ConnectTimeout:
         raise HTTPException(
