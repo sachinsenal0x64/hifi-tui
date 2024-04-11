@@ -44,7 +44,7 @@ async def get_redis_connection():
         port=int(redis_port or 6379),
         password=redis_password,
         db=0,
-        ssl=False,
+        ssl=True,
         ssl_cert_reqs="none",
         protocol=3,
         decode_responses=True,
