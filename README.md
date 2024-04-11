@@ -994,6 +994,71 @@ HIFI returns the following status codes in its API:
 
 ------------------------------------------------------------------------------------------
 
+
+<details>
+
+ <summary><code>GET</code>   <code><b>/lyrics/</b></code> </summary>
+
+## Request
+
+
+<br>
+
+> | Parameter  |   Type    | Description |
+> |------------|-----------|-------------|
+> | `id`       |  integer  | Track ID = `286266926` |
+
+
+<br>
+
+#### Example
+
+>HTTPie
+
+    https GET "https://tidal.401658.xyz/lyrics/?id=286266926"
+    
+
+![image](https://github.com/sachinsenal0x64/picx-images-hosting/raw/master/2024-04-11-14:31:30-screenshot.3go6nb7skh.webp)
+
+<br>
+
+
+### Response
+
+  ```json
+[
+    {
+        "isRightToLeft": false,
+        "lyrics": "You know I question every motive, everything you say\nThought with you, maybe my heart wasn't meant to break\nCan't believe I let you in, I can't believe I stayed\nAs long as I stayed, yeah\n\nI hope one day someone will take your heart and hold it tight\nMake you feel like you're invincible deep inside\nAnd right when you think that it's perfect, they cross a line\nAnd steal your shine\nLike you did mine\n\nGo ahead and break my heart, that's fine\nSo unkind\nEternal sunshine of the spotless mind\nOh, love is blind\nWhy am I missin' you tonight?\nWas it all a lie?\nSomeone's gonna show you how a heart can be used\nLike you did mine\n\nAnd now, I second-guess my thoughts, every step I take\nI'm losin' hope in love, and I've lost all in faith\nYeah, for a dreamer, I just close my eyes and it's all blank\nI have you to thank, yeah\n\nI hope one day someone will take your heart and hold it tight\nMake you feel like you're invincible deep inside\nAnd right when you think that you'll try again, they cross a line\nAnd steal your shine\nLike you did mine\n\nGo ahead and break my heart, that's fine\nSo unkind\nEternal sunshine of the spotless mind\nOh, love is blind\nWhy am I missin' you tonight?\nWas it all a lie?\nSomeone's gonna show you how a heart can be used\n\nAnd you keep talkin', it'll come back, karma\nIs the truth, I don't make you look bad, you do, darlin'\nSabotage, your choice of art\nWho the hell do you think you are?\n\nGo ahead and break my heart, that's fine\nEternal sunshine of the spotless mind\nWhy am I missin' you tonight?\nSomeone's gonna show you how a heart can be used\nLike you did mine",
+        "lyricsProvider": "MUSIXMATCH",
+        "providerCommontrackId": "158550594",
+        "providerLyricsId": "31545572",
+        "subtitles": "[00:00.48] You know I question every motive, everything you say\n[00:04.51] Thought with you, maybe my heart wasn't meant to break\n[00:08.57] Can't believe I let you in, I can't believe I stayed\n[00:13.40] As long as I stayed, yeah\n[00:16.35] I hope one day someone will take your heart and hold it tight\n[00:20.64] Make you feel like you're invincible deep inside\n[00:24.45] And right when you think that it's perfect, they cross a line\n[00:28.97] And steal your shine\n[00:30.77] Like you did mine\n[00:33.04] Go ahead and break my heart, that's fine\n[00:38.97] So unkind\n[00:40.97] Eternal sunshine of the spotless mind\n[00:46.48] Oh, love is blind\n[00:49.13] Why am I missin' you tonight?\n[00:54.53] Was it all a lie?\n[00:57.18] Someone's gonna show you how a heart can be used\n[01:02.86] Like you did mine\n[01:06.11] \n[01:08.32] And now, I second-guess my thoughts, every step I take\n[01:12.67] I'm losin' hope in love, and I've lost all in faith\n[01:16.42] Yeah, for a dreamer, I just close my eyes and it's all blank\n[01:21.56] I have you to thank, yeah\n[01:24.30] I hope one day someone will take your heart and hold it tight\n[01:28.57] Make you feel like you're invincible deep inside\n[01:32.43] And right when you think that you'll try again, they cross a line\n[01:36.96] And steal your shine\n[01:39.06] Like you did mine\n[01:41.11] Go ahead and break my heart, that's fine\n[01:47.09] So unkind\n[01:49.03] Eternal sunshine of the spotless mind\n[01:54.52] Oh, love is blind\n[01:57.17] Why am I missin' you tonight?\n[02:02.52] Was it all a lie?\n[02:04.93] Someone's gonna show you how a heart can be used\n[02:11.65] And you keep talkin', it'll come back, karma\n[02:17.64] Is the truth, I don't make you look bad, you do, darlin'\n[02:23.79] Sabotage, your choice of art\n[02:29.90] Who the hell do you think you are?\n[02:37.59] Go ahead and break my heart, that's fine\n[02:44.06] Eternal sunshine of the spotless mind\n[02:49.03] \n[02:51.56] Why am I missin' you tonight?\n[02:56.72] \n[02:59.23] Someone's gonna show you how a heart can be used\n[03:05.24] Like you did mine\n[03:06.49] ",
+        "trackId": 286266926
+    }
+]
+
+
+```
+<br>
+
+
+### Status Codes
+
+HIFI returns the following status codes in its API:
+
+> | Status Code | Description |
+> | :---        | :--- |
+> | 200         | `OK` |
+> | 422         | `UNPROCESSABLE CONTENT` |
+> | 404         | `NOT FOUND` |
+> | 500         | `INTERNAL SERVER ERROR` |
+
+
+</details>
+
+------------------------------------------------------------------------------------------
+
 <br>
 
 ## 🫂 Contributing
