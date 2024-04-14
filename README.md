@@ -897,7 +897,7 @@ HIFI returns the following status codes in its API:
 > | Parameter  |   Type    | Description |
 > |------------|-----------|-------------|
 > | `id`       |  integer  |  Artist ID = `5034071` |
-> | `f`        | integer   |  Artist ID = `7162333`, This will retrieve all the albums and tracks.| 
+> | `f`        | integer   |  Artist ID = `5034071`, This will retrieve all the albums and tracks.| 
 
 
 <br>
