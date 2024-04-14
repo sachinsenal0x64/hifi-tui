@@ -667,7 +667,7 @@ async def get_artist(
                     return [alb, all_tracks]
 
             except AttributeError:
-                url = f"https://listen.tidal.com/v1/pages/artist?artistId={id}&countryCode=US&locale=en_US&deviceType=BROWSER"
+                url = f"https://api.tidal.com/v1/pages/artist?artistId={id}&countryCode=US&locale=en_US&deviceType=BROWSER"
                 artist_data = await clinet.get(url=url, headers=header)
                 art = artist_data.json()
                 return [art]
