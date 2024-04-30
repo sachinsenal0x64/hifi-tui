@@ -826,7 +826,7 @@ async def main():
         "main:app",
         host="0.0.0.0",
         port=5000,
-        workers=8,
+        workers=9,
     )
     server = uvicorn.Server(config)
     await server.serve()
