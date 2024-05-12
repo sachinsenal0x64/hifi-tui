@@ -12,7 +12,6 @@ type PlayerComponets struct {
 func CreatePlayer() *PlayerComponets {
 	ct := tview.NewFlex()
 	ct.SetDirection(tview.FlexRow).SetBorder(true).SetTitle("Player")
-
 	// Add library component on its container
 
 	return &PlayerComponets{

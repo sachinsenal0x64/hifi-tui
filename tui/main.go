@@ -1,9 +1,10 @@
 package main
 
 import (
+	"hifi-tui/tui/components"
+
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
-	"hifi-tui/tui/components"
 )
 
 // Song informations
@@ -115,7 +116,21 @@ func (a *App) SetInputHandlers() {
 
 }
 
-func main() {
+func init() {
+	theme := tview.Theme{
+		PrimitiveBackgroundColor:    tcell.ColorDefault,
+		ContrastBackgroundColor:     tcell.ColorDefault,
+		MoreContrastBackgroundColor: tcell.ColorDefault,
+		BorderColor:                 tcell.ColorDefault,
+		TitleColor:                  tcell.ColorDefault,
+		GraphicsColor:               tcell.ColorDefault,
+		PrimaryTextColor:            tcell.ColorDefault,
+		SecondaryTextColor:          tcell.ColorDefault,
+		TertiaryTextColor:           tcell.ColorDefault,
+		InverseTextColor:            tcell.ColorDefault,
+		ContrastSecondaryTextColor:  tcell.ColorDefault,
+	}
+	tview.Styles = theme
 	app := CreateApp()
 
 	if err := app.Start(); err != nil {
