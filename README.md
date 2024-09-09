@@ -6,7 +6,7 @@
 
 <h1 align="center"> HIFI TUI </h1>
 
-<h4 align="center"> Privacy Focused Cross Platform Tidal Reverse Proxy / Tui + Batteries Included . </h4>
+<h4 align="center"> 🎵 🔋 Privacy-focused, cross-platform, self-hostable Tidal instance. </h4>
 
 <div align="center">
         
