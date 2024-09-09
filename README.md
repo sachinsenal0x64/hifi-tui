@@ -112,7 +112,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-# 🔋 BATTERIES 
+# 🔋 EXTRA 
 
 - [host-hifi-restapi-on-vercel](https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel)
 - [host-hifi-restapi-on-heroku](https://github.com/sachinsenal0x64/host-hifi-restapi-on-heroku)
