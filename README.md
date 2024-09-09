@@ -74,7 +74,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 - ⌨ VIM LIKE KEY BINDINGS
 
-- 🎧 TIDAL-HIFI | PODCAST PLAYER IN TUI  (⭕ in progress)
+- 🎧 PLAYER: TIDAL-HIFI | PODCAST TUI  (⭕ in progress)
   
 - 👤 TIDAL ACCOUNTS MANAGEMENT 
 
