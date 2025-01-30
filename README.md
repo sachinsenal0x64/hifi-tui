@@ -6,8 +6,7 @@
 
 <h1 align="center"> HIFI TUI </h1>
 
-<h4 align="center">  🎵 Tidal Music. No account required. <br><br>
- Privacy-focused, cross-platform, self-hostable Tidal instance. <br>
+<h4 align="center">  🎵 Privacy-focused, cross-platform, self-hostable Tidal instance. <br><br>
 
 </h4>
 
