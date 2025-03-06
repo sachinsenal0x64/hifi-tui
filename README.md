@@ -124,10 +124,12 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-# Community 
+# 🌱 Community 
 
 - [tidal-dl](https://github.com/Nem-git/tidal) Download music from Tidal, no account required.
+- [tidler](https://git.medvidek77.tech/Medvidek77/tidler) Tidal music downloader based on the hifi-tui API
 
+<br>
 
 # 📄 Documentation
 
