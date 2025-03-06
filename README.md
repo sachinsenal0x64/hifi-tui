@@ -101,6 +101,12 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
+> [!IMPORTANT]
+> Use the direct URL instead of the domain[tidal.401658.xyz] if you face any issues. https://hifi-04ed2aaea09a.herokuapp.com/tdoc
+
+
+<br>
+
 
 # <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="" height="40px" width="40px"> TIDAL REVERSE API / STATUS
 
