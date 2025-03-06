@@ -102,7 +102,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 <br>
 
 > [!IMPORTANT]
-> Use the direct URL instead of the [domain](tidal.401658.xyz) if you face any issues.hifi-04ed2aaea09a.herokuapp.com
+> Use the direct Host [hifi-04ed2aaea09a.herokuapp.com](hifi-04ed2aaea09a.herokuapp.com) instead of the [tidal.401658.xyz](tidal.401658.xyz) if you face any issues.
 
 
 <br>
