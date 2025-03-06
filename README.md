@@ -120,10 +120,13 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 - [host-hifi-restapi-on-heroku](https://github.com/sachinsenal0x64/host-hifi-restapi-on-heroku)
 - [tidal_auth](https://github.com/sachinsenal0x64/hifi-tui/tree/main/tidal_auth)
 - [apigateway](https://github.com/sachinsenal0x64/hifi-tui/tree/main/apigateway)
-- [tidal-dl](https://github.com/Nem-git/tidal) Download music from Tidal, no account required.
+
 
 <br>
 
+# Community 
+
+- [tidal-dl](https://github.com/Nem-git/tidal) Download music from Tidal, no account required.
 
 
 # 📄 Documentation
