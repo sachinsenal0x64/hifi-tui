@@ -162,7 +162,7 @@ async def index():
 @app.api_route("/tdoc", methods=["GET"], include_in_schema=False)
 async def doc():
     return HTMLResponse(
-        """
+        r"""
 
 <!doctype html>
 <html>
@@ -834,3 +834,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
