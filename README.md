@@ -1,6 +1,6 @@
 <div align="center">
  
- ![hifi-tui](https://sachinsenal0x64.github.io/picx-images-hosting/test1.1ejfncjvbvuo.webp)
+ ![hifi-tui](https://github.com/sachinsenal0x64/picx-images-hosting/raw/master/gopher.1ap5wqeiwk.webp)
  
 </div>
 
