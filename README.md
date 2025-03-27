@@ -258,7 +258,8 @@ python main.py
 
 ## 📡 API DOCUMENTATION (No account required)
 
-
+> [!TIP]
+> The same API endpoints are used for self-hosted instances — just change your domain.
 
 
 ------------------------------------------------------------------------------------------
