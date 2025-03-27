@@ -113,7 +113,9 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 > [!NOTE]  
 > TUI based on this api and it free & opensource.
 
-> https://tidal.401658.xyz
+> [API DOCS](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation-no-account-required)
+
+> https://tidal.401658.xyz 
 
 > https://hifi-04ed2aaea09a.herokuapp.com
 
