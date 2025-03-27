@@ -151,7 +151,7 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 ## 🏠 INSTALLATION (TUI)
 
 > [!NOTE]
-> Tui player based on reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) so its totally free (you can listen without any premium subscription) and easy to install via package manager 
+> Tui player based on [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) so its totally free (you can listen without any premium subscription) and easy to install via package manager 
 
 
 (⭕ WIP)
@@ -164,14 +164,14 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-## 🏠 API SELF HOSTING
+## 🏠 API SELF HOSTING (Optional)
 
 > [!NOTE]
 > This Required [Tidal](https://tidal.com) subscription / [Redis](https://github.com/redis/redis) & Fill the [.env](https://github.com/sachinsenal0x64/Hifi-Tui/blob/main/api/env-example) file. / Grab Tokens and Ids Using
 [tidal_auth.py](https://github.com/sachinsenal0x64/hifi-tui/tree/main/tidal_auth)
 
 > [!TIP]
-> You can access reverse [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free.
+> You can access [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free without having to self-host it.
 
 <br>
 
@@ -251,7 +251,9 @@ python main.py
 
 <br>
 
-## 📡 API DOCUMENTATION
+## 📡 API DOCUMENTATION (No account required)
+
+
 
 
 ------------------------------------------------------------------------------------------
