@@ -168,12 +168,13 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 ## 🏠 API SELF HOSTING (Optional)
 
+> [!TIP]
+> You can access [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free without having to self-host it.
+
 > [!NOTE]
 > This Required [Tidal](https://tidal.com) subscription / [Redis](https://github.com/redis/redis) & Fill the [.env](https://github.com/sachinsenal0x64/Hifi-Tui/blob/main/api/env-example) file. / Grab Tokens and Ids Using
 [tidal_auth.py](https://github.com/sachinsenal0x64/hifi-tui/tree/main/tidal_auth)
 
-> [!TIP]
-> You can access [api](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-tidal-reverse-api--status) for free without having to self-host it.
 
 <br>
 
