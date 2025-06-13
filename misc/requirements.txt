@@ -4,7 +4,7 @@ chompjs==1.2.2
 Pillow==10.3.0
 pyglet==2.0.9
 pynput==1.7.6
-Requests==2.32.2
+Requests==2.32.4
 rich==13.6.0
 selectolax==0.3.16
 textual==0.38.1
