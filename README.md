@@ -880,7 +880,7 @@ HIFI returns the following status codes in its API:
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/artist/?id=5034071"
+    https GET "https://hifi.401658.xyz/artist/?id=5034071"
     
 
 ![image](https://sachinsenal0x64.github.io/picx-images-hosting/2024-02-21-21:19:27-screenshot.1aoq2k57al.webp)
@@ -982,7 +982,7 @@ HIFI returns the following status codes in its API:
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/lyrics/?id=286266926"
+    https GET "https://hifi.401658.xyz/lyrics/?id=286266926"
     
 
 ![image](https://github.com/sachinsenal0x64/picx-images-hosting/raw/master/2024-04-11-14:31:30-screenshot.3go6nb7skh.webp)
