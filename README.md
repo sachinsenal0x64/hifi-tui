@@ -175,27 +175,25 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 ### 🐳 Docker
 
-```bash
+```sh
 # Clone the Repo
 git clone https://github.com/sachinsenal0x64/hifi-tui
 
 # Rename .env-example
+cd hifi-tui
 mv env-example .env
 
-# Run the Docker contaer
 docker-compose up
 
 ```
 <br>
 
 
-```
 
-<br>
 
 ### 🦄 From Source Code
 
-```console
+```sh
 git clone https://github.com/sachinsenal0x64/hifi-tui
 cd hifi-tui
 mv env-example .env
@@ -204,6 +202,7 @@ pip install -r requirements.txt
 python main.py
 
 ```
+
 ![fastapi](https://sachinsenal0x64.github.io/picx-images-hosting/300191675-4330ea31-3f15-45b0-962c-ca5a85041f02.5tz3jj54f2ps.webp)
 
 
