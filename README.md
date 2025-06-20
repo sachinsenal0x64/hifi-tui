@@ -250,7 +250,7 @@ python main.py
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/track/?id=286266926&quality=LOSSLESS"
+    https GET "https://hifi.401658.xyz/track/?id=286266926&quality=LOSSLESS"
     
 
 ![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/e586ec03-68eb-4c54-b6ee-251093f4b8a6)
@@ -321,7 +321,7 @@ HIFI returns the following status codes in its API:
 #### Example
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/search/?s=Consequence"
+    https GET "https://hifi.401658.xyz/search/?s=Consequence"
 
 ![2023-11-19_03-05](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/35041774-394c-4b17-9cfd-927e5e113da3)
 
@@ -433,8 +433,8 @@ HIFI returns the following status codes in its API:
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/cover/?q=Maestro"
-    https GET "https://tidal.401658.xyz/cover/?id=328060990"
+    https GET "https://hifi.401658.xyz/cover/?q=Maestro"
+    https GET "https://hifi.401658.xyz/cover/?id=328060990"
     
 
 ![image](https://github.com/sachinsenal0x64/Hifi-Tui/assets/127573781/42b43878-00c5-4d35-8210-2cca466bc594)
@@ -484,7 +484,7 @@ HIFI returns the following status codes in its API:
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/song/?q=Mine&quality=HI_RES"
+    https GET "https://hifi.401658.xyz/song/?q=Mine&quality=HI_RES"
     
 
 ![image](https://sachinsenal0x64.github.io/picx-images-hosting/2024-02-07-20:19:04-screenshot.5zw9tsa19wcg.webp)
@@ -605,7 +605,7 @@ HIFI returns the following status codes in its API:
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/album/?id=157117504"
+    https GET "https://hifi.401658.xyz/album/?id=157117504"
     
 
 ![image](https://github.com/sachinsenal0x64/picx-images-hosting/raw/master/2024-02-20-19:33:52-screenshot.99t2w3gelf.webp)
@@ -705,7 +705,7 @@ HIFI returns the following status codes in its API:
 
 >HTTPie
 
-    https GET "https://tidal.401658.xyz/playlist/?id=910c525f-be8a-41a1-b557-2682af2bcef3"
+    https GET "https://hifi.401658.xyz/playlist/?id=910c525f-be8a-41a1-b557-2682af2bcef3"
     
 
 ![image](https://sachinsenal0x64.github.io/picx-images-hosting/2024-02-20-23:15:31-screenshot.67x6v3b7q9.webp)
