@@ -113,6 +113,12 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 > https://hifi.401658.xyz 
 
 
+<br>
+
+
+# 📄 Documentation
+
+- https://hifi.401658.xyz/tdoc
 
 
 <br>
@@ -134,12 +140,6 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-# 📄 Documentation
-
-- https://hifi.401658.xyz/tdoc
-
-
-<br>
 
 # 💨 Quick Start
 
