@@ -148,8 +148,6 @@ async def auth():
     return out_res
 
 
-
-
 @app.api_route("/", methods=["GET"], include_in_schema=False)
 async def index():
     return {"HIFI-API": "v1.0", "REPO": "https://github.com/sachinsenal0x64/Hifi-Tui"}
@@ -163,6 +161,11 @@ async def doc():
 <!doctype html>
 <html>
 <head>
+  <style>
+    a[href*="scalar.com"] {
+      display: none;
+    }
+  </style>
     <title>hifi api reference</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -176,58 +179,6 @@ async def doc():
     data-proxy-url="https://api.scalar.com/request-proxy"
 ></script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    var configuration = {
-      theme: "saturn",
-    };
-
-    // Assuming the function needs to be executed after DOM is fully loaded
-    function removeTextAndHref() {
-      const pattern = /Powered by scalar\.com/g;
-
-      function removeTextUsingRegex(rootElement, regexPattern, replacementText) {
-          const nodes = rootElement.childNodes;
-          nodes.forEach(node => {
-              if (node.nodeType === 3) { // Node.TEXT_NODE
-                  const text = node.nodeValue;
-                  const newText = text.replace(regexPattern, replacementText);
-                  if (text !== newText) {
-                      node.nodeValue = newText;
-                  }
-              } else if (node.nodeType === 1) { // Node.ELEMENT_NODE
-                  removeTextUsingRegex(node, regexPattern, replacementText);
-
-                  if (node.classList.contains('darklight-reference-promo')) {
-                      node.removeAttribute('href');
-                  }
-              }
-          });
-      }
-
-      // Initial cleanup
-      removeTextUsingRegex(document.body, pattern, '');
-
-      // Observer for dynamic content
-      const observer = new MutationObserver(mutations => {
-          mutations.forEach(mutation => {
-              mutation.addedNodes.forEach(node => {
-                  if (node.nodeType === 1) { // Node.ELEMENT_NODE
-                      removeTextUsingRegex(node, pattern, '');
-                  }
-              });
-          });
-      });
-
-      observer.observe(document.body, {
-          childList: true,
-          subtree: true
-      });
-    }
-
-    removeTextAndHref();
-  });
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
 
@@ -815,4 +766,3 @@ async def get_cover(id: Union[int, None] = None, q: Union[str, None] = None):
         raise HTTPException(
             status_code=429,
         )
-
