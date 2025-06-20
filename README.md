@@ -101,11 +101,6 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 <br>
 
-> [!IMPORTANT]
-> Use the direct Host [hifi-04ed2aaea09a.herokuapp.com](https://hifi-04ed2aaea09a.herokuapp.com) instead of the [tidal.401658.xyz](https://tidal.401658.xyz) if you face any issues.
-
-
-<br>
 
 
 # <img src="https://sachinsenal0x64.github.io/picx-images-hosting/svgviewer-output(1).4gs81c9ecqkg.svg" alt="" height="40px" width="40px"> TIDAL REVERSE API / STATUS
@@ -115,11 +110,9 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 > [API DOCS](https://github.com/sachinsenal0x64/Hifi-Tui?tab=readme-ov-file#-api-documentation-no-account-required)
 
-> https://tidal.401658.xyz 
+> https://hifi.401658.xyz 
 
-> https://hifi-04ed2aaea09a.herokuapp.com
 
-> https://status.401658.xyz
 
 
 <br>
@@ -143,8 +136,8 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 # 📄 Documentation
 
-- https://hifitui.401658.xyz
-- https://hifitui.pages.dev (Backup Url)
+- https://hifi.401658.xyz/tdoc
+
 
 <br>
 
@@ -184,10 +177,9 @@ I love cli tools as well as music, so why not to have a tidal music client for t
 
 ```bash
 # Clone the Repo
-https://github.com/sachinsenal0x64/hifi-tui
+git clone https://github.com/sachinsenal0x64/hifi-tui
 
 # Rename .env-example
-cd hifi-tui/api
 mv env-example .env
 
 # Run the Docker contaer
@@ -196,36 +188,6 @@ docker-compose up
 ```
 <br>
 
-### 🐳 Docker Compose
-
-```bash
-# Clone the Repo
-https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel
-
-# Rename .env-example
-cd host-hifi-restapi-on-vercel
-mv .env-example .env
-
-# Run the Docker contaer
-docker-compose up
-```
-<br>
-
-### 🐳 Docker File
-
-```bash
-# Clone the Repo
-https://github.com/sachinsenal0x64/host-hifi-restapi-on-vercel
-
-# Rename .env-example
-cd host-hifi-restapi-on-vercel
-mv .env-example .env
-
-# Build the Docker image
-docker build -t host-hifi-restapi-on-vercel .
-
-# Run the Docker contaer
-docker run --env-file .env -p 8000:8000 host-hifi-restapi-on-vercel
 
 ```
 
@@ -236,7 +198,6 @@ docker run --env-file .env -p 8000:8000 host-hifi-restapi-on-vercel
 ```console
 git clone https://github.com/sachinsenal0x64/hifi-tui
 cd hifi-tui
-cd api
 mv env-example .env
 pip install "fastapi[all]"
 pip install -r requirements.txt
