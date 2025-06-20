@@ -148,10 +148,6 @@ async def auth():
     return out_res
 
 
-@app.get("/favicon.ico", include_in_schema=False)
-async def favicon():
-    dirname = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__))))
-    return FileResponse(f"{dirname}/favicon.ico")
 
 
 @app.api_route("/", methods=["GET"], include_in_schema=False)
@@ -176,7 +172,7 @@ async def doc():
 <script
     id="api-reference"
     type="application/json"
-    data-url="https://tidal.401658.xyz/openapi.json"
+    data-url="https://hifi.401658.xyz/openapi.json"
     data-proxy-url="https://api.scalar.com/request-proxy"
 ></script>
 
@@ -819,19 +815,4 @@ async def get_cover(id: Union[int, None] = None, q: Union[str, None] = None):
         raise HTTPException(
             status_code=429,
         )
-
-
-async def main():
-    config = uvicorn.Config(
-        "main:app",
-        host="0.0.0.0",
-        port=5000,
-        workers=8,
-    )
-    server = uvicorn.Server(config)
-    await server.serve()
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
 
